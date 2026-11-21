@@ -1,40 +1,49 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#131517">
-  <title>Emma 语音与口型实验</title>
-  <style>
-    *{box-sizing:border-box}body{margin:0;color:#f3f1eb;background:#131517;font:16px/1.55 Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
-    main{width:min(100% - 2rem,58rem);margin:clamp(1.3rem,4vw,3.6rem) auto}
-    h1{font-size:clamp(1.7rem,4vw,2.65rem);line-height:1.15;letter-spacing:-.04em;margin:0 0 .55rem}
-    p{margin:0 0 1.2rem;color:#d0d3d1}
-    figure{margin:0;padding:0;background:#222526;border-radius:.75rem;overflow:hidden}
-    video{display:block;width:100%;max-width:704px;height:auto;margin:auto;background:#222526}
-    figcaption{padding:.8rem 1.2rem;color:#dde1de;font-size:.94rem;border-top:1px solid #373a3b}
-    details{margin-top:1rem;border-bottom:1px solid #343839;padding:0 0 .7rem}summary{cursor:pointer;color:#bce4d3}
-    details p{margin:.6rem 0 0}a{color:#bce4d3;text-underline-offset:3px}
-    nav{margin-top:1rem}a:focus-visible,summary:focus-visible{outline:2px solid #bce4d3;outline-offset:3px}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101312"><title>Emma 数字人 · 八卡训练实验</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101312;color:#f4f5f0;font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1050px;padding:clamp(20px,5vw,60px) 20px;margin:auto}
+h1,h2,p,figure{margin:0}h1{font-size:clamp(1.85rem,5vw,3.25rem);line-height:1.18;letter-spacing:-.04em}h2{font-size:1.28rem;margin-bottom:.45rem}header p,figcaption,.note{color:#b7c1ba}header p{margin:.6rem 0 1.5rem}
+.stage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(230px,1fr);align-items:center;gap:clamp(18px,4vw,46px)}
+video{background:#1e2320;width:100%;height:auto;display:block;border-radius:12px}figcaption{font-size:.84rem;margin-top:.55rem}
+label{display:block;font-weight:600}select{display:block;width:100%;margin:.45rem 0 1.5rem;border:1px solid #657469;background:#1d2922;color:#edf5ee;font:inherit;border-radius:6px;padding:.5rem .6rem}
+blockquote{margin:.45rem 0 1rem;padding-left:1rem;border-left:2px solid #9cdcb6;font-size:1.2rem;line-height:1.5}
+section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.sample{background:#1c231f;border-radius:9px;padding:1rem}.sample p{margin:.45rem 0}audio{display:block;width:100%;max-width:100%}a{color:#a4e3bb}nav{margin-top:1rem}.note{font-size:.92rem}table{border-collapse:collapse;width:100%;margin-top:1rem}th,td{border-bottom:1px solid #36423b;padding:.45rem .2rem;text-align:right}th:first-child,td:first-child{text-align:left}caption{text-align:left;color:#b7c1ba;font-size:.9rem}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}:focus-visible{outline:3px solid #b0e7bd;outline-offset:3px}@media(max-width:680px){.stage,.pair{grid-template-columns:1fr}main{padding-top:24px}select{margin-bottom:1rem}}
+</style>
 </head>
-<body>
-  <main id="reply">
-    <h1>Emma 语音与口型实验</h1>
-    <p>播放 7.84 秒的问答样片，观察回答时的嘴部动作。</p>
-    <figure>
-      <video controls playsinline preload="metadata" width="704" height="640" poster="mouth-preview.jpg" aria-label="参考帧与生成口型的问答样片">
-        <source src="mouth-reply.mp4" type="video/mp4">
-      </video>
-      <figcaption>704 × 640。头部和背景来自一张 Emma 参考帧，嘴部随模型生成的回答变化。</figcaption>
-    </figure>
-    <details>
-      <summary>输入与模型输出</summary>
-      <p>输入语音：“What is two plus three?”</p>
-      <p>Moshika 输出：“Hey, how can I help you? The sum of 2 and 3 is 5.”</p>
-      <p>口型由 Wav2Lip 生成，并用 Emma 演示片段微调。页面播放已生成的问答。</p>
-    </details>
-    <nav id="replay"><a href="baseline.html">查看早期 88 × 80 表情模型的对比</a></nav>
-  </main>
-</body>
-</html>
+<body><main>
+<header><h1>Emma 数字人训练实验</h1><p>同一句提问，切换试听八张 H100 训练前后的回答。</p></header>
+<div class="stage">
+<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="eight-gpu-voiced.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640 · 7.84 秒。头部和背景使用一张参考帧，口型随回答生成。</figcaption></figure>
+<div><label for="variant">选择语音模型</label>
+<select id="variant"><option value="voiced">八卡训练 · 提高有声帧比例</option><option value="mixed">八卡训练 · 常规采样</option><option value="base">训练前 · Moshika</option></select>
+<p class="note">输入语音</p><blockquote lang="en">What is two plus three?</blockquote>
+<p class="note">模型输出</p><p lang="en" id="transcript" aria-live="polite">Good day, how is it going? The sum of 2 and 3 is 5.</p></div></div>
+<section><h2>换一道题，回答还准确吗？</h2><p lang="en">Why does ice float on water?</p><div class="pair">
+<div class="sample"><strong>训练前</strong><p>回答提到冰的密度低于水，答对了。</p><audio controls preload="none" src="ice-base.m4a" aria-label="冰为什么浮在水上，训练前回答"></audio></div>
+<div class="sample"><strong>八卡训练 · 常规采样</strong><p>回答解释了冰如何融化，偏离了问题。</p><audio controls preload="none" src="ice-mixed.m4a" aria-label="冰为什么浮在水上，常规采样模型回答"></audio></div>
+</div></section>
+<section><h2>同一段对话，说话时机差多远？</h2><p>把演示里对方的声道分别输入两个模型，用相同方法统计 28.64 秒内的说话时间。</p>
+<table><thead><tr><th scope="col">输出</th><th scope="col">开口时长</th><th scope="col">双方同时发声</th></tr></thead><tbody>
+<tr><td>Emma 参考片段</td><td>17.28 秒</td><td>1.12 秒</td></tr>
+<tr><td>训练前</td><td>4.56 秒</td><td>1.76 秒</td></tr>
+<tr><td>八卡训练 · 常规采样</td><td>8.62 秒</td><td>2.42 秒</td></tr>
+</tbody></table><p class="note">常规采样增加了开口时长，也增加了同时发声。训练使用了这条展示素材的前 18 秒，整段回放只能用于观察行为；新问题的回答可在上方单独试听。</p></section>
+<nav><a href="baseline.html">早期低分辨率表情实验</a></nav>
+</main>
+<script>
+const replies={voiced:'Good day, how is it going? The sum of 2 and 3 is 5.',mixed:'Hey there, how is it going? The sum of 2 and 3 is 5.',base:'Hey, how can I help you? The sum of 2 and 3 is 5.'};
+const player=document.getElementById('reply');
+document.getElementById('variant').addEventListener('change',event=>{
+ const name=event.target.value;
+ const resume=!player.paused;
+ player.src='eight-gpu-'+name+'.mp4';player.load();
+ document.getElementById('transcript').textContent=replies[name];
+ if(resume)player.play().catch(()=>{});
+});
+document.addEventListener('play',event=>{
+ if(event.target.matches('audio,video'))document.querySelectorAll('video,audio').forEach(media=>{if(media!==event.target)media.pause();});
+},true);
+</script></body></html>
