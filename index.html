@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>查看模型生成的最新有声视频，或进入实时语音对话。</p></header>
+<section id="joint-expanded"><h2>八卡联合生成 · 1,008 段对话</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-1008-0768.mp4" aria-label="扩容后的模型自主生成的八秒语音和全脸动作"></video>
+<p><a href="joint-portrait-1008-0768.mp4">直接播放最新联合生成样片</a> · <a href="joint-portrait-0768.mp4">比较 231 段训练对话的版本</a></p>
+<p>输入是一张 Emma 参考图，以及留出片段中对方的语音和动作。学生模型逐帧生成自己的语音、表情和头部动作，再由 LivePortrait 渲染。八张 H100 用 1,008 段公开对话训练了 768 步，后期混入 17.92 秒官方双人示例。24 段验证对话的综合损失在第 768 步最低。</p></section>
 <section id="expanded"><h2>1,008 段对话训练的头部动作</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="portrait-flow-1008.mp4" aria-label="扩容训练后生成的八秒头部动作样片"></video>
 <p><a href="portrait-flow-1008.mp4">直接播放扩容样片</a> · <a href="joint-portrait-0768.mp4">比较相同语音的八卡基线</a> · <a href="#live">进入实时对话</a></p>
