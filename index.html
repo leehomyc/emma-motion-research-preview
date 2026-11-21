@@ -13,7 +13,8 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-aligned-1008.mp4" aria-label="学生模型根据留出片段中对方的声音和动作生成的回答"></video>
 <p><a href="joint-aligned-1008.mp4">播放新模型</a> · <a href="joint-portrait-1008-0768.mp4">播放相同输入下继续训练前的模型</a> · <a href="#live">进入实时对话</a></p>
 <p>两个版本接收同一张参考图和同一段对方的语音、动作，各自生成自己的声音、眼睛和头部动作。新版本在八张 H100 上继续训练 384 步，使用 1,008 段公开对话中双方的逐词时间标注，每一方都实际参与了训练。</p>
-<p>在说话人和场次独立的 24 段开发对话上，语音词元负对数似然从 2.319 降到 2.294，文本词元从 2.457 降到 2.375。这两项衡量给定历史时的预测能力。<a href="#interruptions">查看能听到双方声音的打断实验</a>。</p></section>
+<p>在说话人和场次独立的 24 段开发对话上，语音词元负对数似然从 2.319 降到 2.294，文本词元从 2.457 降到 2.375。这两项衡量给定历史时的预测能力。</p>
+<p>实际打断测试共尝试九次。新版本有六次在学生已经开口时成功插入问题，独立语音识别在这六次中检出零个正确答案。继续训练前成功插入九次，检出两个正确答案。这个新样片的 104 帧均追踪到脸，检测器记录到零次双眼完整闭合后再张开。<a href="#interruptions">听继续训练前的打断对照</a>。</p></section>
 <section id="continuous"><h2>连续对话 · 28 秒生成视频</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-continuous-28s.mp4" aria-label="学生模型从第一帧开始自主生成的 28 秒声音和面部动作"></video>
 <p><a href="joint-portrait-continuous-28s.mp4">直接播放 28 秒视频</a> · <a href="#live">进入实时对话</a></p>
