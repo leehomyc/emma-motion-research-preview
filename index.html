@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="temporal-coverage"><h2>八卡训练后的 Emma · 8.32 秒</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="temporal-4051-6400.mp4" aria-label="第 6400 步的模型在留出片段生成自己的语音和面部动作"></video>
+<p>给模型一张起始人像，再输入对方的语音和面部动作。模型逐步生成自己的声音、眼睑和面部动作，LivePortrait 渲染画面。104 帧均检测到人脸，双眼在 4.08 秒和 4.88 秒出现闭合后张开。</p>
+<p>八张 H100 共训练 7,105 步，覆盖 4,051 段公开对话中双方全部 4,115,816 个可用动作时间点。用独立的开发集选出第 6,400 步，生成这段 Emma 留出样片。<a href="temporal-4051-6400.mp4">直接播放视频</a> · <a href="#lighthouse">听模型在另一项实验中如何回应打断</a></p></section>
 <section id="lighthouse"><h2>灯塔故事讲到一半，换个问题</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="lighthouse-addition.mp4" aria-label="模型讲故事时被问七加九，完整保留双方音频"></video>
 <p>第 8.16 秒插话问「七加九是多少？」。提问结束约 1.51 秒后，模型说出 sixteen，后续表达有些混乱。同一个模型、同一个随机种子换问「什么金属在室温下是液体？」，它没说出 mercury。</p>
