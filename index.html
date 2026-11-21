@@ -16,6 +16,7 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p id="eyes" aria-live="polite"></p><button id="jump" type="button" hidden>播放一次眨眼</button></div></div>
 <section><h2>这次训练了什么？</h2><p>八张 H100 微调了 Moshika 的音频输出层，用了 256 段公开对话和 18 秒 Emma 素材。两种视频都使用它生成的同一条回答。全脸版本调用开源 EchoMimicV3-Flash 的预训练权重，进行八步流匹配采样。视觉模型使用语音、参考图和含有自然眨眼提示的文字。</p><p class="note">这个实验分别生成语音和视频。Nuance Labs 公开描述的目标是自回归预测音频和视觉 token；其发布材料没有说明 Nuplex 1.0 的视觉解码器实现。</p></section>
 <section><h2>输入与回答</h2><blockquote id="input" lang="en">Why does ice float on water?</blockquote><p lang="en" id="response">Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.</p></section>
+<section id="joint-av-01"><h2>首轮联合音视频样片</h2><p>同一个 Moshika 主干预测语音和画面 token。八张 H100 训练 64 步后，这段 8.24 秒的输出仍是绿色色块，未形成可辨认的人脸。</p><a href="joint-av-01.mp4">播放原始 64 × 64 样片（含声音）</a></section>
 <nav><a href="speech.html">八卡语音训练与对话时机对照</a> · <a href="https://github.com/antgroup/echomimic_v3">EchoMimicV3</a> · <a href="https://www.nuancelabs.ai/research/meet-emma-the-first-nuplex-persona">Nuplex 发布说明</a></nav>
 </main><script>
 const peaks={"ice": [3.48], "question": [6.48]};
