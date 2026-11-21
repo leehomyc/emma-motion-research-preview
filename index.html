@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="lighthouse"><h2>灯塔故事讲到一半，换个问题</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="lighthouse-addition.mp4" aria-label="模型讲故事时被问七加九，完整保留双方音频"></video>
+<p>第 8.16 秒插话问「七加九是多少？」。提问结束约 1.51 秒后，模型说出 sixteen，后续表达有些混乱。同一个模型、同一个随机种子换问「什么金属在室温下是液体？」，它没说出 mercury。</p>
+<p><a href="lighthouse-addition.mp4">听七加九的回答</a> · <a href="lighthouse-metal.mp4">听室温液态金属的回答</a></p>
+<p>这版用 913 段真人同时出声后接续的问答微调了语音模型。三组实验都固定在第 12.8 秒提问时，两套语音识别器均检出正确关键词的次数同为 3/12。在线版仍使用原语音模型。</p></section>
 <section id="head-horizon"><h2>头部动作一次预测多久？</h2>
 <video controls playsinline preload="metadata" width="1024" height="512" src="motion-horizon-4051.mp4" aria-label="同一段回答，左侧为短时动作模型，右侧为新长时动作模型"></video>
 <p>左边每次预测 0.32 秒，右边每次预测 1.28 秒。两者都每 0.32 秒根据最新输入重新预测。两边使用相同的语音、表情和首帧。留意后半段抬头的幅度。</p>
