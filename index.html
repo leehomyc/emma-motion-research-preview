@@ -16,7 +16,7 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <body><main>
 <header><h1>Emma 数字人训练实验</h1><p>最新一轮在八张 H100 上训练了 432 步，使用 256 段公开对话和 Emma 演示的前 18 秒。选择测试问题，直接比较各版本的回答。</p></header>
 <div class="stage">
-<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="ice-video-expanded.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640。头部和背景使用一张参考帧，口型随回答生成。</figcaption></figure>
+<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="ice-video-expanded.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640。语音由 Moshika 生成，Wav2Lip 驱动嘴部；眼睛和头部固定。这组视频用于对比语音训练。</figcaption></figure>
 <div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select><label for="variant">选择语音模型</label>
 <select id="variant"><option value="expanded">最新 · 256 段公开对话</option><option value="voiced" disabled>八卡训练 · 提高有声帧比例</option><option value="mixed">八卡训练 · 常规采样</option><option value="base">训练前 · Moshika</option></select>
 <p class="note">输入语音</p><blockquote id="input-text" lang="en">Why does ice float on water?</blockquote>
