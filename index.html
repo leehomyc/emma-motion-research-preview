@@ -14,35 +14,42 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 </head>
 <body><main>
-<header><h1>Emma 数字人训练实验</h1><p>同一句提问，切换试听八张 H100 训练前后的回答。</p></header>
+<header><h1>Emma 数字人训练实验</h1><p>最新一轮在八张 H100 上训练了 432 步，使用 256 段公开对话和 Emma 演示的前 18 秒。选择测试问题，直接比较各版本的回答。</p></header>
 <div class="stage">
-<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="eight-gpu-voiced.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640 · 7.84 秒。头部和背景使用一张参考帧，口型随回答生成。</figcaption></figure>
-<div><label for="variant">选择语音模型</label>
-<select id="variant"><option value="voiced">八卡训练 · 提高有声帧比例</option><option value="mixed">八卡训练 · 常规采样</option><option value="base">训练前 · Moshika</option></select>
-<p class="note">输入语音</p><blockquote lang="en">What is two plus three?</blockquote>
-<p class="note">模型输出</p><p lang="en" id="transcript" aria-live="polite">Good day, how is it going? The sum of 2 and 3 is 5.</p></div></div>
-<section><h2>换一道题，回答还准确吗？</h2><p lang="en">Why does ice float on water?</p><div class="pair">
-<div class="sample"><strong>训练前</strong><p>回答提到冰的密度低于水，答对了。</p><audio controls preload="none" src="ice-base.m4a" aria-label="冰为什么浮在水上，训练前回答"></audio></div>
-<div class="sample"><strong>八卡训练 · 常规采样</strong><p>回答解释了冰如何融化，偏离了问题。</p><audio controls preload="none" src="ice-mixed.m4a" aria-label="冰为什么浮在水上，常规采样模型回答"></audio></div>
-</div></section>
+<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="ice-video-expanded.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640。头部和背景使用一张参考帧，口型随回答生成。</figcaption></figure>
+<div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select><label for="variant">选择语音模型</label>
+<select id="variant"><option value="expanded">最新 · 256 段公开对话</option><option value="voiced" disabled>八卡训练 · 提高有声帧比例</option><option value="mixed">八卡训练 · 常规采样</option><option value="base">训练前 · Moshika</option></select>
+<p class="note">输入语音</p><blockquote id="input-text" lang="en">Why does ice float on water?</blockquote>
+<p class="note">模型输出</p><p lang="en" id="transcript" aria-live="polite">Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.</p></div></div>
+<section><h2>两道题的实际回答</h2><p>256 段训练版答对了两道题。解释浮冰时，它提到冰的密度比水低；此前的常规采样版说的是冰如何融化。两题是固定输入、固定随机种子的单次生成。</p></section>
 <section><h2>同一段对话，说话时机差多远？</h2><p>把演示里对方的声道分别输入两个模型，用相同方法统计 28.64 秒内的说话时间。</p>
 <table><thead><tr><th scope="col">输出</th><th scope="col">开口时长</th><th scope="col">双方同时发声</th></tr></thead><tbody>
 <tr><td>Emma 参考片段</td><td>17.28 秒</td><td>1.12 秒</td></tr>
 <tr><td>训练前</td><td>4.56 秒</td><td>1.76 秒</td></tr>
 <tr><td>八卡训练 · 常规采样</td><td>8.62 秒</td><td>2.42 秒</td></tr>
-</tbody></table><p class="note">常规采样增加了开口时长，也增加了同时发声。训练使用了这条展示素材的前 18 秒，整段回放只能用于观察行为；新问题的回答可在上方单独试听。</p></section>
+<tr><td>最新 · 256 段训练</td><td>13.46 秒</td><td>3.76 秒</td></tr>
+</tbody></table><p class="note">训练使用了这条展示素材的前 18 秒，整段回放只能用于观察行为；新问题的回答可在上方单独试听。</p></section>
 <nav><a href="baseline.html">早期低分辨率表情实验</a></nav>
 </main>
 <script>
-const replies={voiced:'Good day, how is it going? The sum of 2 and 3 is 5.',mixed:'Hey there, how is it going? The sum of 2 and 3 is 5.',base:'Hey, how can I help you? The sum of 2 and 3 is 5.'};
+const replies={"ice": {"expanded": "Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.", "base": "Hey, how can I help you? Ice floats on water because it is less dense than the water beneath it, which allows it to float.", "mixed": "Hey there, how is it going? Ice melts when it comes into contact with water because the heat from the water causes the ice to change its phase from solid to liquid."}, "question": {"expanded": "Hello, how was your day? The sum of two and three is five.", "base": "Hey, how can I help you? The sum of 2 and 3 is 5.", "mixed": "Hey there, how is it going? The sum of 2 and 3 is 5.", "voiced": "Good day, how is it going? The sum of 2 and 3 is 5."}};
 const player=document.getElementById('reply');
-document.getElementById('variant').addEventListener('change',event=>{
- const name=event.target.value;
+const promptSelect=document.getElementById('prompt');
+const variant=document.getElementById('variant');
+function update(){
+ const prompt=promptSelect.value;
+ for(const option of variant.options)option.disabled=!(option.value in replies[prompt]);
+ if(!(variant.value in replies[prompt]))variant.value='expanded';
+ const name=variant.value;
  const resume=!player.paused;
- player.src='eight-gpu-'+name+'.mp4';player.load();
- document.getElementById('transcript').textContent=replies[name];
+ player.src=(prompt==='ice'?'ice-video-':'eight-gpu-')+name+'.mp4';
+ player.load();
+ document.getElementById('input-text').textContent=prompt==='ice'?'Why does ice float on water?':'What is two plus three?';
+ document.getElementById('transcript').textContent=replies[prompt][name];
  if(resume)player.play().catch(()=>{});
-});
+}
+variant.addEventListener('change',update);
+promptSelect.addEventListener('change',update);
 document.addEventListener('play',event=>{
  if(event.target.matches('audio,video'))document.querySelectorAll('video,audio').forEach(media=>{if(media!==event.target)media.pause();});
 },true);
