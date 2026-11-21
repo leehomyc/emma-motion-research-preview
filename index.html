@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="conditional-reply"><h2>听到打断后，能接住哪个问题？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="conditional-pacific.mp4" aria-label="听模型被打断后回答世界上最大的大洋"></video>
+<p><a href="conditional-pacific.mp4">听它答出太平洋</a> · <a href="conditional-freezing.mp4">听它漏答水的冰点</a></p>
+<p>两段都是 24 秒，使用同一模型、同一随机种子。先听它讲厨房故事，到 13.44 秒插入问题，开头的声音和动作相同。它在对方问完约 3.73 秒后说出 Pacific，另一遍漏掉了摄氏零度。</p>
+<p>这个实验用双方的语音 token 判断何时启用打断微调。四个问题各测三个随机种子，12 次中有 4 次能在持续发声时插入问题，两套语音识别都在其中 3 次检出正确答案。相同设置的原版也答对 3 次，持续开启打断微调的一版答对 0 次。</p></section>
 <section id="temporal-coverage"><h2>八卡训练后的 Emma · 8.32 秒</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="temporal-4051-6400.mp4" aria-label="第 6400 步的模型在留出片段生成自己的语音和面部动作"></video>
 <p>给模型一张起始人像，再输入对方的语音和面部动作。模型逐步生成自己的声音、眼睑和面部动作，LivePortrait 渲染画面。104 帧均检测到人脸，双眼在 4.08 秒和 4.88 秒出现闭合后张开。</p>
