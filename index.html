@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="zh-Hans">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101312"><title>Emma 数字人 · 八卡训练实验</title>
-<style>
+<!doctype html><html lang="zh-Hans"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101312"><title>Emma 全脸生成实验</title><style>
 *{box-sizing:border-box}body{margin:0;background:#101312;color:#f4f5f0;font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1050px;padding:clamp(20px,5vw,60px) 20px;margin:auto}
 h1,h2,p,figure{margin:0}h1{font-size:clamp(1.85rem,5vw,3.25rem);line-height:1.18;letter-spacing:-.04em}h2{font-size:1.28rem;margin-bottom:.45rem}header p,figcaption,.note{color:#b7c1ba}header p{margin:.6rem 0 1.5rem}
 .stage{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(230px,1fr);align-items:center;gap:clamp(18px,4vw,46px)}
@@ -12,45 +7,34 @@ label{display:block;font-weight:600}select{display:block;width:100%;margin:.45re
 blockquote{margin:.45rem 0 1rem;padding-left:1rem;border-left:2px solid #9cdcb6;font-size:1.2rem;line-height:1.5}
 section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.sample{background:#1c231f;border-radius:9px;padding:1rem}.sample p{margin:.45rem 0}audio{display:block;width:100%;max-width:100%}a{color:#a4e3bb}nav{margin-top:1rem}.note{font-size:.92rem}table{border-collapse:collapse;width:100%;margin-top:1rem}th,td{border-bottom:1px solid #36423b;padding:.45rem .2rem;text-align:right}th:first-child,td:first-child{text-align:left}caption{text-align:left;color:#b7c1ba;font-size:.9rem}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}:focus-visible{outline:3px solid #b0e7bd;outline-offset:3px}@media(max-width:680px){.stage,.pair{grid-template-columns:1fr}main{padding-top:24px}select{margin-bottom:1rem}}
 </style>
-</head>
-<body><main>
-<header><h1>Emma 数字人训练实验</h1><p>最新一轮在八张 H100 上训练了 432 步，使用 256 段公开对话和 Emma 演示的前 18 秒。选择测试问题，直接比较各版本的回答。</p></header>
-<div class="stage">
-<figure><video id="reply" width="704" height="640" controls playsinline preload="metadata" poster="eight-gpu-poster.jpg" src="ice-video-expanded.mp4" aria-label="模型回答与生成口型"></video><figcaption>预生成视频 · 704 × 640。语音由 Moshika 生成，Wav2Lip 驱动嘴部；眼睛和头部固定。这组视频用于对比语音训练。</figcaption></figure>
-<div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select><label for="variant">选择语音模型</label>
-<select id="variant"><option value="expanded">最新 · 256 段公开对话</option><option value="voiced" disabled>八卡训练 · 提高有声帧比例</option><option value="mixed">八卡训练 · 常规采样</option><option value="base">训练前 · Moshika</option></select>
-<p class="note">输入语音</p><blockquote id="input-text" lang="en">Why does ice float on water?</blockquote>
-<p class="note">模型输出</p><p lang="en" id="transcript" aria-live="polite">Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.</p></div></div>
-<section><h2>两道题的实际回答</h2><p>256 段训练版答对了两道题。解释浮冰时，它提到冰的密度比水低；此前的常规采样版说的是冰如何融化。两题是固定输入、固定随机种子的单次生成。</p></section>
-<section><h2>同一段对话，说话时机差多远？</h2><p>把演示里对方的声道分别输入两个模型，用相同方法统计 28.64 秒内的说话时间。</p>
-<table><thead><tr><th scope="col">输出</th><th scope="col">开口时长</th><th scope="col">双方同时发声</th></tr></thead><tbody>
-<tr><td>Emma 参考片段</td><td>17.28 秒</td><td>1.12 秒</td></tr>
-<tr><td>训练前</td><td>4.56 秒</td><td>1.76 秒</td></tr>
-<tr><td>八卡训练 · 常规采样</td><td>8.62 秒</td><td>2.42 秒</td></tr>
-<tr><td>最新 · 256 段训练</td><td>13.46 秒</td><td>3.76 秒</td></tr>
-</tbody></table><p class="note">训练使用了这条展示素材的前 18 秒，整段回放只能用于观察行为；新问题的回答可在上方单独试听。</p></section>
-<nav><a href="baseline.html">早期低分辨率表情实验</a></nav>
-</main>
-<script>
-const replies={"ice": {"expanded": "Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.", "base": "Hey, how can I help you? Ice floats on water because it is less dense than the water beneath it, which allows it to float.", "mixed": "Hey there, how is it going? Ice melts when it comes into contact with water because the heat from the water causes the ice to change its phase from solid to liquid."}, "question": {"expanded": "Hello, how was your day? The sum of two and three is five.", "base": "Hey, how can I help you? The sum of 2 and 3 is 5.", "mixed": "Hey there, how is it going? The sum of 2 and 3 is 5.", "voiced": "Good day, how is it going? The sum of 2 and 3 is 5."}};
-const player=document.getElementById('reply');
-const promptSelect=document.getElementById('prompt');
-const variant=document.getElementById('variant');
-function update(){
- const prompt=promptSelect.value;
- for(const option of variant.options)option.disabled=!(option.value in replies[prompt]);
- if(!(variant.value in replies[prompt]))variant.value='expanded';
- const name=variant.value;
- const resume=!player.paused;
- player.src=(prompt==='ice'?'ice-video-':'eight-gpu-')+name+'.mp4';
- player.load();
- document.getElementById('input-text').textContent=prompt==='ice'?'Why does ice float on water?':'What is two plus three?';
- document.getElementById('transcript').textContent=replies[prompt][name];
- if(resume)player.play().catch(()=>{});
+<style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
+<body><main><header><h1>Emma 全脸生成实验</h1><p>同一段语音，两种视频模型。切换对照，观察眼睑、视线和头部动作。</p></header>
+<div class="stage"><figure><video id="reply" controls playsinline preload="metadata" width="704" height="640" poster="fullface-poster.jpg" src="fullface-ice.mp4" aria-label="全脸生成与固定眼睛口型对照"></video>
+<figcaption id="caption">EchoMimicV3-Flash 根据一张参考图和模型生成的回答，逐段生成整张脸。此处播放预先算好的结果。</figcaption></figure>
+<div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select>
+<label for="renderer">视频模型</label><select id="renderer"><option value="fullface">全脸生成 · EchoMimicV3-Flash</option><option value="mouth">口型基线 · Wav2Lip</option></select>
+<p id="eyes" aria-live="polite"></p><button id="jump" type="button" hidden>播放一次眨眼</button></div></div>
+<section><h2>这次训练了什么？</h2><p>八张 H100 微调了 Moshika 的音频输出层，用了 256 段公开对话和 18 秒 Emma 素材。两种视频都使用它生成的同一条回答。全脸版本调用开源 EchoMimicV3-Flash 的预训练权重，进行八步流匹配采样。视觉模型使用语音、参考图和含有自然眨眼提示的文字。</p><p class="note">这个实验分别生成语音和视频。Nuance Labs 公开描述的目标是自回归预测音频和视觉 token；其发布材料没有说明 Nuplex 1.0 的视觉解码器实现。</p></section>
+<section><h2>输入与回答</h2><blockquote id="input" lang="en">Why does ice float on water?</blockquote><p lang="en" id="response">Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.</p></section>
+<nav><a href="speech.html">八卡语音训练与对话时机对照</a> · <a href="https://github.com/antgroup/echomimic_v3">EchoMimicV3</a> · <a href="https://www.nuancelabs.ai/research/meet-emma-the-first-nuplex-persona">Nuplex 发布说明</a></nav>
+</main><script>
+const peaks={"ice": [3.48], "question": [6.48]};
+const answers={"ice": "Hello, how was your day? Ice floats on water because its density is lower than that of water, which allows it to float on the surface.", "question": "Hello, how was your day? The sum of two and three is five."};
+const el=id=>document.getElementById(id), v=el('reply'), p=el('prompt'), r=el('renderer');
+function describe(){
+ const full=r.value==='fullface', list=peaks[p.value];
+ el('eyes').textContent=full?(list.length?'逐帧检测到 '+list.length+' 次双眼闭合后张开。':'这段视频未检测到明确的双眼闭合再张开。'):'眼部使用固定参考图。';
+ el('jump').hidden=!full||!list.length;
+ el('caption').textContent=full?'开源全脸模型生成眼睛、头部和嘴部动作。此处播放预生成视频。':'Wav2Lip 只更新嘴部区域，眼睛和头部使用固定参考图。';
+ el('input').textContent=p.value==='ice'?'Why does ice float on water?':'What is two plus three?';
+ el('response').textContent=answers[p.value];
 }
-variant.addEventListener('change',update);
-promptSelect.addEventListener('change',update);
-document.addEventListener('play',event=>{
- if(event.target.matches('audio,video'))document.querySelectorAll('video,audio').forEach(media=>{if(media!==event.target)media.pause();});
-},true);
+function update(){
+ const previous=v.currentTime||0, resume=!v.paused;
+ const src=r.value==='fullface'?'fullface-'+p.value+'.mp4':p.value==='ice'?'ice-video-expanded.mp4':'eight-gpu-expanded.mp4';
+ v.onloadedmetadata=()=>{if(resume){v.currentTime=Math.min(previous,v.duration-.1);v.play().catch(()=>{});}};
+ v.src=src;v.load();describe();
+}
+el('jump').onclick=()=>{v.currentTime=Math.max(0,peaks[p.value][0]-.65);v.play().catch(()=>{});};
+p.onchange=update;r.onchange=update;describe();
 </script></body></html>
