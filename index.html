@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="kitchen-4051"><h2>对话中途换个问题，她能接住吗？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="kitchen-4051-months.mp4" aria-label="先讲做饭，再打断问一年有几个月，含双方声音"></video>
+<p><a href="kitchen-4051-months.mp4">听「一年有几个月」</a> · <a href="kitchen-4051-capital.mp4">听「法国首都是哪里」</a></p>
+<p>两段开头、模型和随机种子相同，13.36 秒时插话。保留早期语音适配器、采用第 2,058 步动作权重的模型，在第一个问题结束后约 0.33 秒说出 twelve。第二个问题仍然在说晚餐。四个问题各测三个种子，12 次尝试里确认了 4 次真实插话，只有一次答出了对应关键词。</p></section>
 <section id="joint-4051-1152"><h2>八卡续训完成后的有声样片</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-4051-2058.mp4" aria-label="第 2,058 步模型在同一留出片段上自由生成的声音和面部动作"></video>
 <p><a href="joint-4051-2058.mp4">播放第 2,058 步的样片</a> · <a href="joint-4051-1152.mp4">对照第 1,152 步</a> · <a href="joint-4051-0768.mp4">对照续训前</a></p>
@@ -80,6 +84,7 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <video controls playsinline preload="metadata" width="1024" height="554" src="motion-flow-comparison.mp4" aria-label="左侧为八卡基线，右侧为流匹配预测的头部动作"></video>
 <p>两边共用模型生成的语音、口型和眼睑动作。右侧用流匹配重新预测头部姿态，可直接比较点头和转头。两侧都检测到三次眨眼。这是离线对照。</p></section>
 <section id="live"><h2>实时对话 · 512 × 512</h2>
+<p>语音生成和人脸渲染现在分别运行在两张 H100 上。公网单会话测试中，7.68 秒的音视频用 8.09 秒传回，96 个包顺序完整，发送到接收的中位延迟为 435 毫秒。这项测试使用三千段对话训练的在线动作模型。</p>
 <p><a href="https://bar-backup-rim-female.trycloudflare.com/?profile=expanded">与 1,008 段训练的模型对话</a> · <a href="https://bar-backup-rim-female.trycloudflare.com/">与 231 段训练的模型对话</a></p>
 <p>点击「用示例提问」，即可看 H100 当场生成的声音与画面。可在两种训练规模之间切换。两者均使用第 768 步权重，每个音视频数据包对应 80 毫秒。也可以打开麦克风提问或选择发送摄像头画面。每次对话最长 60 秒，目前一次支持一个会话。</p></section>
 <div class="stage"><figure><video id="reply" controls playsinline preload="metadata" width="704" height="640" poster="fullface-poster.jpg" src="fullface-ice.mp4" aria-label="全脸生成与固定眼睛口型对照"></video>
