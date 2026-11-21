@@ -14,6 +14,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="joint-portrait-continuous-28s.mp4">直接播放 28 秒视频</a> · <a href="#live">进入实时对话</a></p>
 <p>从第一帧开始，学生模型每 80 毫秒接收对方的语音和动作，生成自己的声音和全脸动作。视频只播放学生的声音。354 帧均检测到人脸，检测到两次完整眨眼，分别在 1.04 和 4.08 秒。使用 1,008 段公开对话训练的 Moshika、Mimi 和面部动作适配器，画面由 LivePortrait 渲染。</p>
 <p>前 20 秒的对话情境有 17.92 秒也用于训练。我们只对最后 8.32 秒评分。三组随机种子下，双方同时说话的时长中位数从中途启动的 2.40 秒降到连续对话的 1.36 秒，官方样片为 0.40 秒。连续对话里学生开口时长的中位数也降到了 1.36 秒，官方为 3.68 秒。</p></section>
+<section id="interruptions"><h2>学生说到一半被打断，会改答新问题吗？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="interrupt-number-answered.mp4" aria-label="讲火车故事时被打断，学生转而回答数字问题；可听到双方声音"></video>
+<p><a href="interrupt-number-answered.mp4">播放答出 seven 的一遍</a> · <a href="interrupt-number-missed.mp4">播放同一问题答偏的一遍</a> · <a href="interruption-control-1235.m4a">听同一随机种子下没有打断时的回答</a></p>
+<p>先请学生讲一个火车旅行的故事，等它开口后再问“六之后是几？” 两段视频中都能听到提问和学生的原声。第一段在 2.48 秒打断，第二段在 13.68 秒打断。区别来自生成的故事和开口时间，使用的是同一检查点。</p>
+<p>完整测试含颜色、数字和星期三个问题，每题三组随机种子。九次都在学生发声时触发。用独立语音识别检查学生声轨，九次中有两次识别到正确答案，且对应的无打断对照中未出现该词。词匹配可能漏掉发音含混的正确回答。</p></section>
 <section id="joint-expanded"><h2>八卡联合生成 · 1,008 段对话</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-1008-0768.mp4" aria-label="扩容后的模型自主生成的八秒语音和全脸动作"></video>
 <p><a href="joint-portrait-1008-0768.mp4">直接播放八秒联合生成样片</a> · <a href="joint-portrait-0768.mp4">比较 231 段训练对话的版本</a></p>
