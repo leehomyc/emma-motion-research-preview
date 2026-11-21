@@ -9,11 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>查看模型生成的最新有声视频，或进入实时语音对话。</p></header>
-<section id="portrait"><h2>最新生成样片 · 512 × 512</h2>
-<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-0096.mp4" aria-label="第 96 步生成的 8.32 秒有声样片"></video>
-<p><a href="joint-portrait-0096.mp4">直接打开有声视频（8.32 秒）</a></p>
-<p>给模型一张 Emma 参考图和对方的音视频。Moshika 预测语音和面部动作，LivePortrait 将预测的动作渲染成画面。生成时只使用 Emma 的第一帧。</p>
-<p>这轮在两张 H100 上训练 96 步，使用 48 段公开对话，后期混入 17.92 秒官方示例。检测器在 104 帧中始终追踪到脸，测到两次眨眼，分别在 1.04 秒和 5.60 秒。嘴部开合幅度仍小。这段视频为离线生成。</p></section>
+<section id="portrait"><h2>八卡生成样片 · 512 × 512</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-0768.mp4" aria-label="第 768 步生成的 8.32 秒有声样片"></video>
+<p><a href="joint-portrait-0768.mp4">直接播放八卡样片</a> · <a href="joint-portrait-0096.mp4">比较两卡 96 步样片</a></p>
+<p>模型输入为一张 Emma 参考图和对方的音视频。Moshika 与动作预测层共同生成语音和面部动作，LivePortrait 将动作渲染成 512 像素画面。八张 H100 完成 768 步适配器训练，使用 231 段公开对话，后期混入 17.92 秒官方示例。</p>
+<p>样片长 8.32 秒，检测器在 104 帧里都追踪到脸，测到三次眨眼。固定模型为睁眼后测到零次。嘴唇开合与生成语音音量的相关系数为 0.65，错开两秒后为 0.04。该指标衡量这段样片的开合时机，精确的发音口型仍待验证。</p></section>
 <section id="live"><h2>实时对话 · 第 1,920 步</h2>
 <p><a href="https://bar-backup-rim-female.trycloudflare.com/">打开实时对话</a> · <a href="joint-av-1920.mp4">直接播放 8.24 秒样片</a></p>
 <p>点「用示例提问」即可体验 H100 当场生成的声音与画面。也可以自己打开麦克风提问，摄像头默认关闭。每次最多 60 秒。当前分辨率为 64 × 64，五官会失真。</p></section>
