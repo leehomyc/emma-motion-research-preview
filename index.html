@@ -9,6 +9,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>同一段语音，两种视频模型。切换对照，观察眼睑、视线和头部动作。</p></header>
+<section id="live"><h2>实时对话 · 第 1,920 步</h2>
+<p><a href="https://bar-backup-rim-female.trycloudflare.com/">打开实时对话</a> · <a href="joint-av-1920.mp4">直接播放 8.24 秒样片</a></p>
+<p>点「用示例提问」即可体验 H100 当场生成的声音与画面。也可以自己打开麦克风提问，摄像头默认关闭。每次最多 60 秒。当前分辨率为 64 × 64，五官会失真。</p></section>
 <div class="stage"><figure><video id="reply" controls playsinline preload="metadata" width="704" height="640" poster="fullface-poster.jpg" src="fullface-ice.mp4" aria-label="全脸生成与固定眼睛口型对照"></video>
 <figcaption id="caption">EchoMimicV3-Flash 根据一张参考图和模型生成的回答，逐段生成整张脸。此处播放预先算好的结果。</figcaption></figure>
 <div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select>
