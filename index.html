@@ -13,6 +13,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="served-4091-eyes.mp4" aria-label="来自在线模型的有声回答，含提问、头部动作和眨眼"></video>
 <p><a href="served-4091-eyes.mp4">直接播放 17 秒回答</a> · <a href="https://june-detect-sound-stan.trycloudflare.com/?profile=semantic">打开浏览器实验版</a></p>
 <p>视频来自在线服务实际返回的 216 帧和声音。它回答冰的密度低于液态水，独立人脸检测器测到六次完整眨眼。语音模块训练使用 4,091 段对话，全脸动作模型使用 1,008 段。共享 GPU 上，这次生成 17.28 秒音视频用了 42.9 秒。在线实验一次接入一个会话，点击「用示例提问」即可试用。</p></section>
+<section id="vq-1024"><h2>直接生成图像词元的对照实验</h2>
+<p><a href="joint-vq-1024-step2176.mp4">播放 8 秒原始输出（128 × 128，有声）</a></p>
+<p>这个分支在 8 张 H100 上用 1,024 段公开对话训练了 4,096 步。开发集选出的第 2,176 步权重用对方的声音和画面生成自己的声音和画面。在 Emma 留出片段中，五官模糊，相邻帧的平均像素变化为 6.54，原片为 0.81。</p></section>
 <section id="semantic-4091"><h2>4,091 段双人对话训练 · 被打断时回答新问题</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="semantic-4091-bicycle.mp4" aria-label="学生讲露营故事时被问到自行车有几个轮子，含双方声音"></video>
 <p><a href="semantic-4091-bicycle.mp4">播放自行车问题（24 秒）</a> · <a href="semantic-4091-cat.mp4">播放同一开场下答偏的一遍</a></p>
