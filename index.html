@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="question-timing"><h2>同一句问题，开场问和中途问有什么区别？</h2>
+<p>两段录音使用同一个模型、同一条提问音频和同一个随机种子。问题是「我们呼吸的空气里，哪种气体最多？」。每段 10.56 秒，包含提问和模型的回答。</p>
+<div class="pair"><figure><figcaption>开场直接问</figcaption><audio controls preload="none" src="library-gas-direct.m4a"></audio></figure><figure><figcaption>讲图书馆故事时插话，从提问处播放</figcaption><audio controls preload="none" src="library-gas-interrupt.m4a"></audio></figure></div>
+<p>四个问题共八组可配对的试验。两套独立语音识别器均在直接问时检出五次正确关键词。插话时，一套检出一次，另一套检出两次。这里统计的是回答中出现、同种子静音对照中未出现的词。</p></section>
 <section id="live-ice"><h2>问 Emma：冰为什么会浮在水面上？</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="live-flow-ice.mp4" aria-label="在线模型回答冰为什么会浮起来，包含提问和模型回答"></video>
 <p>这 10.56 秒保留了公网服务返回的全部 132 帧，并混入了浏览器发送的问题。自动转写识别到 “less dense than water”，也识别到一句与之矛盾的话。可以听原声判断。</p>
