@@ -24,6 +24,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="joint-portrait-1008-0768.mp4">直接播放八秒联合生成样片</a> · <a href="joint-portrait-0768.mp4">比较 231 段训练对话的版本</a></p>
 <p>输入是一张 Emma 参考图，以及留出片段中对方的语音和动作。学生模型逐帧生成自己的语音、表情和头部动作，再由 LivePortrait 渲染。八张 H100 用 1,008 段公开对话训练了 768 步，后期混入 17.92 秒官方双人示例。24 段验证对话的综合损失在第 768 步最低。</p>
 <p>这段 8.32 秒的样片在 104 帧中都检测到人脸，在 1.04 秒处检测到一次眨眼。嘴唇开合和生成语音音量的相关系数为 0.19。口型同步仍是这个版本的弱项。</p></section>
+<section id="voice"><h2>同一个提问，比较音色</h2>
+<p><a href="voice-conditioned-1234.m4a">听使用 Emma 声音参考的生成结果</a> · <a href="voice-neutral-1234.m4a">听同一随机种子的原模型</a></p>
+<p>用 116 位说话人跨会话的声音训练了一个模块，在模型采样六组声学 token 时加入音色信息。实验使用官方训练片段中的 12 秒发声作为 Emma 的参考。三个随机种子下，独立声纹模型测得与参考音色的余弦相似度中位数由 0.148 升到 0.195。从同一官方录像取一段未参与训练的 Emma 声音作相同比较，得分为 0.598。两段音频都由学生重新生成，回答的用词也会变化。</p></section>
 <section id="expanded"><h2>1,008 段对话训练的头部动作</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="portrait-flow-1008.mp4" aria-label="扩容训练后生成的八秒头部动作样片"></video>
 <p><a href="portrait-flow-1008.mp4">直接播放扩容样片</a> · <a href="joint-portrait-0768.mp4">比较相同语音的八卡基线</a> · <a href="#live">进入实时对话</a></p>
@@ -37,10 +40,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p>样片长 8.32 秒，检测器在 104 帧里都追踪到脸，测到三次眨眼。固定模型为睁眼后测到零次。嘴唇开合与生成语音音量的相关系数为 0.65，错开两秒后为 0.04。该指标衡量这段样片的开合时机，精确的发音口型仍待验证。</p></section>
 <section id="motion-study"><h2>同一段语音下，头部动作有什么变化？</h2>
 <video controls playsinline preload="metadata" width="1024" height="554" src="motion-flow-comparison.mp4" aria-label="左侧为八卡基线，右侧为流匹配预测的头部动作"></video>
-<p>两边共用模型生成的语音、口型和眼睑动作。右侧用流匹配重新预测头部姿态，可直接比较点头和转头。两侧都检测到三次眨眼。这是离线对照，下面的实时入口仍使用左侧模型。</p></section>
+<p>两边共用模型生成的语音、口型和眼睑动作。右侧用流匹配重新预测头部姿态，可直接比较点头和转头。两侧都检测到三次眨眼。这是离线对照。</p></section>
 <section id="live"><h2>实时对话 · 512 × 512</h2>
-<p><a href="https://bar-backup-rim-female.trycloudflare.com/">打开实时对话</a> · <a href="joint-portrait-0768.mp4">直接播放同一检查点的有声样片</a></p>
-<p>点击「用示例提问」，即可看 H100 当场生成的声音与画面。实时服务使用 231 段对话训练的第 768 步模型，每 80 毫秒生成一帧。也可以打开麦克风提问或选择发送摄像头画面。每次对话最长 60 秒，目前一次支持一个会话。</p></section>
+<p><a href="https://bar-backup-rim-female.trycloudflare.com/?profile=expanded">与 1,008 段训练的模型对话</a> · <a href="https://bar-backup-rim-female.trycloudflare.com/">与 231 段训练的模型对话</a></p>
+<p>点击「用示例提问」，即可看 H100 当场生成的声音与画面。可在两种训练规模之间切换。两者均使用第 768 步权重，每个音视频数据包对应 80 毫秒。也可以打开麦克风提问或选择发送摄像头画面。每次对话最长 60 秒，目前一次支持一个会话。</p></section>
 <div class="stage"><figure><video id="reply" controls playsinline preload="metadata" width="704" height="640" poster="fullface-poster.jpg" src="fullface-ice.mp4" aria-label="全脸生成与固定眼睛口型对照"></video>
 <figcaption id="caption">EchoMimicV3-Flash 根据一张参考图和模型生成的回答，逐段生成整张脸。此处播放预先算好的结果。</figcaption></figure>
 <div><label for="prompt">测试问题</label><select id="prompt"><option value="ice">冰为什么浮在水上？</option><option value="question">二加三等于多少？</option></select>
