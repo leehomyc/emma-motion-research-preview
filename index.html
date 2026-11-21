@@ -9,10 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
-<section id="joint-4051-1152"><h2>覆盖全部 4,051 段对话双方后的样片</h2>
-<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-4051-1152.mp4" aria-label="4,051 段对话续训至第 1,152 步的原始有声样片"></video>
-<p><a href="joint-4051-1152.mp4">直接播放 8.32 秒视频</a> · <a href="joint-4051-0768.mp4">对照上一轮同输入、同随机种子的样片</a></p>
-<p>两版都从一张参考脸开始，接收同一留出片段中对方的声音和面部动作。新样片由模型生成自己的声音和表情，人脸检测器在 104 帧中测到三次双眼闭合后重新睁开，上一轮为一次。这个片段用来观察动作与声音，插话能力另外评测。</p></section>
+<section id="joint-4051-1152"><h2>八卡续训完成后的有声样片</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-4051-2058.mp4" aria-label="第 2,058 步模型在同一留出片段上自由生成的声音和面部动作"></video>
+<p><a href="joint-4051-2058.mp4">播放第 2,058 步的样片</a> · <a href="joint-4051-1152.mp4">对照第 1,152 步</a> · <a href="joint-4051-0768.mp4">对照续训前</a></p>
+<p>三段都使用同一张参考脸、对方输入和随机种子。续训遍历了 4,051 段对话的双方，包含 5,016 个同时说话的训练窗口。第 2,058 步在本轮验证集上综合损失最低。8.32 秒样片中检测到两次完整眨眼，分别出现在 4.08 秒和 5.20 秒。第 1,152 步测到三次，续训前一次。</p></section>
 <section id="rail-3000"><h2>打断火车故事，听它怎样回答</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="rail-3000-triangle.mp4" aria-label="模型讲火车故事时被问三角形有几条边，含双方声音"></video>
 <p><a href="rail-3000-triangle.mp4">三角形有几条边？</a> · <a href="rail-3000-weekday.mp4">星期一的后一天是星期几？</a> · <a href="https://june-detect-sound-stan.trycloudflare.com/?profile=motion3000">亲自提问</a></p>
