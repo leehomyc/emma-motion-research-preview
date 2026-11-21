@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="rail-3000"><h2>打断火车故事，听它怎样回答</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="rail-3000-triangle.mp4" aria-label="模型讲火车故事时被问三角形有几条边，含双方声音"></video>
+<p><a href="rail-3000-triangle.mp4">三角形有几条边？</a> · <a href="rail-3000-weekday.mp4">星期一的后一天是星期几？</a> · <a href="https://june-detect-sound-stan.trycloudflare.com/?profile=motion3000">亲自提问</a></p>
+<p>两段各 24 秒，模型和随机种子相同。第 3.2 秒插话。第一段答出三条边后又说起算术，第二段答错了星期。这个版本保留原语音适配器，脸部动作和传给语音模型的动作信息采用 3,000 段训练后的权重。</p>
+<p>换成检测到持续人声才插话的测试，四道新题各试三次。该版有 4 次在插话前确认模型正在说话，2 次说出正确关键词。原版有 8 次确认、2 次答中；全部使用新权重时有 8 次确认、1 次答中。</p></section>
 <section id="joint-3000"><h2>3,000 段全脸联合训练后的有声样片</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-3000-0762.mp4" aria-label="从一张参考脸开始，在未参加训练的对话片段中生成的 8 秒声音和画面"></video>
 <p><a href="joint-3000-0762.mp4">播放最新 8 秒样片</a> · <a href="joint-portrait-1008-0768.mp4">比较 1,008 段训练的版本</a></p>
