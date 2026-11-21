@@ -14,6 +14,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="joint-portrait-0768.mp4">直接播放八卡样片</a> · <a href="joint-portrait-0096.mp4">比较两卡 96 步样片</a></p>
 <p>模型输入为一张 Emma 参考图和对方的音视频。Moshika 与动作预测层共同生成语音和面部动作，LivePortrait 将动作渲染成 512 像素画面。八张 H100 完成 768 步适配器训练，使用 231 段公开对话，后期混入 17.92 秒官方示例。</p>
 <p>样片长 8.32 秒，检测器在 104 帧里都追踪到脸，测到三次眨眼。固定模型为睁眼后测到零次。嘴唇开合与生成语音音量的相关系数为 0.65，错开两秒后为 0.04。该指标衡量这段样片的开合时机，精确的发音口型仍待验证。</p></section>
+<section id="motion-study"><h2>同一段语音下，头部动作有什么变化？</h2>
+<video controls playsinline preload="metadata" width="1024" height="554" src="motion-flow-comparison.mp4" aria-label="左侧为八卡基线，右侧为流匹配预测的头部动作"></video>
+<p>两边共用模型生成的语音、口型和眼睑动作。右侧用流匹配重新预测头部姿态，可直接比较点头和转头。两侧都检测到三次眨眼。这是离线对照，下面的实时入口仍使用左侧模型。</p></section>
 <section id="live"><h2>实时对话 · 512 × 512</h2>
 <p><a href="https://bar-backup-rim-female.trycloudflare.com/">打开实时对话</a> · <a href="joint-portrait-0768.mp4">直接播放同一检查点的有声样片</a></p>
 <p>点击「用示例提问」，即可看 H100 当场生成的声音与画面。八卡训练第 768 步的模型每 80 毫秒生成一帧。也可以打开麦克风提问或选择发送摄像头画面。每次对话最长 60 秒，目前一次支持一个会话。</p></section>
