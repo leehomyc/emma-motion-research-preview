@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>查看模型生成的最新有声视频，或进入实时语音对话。</p></header>
+<section id="expanded"><h2>1,008 段对话训练的头部动作</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="portrait-flow-1008.mp4" aria-label="扩容训练后生成的八秒头部动作样片"></video>
+<p><a href="portrait-flow-1008.mp4">直接播放扩容样片</a> · <a href="joint-portrait-0768.mp4">比较相同语音的八卡基线</a> · <a href="#live">进入实时对话</a></p>
+<p>这段离线实验共用基线生成的语音、口型和眼睑动作。新模型根据双方的语音和之前的动作，每次预测接下来四帧的头部动作。它在 385 位说话人的 11.47 小时公开对话上训练了 3,000 步。画面为 512 × 512，检测到三次眨眼。</p>
+<p>将模型容量和训练步数固定，在 24 段未见对话中，把训练集从 231 段扩大到 1,008 段后，生成动作与实测动作的速度比中位数由 0.84 变为 0.85。其中 7 段的速度更接近实测值。这项测试给两组模型相同的真实语音，单独衡量动作生成。</p></section>
 <section id="portrait"><h2>八卡生成样片 · 512 × 512</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-portrait-0768.mp4" aria-label="第 768 步生成的 8.32 秒有声样片"></video>
 <p><a href="joint-portrait-0768.mp4">直接播放八卡样片</a> · <a href="joint-portrait-0096.mp4">比较两卡 96 步样片</a></p>
