@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="live-ice"><h2>问 Emma：冰为什么会浮在水面上？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="live-flow-ice.mp4" aria-label="在线模型回答冰为什么会浮起来，包含提问和模型回答"></video>
+<p>这 10.56 秒保留了公网服务返回的全部 132 帧，并混入了浏览器发送的问题。自动转写识别到 “less dense than water”，也识别到一句与之矛盾的话。可以听原声判断。</p>
+<p><a href="live-flow-ice.mp4">打开原分辨率视频</a> · <a href="https://june-detect-sound-stan.trycloudflare.com/?profile=flow4051">亲自试问</a></p></section>
 <section id="flow-4051"><h2>同一段回答，两种头部动作</h2>
 <video controls playsinline preload="metadata" width="1024" height="512" src="motion-flow-4051-matched.mp4" aria-label="左边为联合模型，右边加入条件流头部动作，两边共用同一条生成语音"></video>
 <p>左边是原联合模型，右边加入用 4,051 段对话训练的头部动作模型。两边共用同一条生成语音和面部表情。留意右边后半段的抬头幅度，仍大于参考人物。</p>
