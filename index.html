@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="joint-3000"><h2>3,000 段全脸联合训练后的有声样片</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-3000-0762.mp4" aria-label="从一张参考脸开始，在未参加训练的对话片段中生成的 8 秒声音和画面"></video>
+<p><a href="joint-3000-0762.mp4">播放最新 8 秒样片</a> · <a href="joint-portrait-1008-0768.mp4">比较 1,008 段训练的版本</a></p>
+<p>8 张 H100 完成 762 步。每段训练对话都分别从双方视角采样，覆盖 404 位说话人。最后一步在固定验证集上的综合损失最低。这里给模型一张参考脸和留出片段中另一方的声音、动作，由它逐帧生成自己的声音和脸部动作。第 5 秒附近可见闭眼再睁开。</p></section>
 <section id="served-4091"><h2>最新在线模型 · 冰为什么浮在水面？</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="served-4091-eyes.mp4" aria-label="来自在线模型的有声回答，含提问、头部动作和眨眼"></video>
 <p><a href="served-4091-eyes.mp4">直接播放 17 秒回答</a> · <a href="https://june-detect-sound-stan.trycloudflare.com/?profile=semantic">打开浏览器实验版</a></p>
