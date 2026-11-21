@@ -9,6 +9,15 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="semantic-4091"><h2>4,091 段双人对话训练 · 被打断时回答新问题</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="semantic-4091-bicycle.mp4" aria-label="学生讲露营故事时被问到自行车有几个轮子，含双方声音"></video>
+<p><a href="semantic-4091-bicycle.mp4">播放自行车问题（24 秒）</a> · <a href="semantic-4091-cat.mp4">播放同一开场下答偏的一遍</a></p>
+<p>先请学生讲露营故事，在 2.64 秒插入新问题。第一段里它回答普通自行车有两个轮子。第二段问哪种宠物会喵喵叫，它继续讲故事。两段采用相同权重、开场和随机种子。</p>
+<p>八张 H100 使用 4,091 段对话训练了 88 万参数的语音模块，六轮中每轮都采到双方。它依据自己和对方刚刚说出的语音词元，调整冻结的 Moshika 接下来发出的声音。视频使用 1,008 段训练的全脸动作模型。新出的三道打断题各试三次，独立语音检测确认三次在学生发声时插入，识别到一次正确回答。同一组题上原版确认六次打断，识别到两次正确回答。</p></section>
+<section id="eye-calibration"><h2>睁眼与眨眼 · 相同语音的渲染对照</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="eyes-calibrated-1234.mp4" aria-label="根据训练片段校准眼睛后，学生生成的八秒全脸视频"></video>
+<p><a href="eyes-calibrated-1234.mp4">播放眼睑校准版</a> · <a href="joint-portrait-1008-0768.mp4">播放同一段语音和头部动作的原版</a></p>
+<p>用 Emma 官方训练片段的 224 帧，渲染出 1,120 帧眼睑变化样本，拟合模型眼睑状态与最终画面的关系。上面这段的语音与原版逐样本一致，检测到完整眨眼三次。三组生成中，睁眼帧占比从 13%–27% 提高到 48%–59%。将官方真实动作送入同一渲染器得到 92% 睁眼帧和一次完整眨眼。校准版仍有眨眼偏多的情况。</p></section>
 <section id="aligned"><h2>词对齐训练后的 8 秒样片</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="joint-aligned-1008.mp4" aria-label="学生模型根据留出片段中对方的声音和动作生成的回答"></video>
 <p><a href="joint-aligned-1008.mp4">播放新模型</a> · <a href="joint-portrait-1008-0768.mp4">播放相同输入下继续训练前的模型</a> · <a href="#live">进入实时对话</a></p>
