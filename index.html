@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="head-horizon"><h2>头部动作一次预测多久？</h2>
+<video controls playsinline preload="metadata" width="1024" height="512" src="motion-horizon-4051.mp4" aria-label="同一段回答，左侧为短时动作模型，右侧为新长时动作模型"></video>
+<p>左边每次预测 0.32 秒，右边每次预测 1.28 秒。两者都每 0.32 秒根据最新输入重新预测。两边使用相同的语音、表情和首帧。留意后半段抬头的幅度。</p>
+<p>这个样本里，转头幅度与参考视频的比值从 1.75 降到 1.03，但转动速度从参考的 0.97 倍升到 1.28 倍。按 15 场独立验证会话比较，总体动作误差的差异仍不确定。</p>
+<p><a href="motion-horizon-4051.mp4">直接播放 8.32 秒对照</a></p></section>
 <section id="question-timing"><h2>同一句问题，开场问和中途问有什么区别？</h2>
 <p>两段录音使用同一个模型、同一条提问音频和同一个随机种子。问题是「我们呼吸的空气里，哪种气体最多？」。每段 10.56 秒，包含提问和模型的回答。</p>
 <div class="pair"><figure><figcaption>开场直接问</figcaption><audio controls preload="none" src="library-gas-direct.m4a"></audio></figure><figure><figcaption>讲图书馆故事时插话，从提问处播放</figcaption><audio controls preload="none" src="library-gas-interrupt.m4a"></audio></figure></div>
