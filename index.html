@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="live-head"><h2>和 Emma 实时对话</h2>
+<p><a href="https://june-detect-sound-stan.trycloudflare.com/?profile=head4051">打开实时原型</a> · <a href="live-trained-head.mp4">播放本次公网录制，19.2 秒</a></p>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="live-trained-head.mp4" aria-label="公网实时服务实际返回的 Emma 和双向语音"></video>
+<p>这段录制使用网页自带的语音示例。模型接收语音并连续返回 240 帧 512 × 512 图像和同步声音。左声道以提问为主，右声道以模型回复为主。服务一次可接待一位用户，也可在打开页面后启用摄像头。</p></section>
 <section id="head-calibration"><h2>Emma 会在什么时候转头？</h2>
 <figure><video controls playsinline preload="metadata" width="1024" height="512" src="trained-head-emma.mp4" aria-label="左为原生模型，右为校准后的头部运动"></video>
 <figcaption>左边是原生模型，右边使用新的头部运动模型。两边听到同一个人说话，也播放完全相同的模型生成语音。<a href="trained-head-emma.mp4">打开有声 MP4</a></figcaption></figure>
