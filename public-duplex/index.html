@@ -12,17 +12,21 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear-energy">试用独立头部模型</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
+<section id="portrait">
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?view=portrait&amp;mouth=refined&amp;head=listener-anchored">进入头肩近景对话</a></p>
+<figure style="max-width:512px"><video controls playsinline preload="metadata" width="512" height="512" aria-label="头肩近景实时对话录屏"><source src="portrait-live.mp4" type="video/mp4"></video>
+<figcaption>20 秒浏览器实录，含示例提问和模型现场生成的回答。</figcaption></figure></section>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear-energy&amp;view=wide">试用独立头部模型</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
 <h2 id="listener-pitch">听别人讲话时，数字人何时点头？</h2>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=listener-anchored">试用肩颈与点头联动版</a>　<a href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=listener-pitch">试用视频右栏版本</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=listener-anchored&amp;view=wide">试用肩颈与点头联动版</a>　<a href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=listener-pitch&amp;view=wide">试用视频右栏版本</a></p>
 <figure><div class="labels" style="grid-template-columns:repeat(3,1fr)"><span>上一版联合模型</span><span>连续速度模型</span><span>新版速度分档模型</span></div>
 <video controls playsinline preload="metadata" width="1536" height="512" aria-label="同一段对话、同一身体动作，仅俯仰角不同的三栏比较"><source src="listening-pitch.mp4" type="video/mp4"></video>
 <figcaption>看第 17 至 18 秒。三栏的声音、嘴形和身体动作相同。独立跟踪画面，在这 12 帧里测到的俯仰幅度分别是 7.6°、73.1° 和 5.9°。中栏暴露了连续速度模型的一次大幅甩头。</figcaption></figure>
 <p>从训练以外的 16 场录制中取 103 个片段，评估对话双方。真人每分钟出现 4.06 次倾听点头，新版为 4.79 次。把对方声音错开 8 秒后，点头时机的差异仍在统计误差内。这里的点头指至少 6°、随后向回转动的俯仰动作。</p>
 <p>肩颈联动版保留快速点头，慢速俯仰跟随身体姿态。在同一段五分钟语音回放中，五个固定种子里最后一分钟的最大持续偏角从 32.7° 降到 9.5°。持续偏角取该分钟头部俯仰中位数相对起始姿态的绝对差。这项测试衡量长对话里的姿态漂移。</p>
 <h2 id="joint-phase">同一段对话里的头、肩和手势</h2>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=joint-flow">试用头部与身体联合生成</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=joint-flow&amp;view=wide">试用头部与身体联合生成</a></p>
 <figure><div class="labels" style="grid-template-columns:repeat(3,1fr)"><span>真人录像</span><span>旧身体模型</span><span>新联合动作模型</span></div>
 <video controls playsinline preload="metadata" width="960" height="576" aria-label="真人与两种语音驱动模型的动作对照"><source src="joint-phase.mp4" type="video/mp4"></video>
 <figcaption>第 4 秒左右，真人把手举过头顶，旧版的手停在身下，新版抬到胸前。两种模型听到同一段对话，各自从同一张照片预测动作。中、右使用同一 MusePose 渲染器和固定种子。实时入口使用较快的照片变形渲染器。</figcaption></figure>
