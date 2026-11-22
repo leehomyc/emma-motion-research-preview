@@ -24,5 +24,9 @@
 <p>三栏使用同一段真人说话录音。从左到右依次是真实录像、当前在线版的嘴形算法和新训练的嘴形模型。</p>
 <figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="六秒嘴形对比，真实录像、原模型、新模型"><source src="trained-lips.mp4" type="video/mp4"></video>
 <figcaption>新模型使用 8,059 段公开双人对话训练。14 段留出视频中有 9 段语音足够评分，其中 7 段的 SyncNet 置信度提高，中位数从 3.54 到 4.04。此处展示预先选定的第一段。</figcaption></figure>
+<h2>同一段对方语音，两种回应</h2>
+<p>把 Nuplex 公开片段里对方的独立声轨送进在线模型，连续生成了下面的 28.72 秒。这里播放的是我们模型的声音和画面。原片里 Emma 能看见对方，我们这个版本只接收声音。</p>
+<figure><video controls playsinline preload="metadata" width="512" height="512" aria-label="公开对话输入下实时生成的回复"><source src="generated-reply.mp4" type="video/mp4"></video>
+<figcaption>同一段输入下，Emma 延续了对方的玩笑，我们的模型多次道歉。把两段画面都按每秒 12.5 帧评分，语音活动期间的 SyncNet 置信度分别为 6.40 和 6.01。<a href="https://www.nuancelabs.ai/research/meet-emma-the-first-nuplex-persona">Nuplex 官方示例</a></figcaption></figure>
 <footer>参考画面来自 Meta 的 Seamless Interaction 公开研究数据，片段 V00_S0080_I00000135_P0115 和 V00_S0648_I00000504。此页包含从参考画面合成的研究视频。 <a href="https://huggingface.co/datasets/facebook/seamless-interaction">数据来源</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></footer>
 </main></body></html>
