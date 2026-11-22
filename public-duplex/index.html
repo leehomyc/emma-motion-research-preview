@@ -20,6 +20,10 @@
 <p><a href="mouth-listening-test/">做 9 段嘴形同步盲测</a></p>
 <details><summary>播放原版和新版对照</summary><figure><video controls playsinline preload="none" width="1024" height="512" aria-label="左边原版，右边新版，两边共用音轨"><source src="voiced-width-pair.mp4" type="video/mp4"></video><figcaption>左侧为原版，右侧只在说话时加大嘴形。</figcaption></figure></details></section>
 <p><a href="recall-timing.html">试听四段五分钟对话的口令回忆对照</a></p>
+<section id="distilled-mouth"><h2>新嘴形模型 · 四段留出回答</h2>
+<p>左边每 80 毫秒更新一次，右边用蒸馏模型补出中间一帧，每 40 毫秒更新一次。左右使用同一段语音和相同的头肩姿态。可全屏对照嘴唇闭合和重新张开的时刻。</p>
+<video controls playsinline preload="none" width="1024" height="512" aria-label="左侧原帧率，右侧蒸馏嘴形，四段各五秒"><source src="distilled-mouth.mp4" type="video/mp4"></video>
+<p>这四段回答均未用于训练插帧。每段按人声能量选取五秒，视频为离线输出。在线通话继续使用原帧率。</p></section>
 <section id="mouth-25fps"><h2>25 帧嘴形训练对照</h2>
 <p>左侧用前后两个姿态的平均值生成中间帧，右侧用公开真人对话训练的小模型预测中间帧的嘴部开合。四段各五秒，两边的声音、头肩和原始姿态相同。</p>
 <video controls playsinline preload="none" width="1024" height="512" aria-label="四段嘴形对照，左侧线性插帧，右侧训练模型"><source src="mouth-25fps.mp4" type="video/mp4"></video>
