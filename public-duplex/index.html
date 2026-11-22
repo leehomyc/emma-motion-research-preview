@@ -18,7 +18,7 @@
 <p>左边是当前在线版的动作算法，右边是用 192 段公开双人对话建立的头部动作模型。两边接收完全相同的两路语音，使用同一张脸、同一组嘴形和同一个渲染器。右边每次只根据已听到的声音和刚做过的动作选择下一段转动。</p>
 <figure><div class="labels"><span>当前模型</span><span>新头部模型</span></div>
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段对话，新旧模型头部动作对照"><source src="head-candidate.mp4" type="video/mp4"></video>
-<figcaption>24 秒公开测试录音。在输入渲染器的轨迹上，左右转头幅度从 4.6° 增至 14.7°，真人为 28.6°。幅度按第 5 到第 95 百分位计算。可以留意人物在对方讲话时转头的时机。</figcaption></figure>
+<figcaption>24 秒公开测试录音。用独立检测器逐帧测量，左右转头幅度从 3.8° 增至 12.6°，真人为 25.8°。幅度按第 5 到第 95 百分位计算。另测 24 段对话、48 条人物轨迹，预测和真人的动作速度相关性中位数为 −0.04。新模型能转得更开，动作时机还不准确。</figcaption></figure>
 <details><summary>同一段真人录像：渲染器能跟上多少动作？</summary>
 <p>从左到右是真人、当前模型、输入真人头部姿态后的同一渲染器。最右栏用到了测试录像里的真实动作，用于检查渲染能力。</p>
 <video controls playsinline preload="none" width="1536" height="512" aria-label="真人、当前模型、真人头部姿态驱动的渲染器"><source src="head-motion-ceiling.mp4" type="video/mp4"></video></details>
