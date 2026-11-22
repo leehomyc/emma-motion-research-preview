@@ -12,18 +12,18 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<section id="center-live"><h2>试用较少左右摆头的近景</h2>
-<p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3-center&amp;torso=learned&amp;motion=steady&amp;mouth=width&amp;cadence=adaptive">打开新版实时头肩对话</a></p>
-<figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="相同的语音和口型，左侧为原版，右侧减少转头和侧倾"><source src="center-comparison-verified.mp4" type="video/mp4"></video><figcaption>左边是上一版，右边减小转头和侧倾，保留点头。四段各 20 秒的通话里，鼻尖横移范围分别从 11.6、10.4、11.9、12.7 像素降至 11.1、9.4、10.7、11.0 像素。两边使用相同的声音。</figcaption></figure></section>
-<section id="audio-first"><h2>试用双卡实时对话</h2>
-<p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3&amp;torso=learned&amp;motion=steady&amp;mouth=width&amp;cadence=adaptive">打开双卡头肩对话</a></p>
-<p>语音和画面分别在一张 H100 上运行。同一段五分钟输入在服务器本机回放时，95% 的音频包在 73 毫秒内返回，原版为 2.01 秒。两版生成的语音逐字节一致。双卡版每秒平均发送 11.7 帧。公网传输和人物决定何时开口还会带来额外延迟。</p></section>
 <section id="voiced-width"><h2>试用新版说话嘴形</h2>
 <p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3-center&amp;torso=learned&amp;motion=steady&amp;mouth=voiced&amp;cadence=adaptive">打开新版实时头肩对话</a></p>
 <p>这个版本在发声时加大嘴角的横向运动。九段留出回答的唇音同步分数均有提高。以下是第一段，中心构图、头肩动作和音轨相同。</p>
 <video controls playsinline preload="metadata" width="512" height="512" aria-label="新版说话嘴形"><source src="voiced-width.mp4" type="video/mp4"></video>
 <p><a href="mouth-listening-test/">做 9 段嘴形同步盲测</a></p>
 <details><summary>播放原版和新版对照</summary><figure><video controls playsinline preload="none" width="1024" height="512" aria-label="左边原版，右边新版，两边共用音轨"><source src="voiced-width-pair.mp4" type="video/mp4"></video><figcaption>左侧为原版，右侧只在说话时加大嘴形。</figcaption></figure></details></section>
+<section id="center-live"><h2>试用较少左右摆头的近景</h2>
+<p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3-center&amp;torso=learned&amp;motion=steady&amp;mouth=voiced&amp;cadence=adaptive">打开新版实时头肩对话</a></p>
+<figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="相同的语音和口型，左侧为原版，右侧减少转头和侧倾"><source src="center-comparison-verified.mp4" type="video/mp4"></video><figcaption>左边是上一版，右边减小转头和侧倾，保留点头。四段各 20 秒的通话里，鼻尖横移范围分别从 11.6、10.4、11.9、12.7 像素降至 11.1、9.4、10.7、11.0 像素。两边使用相同的声音。</figcaption></figure></section>
+<section id="audio-first"><h2>试用双卡实时对话</h2>
+<p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3&amp;torso=learned&amp;motion=steady&amp;mouth=width&amp;cadence=adaptive">打开双卡头肩对话</a></p>
+<p>语音和画面分别在一张 H100 上运行。同一段五分钟输入在服务器本机回放时，95% 的音频包在 73 毫秒内返回，原版为 2.01 秒。两版生成的语音逐字节一致。双卡版每秒平均发送 11.7 帧。公网传输和人物决定何时开口还会带来额外延迟。</p></section>
 <section id="mouth-time"><h2>试用连续轨迹训练的嘴形</h2>
 <p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3-center&amp;torso=learned&amp;motion=steady&amp;mouth=trajectory&amp;cadence=adaptive">打开实时轨迹版</a></p>
 <p>最新实验用 184 位说话者的连续唇部轨迹训练。下面用实时服务的两个嘴形模型重放同一段 Moshiko 回答。两边共用播放音轨和头肩动作，视频以每秒 12.5 帧完整渲染。</p>
