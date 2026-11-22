@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="bilingual-live"><h2>和双语版 Emma 对话</h2>
+<p><a href="https://slow-verbal-block-jeffrey.trycloudflare.com/">打开双语实时 Demo</a></p>
+<p>可以打开麦克风，或播放页面上的中文示例。双语语音骨干每秒读取一段输入。我们用 1,024 段公开对话训练口型模型，让合成声音使用的同一组语音 token 驱动每秒 25 帧的嘴部动作。这个版本固定头部和眼睛，便于检查中文发音和口型。</p>
+<div class="pair"><div class="sample"><h3>中文算术</h3><video controls playsinline preload="metadata" width="512" height="512" src="bilingual-native-chinese.mp4" aria-label="听中文三加四并作答"></video><p>要求只说数字。她答对了七，也复述了算式。<a href="bilingual-native-chinese.mp4">直接播放</a></p></div><div class="sample"><h3>数数时打断</h3><video controls playsinline preload="metadata" width="512" height="512" src="bilingual-native-interrupt.mp4" aria-label="用新指令打断数数"></video><p>要求停止数数并只说 blue。她数到二，随后说了 Blue。<a href="bilingual-native-interrupt.mp4">直接播放</a></p></div></div>
+<p>上面两段是同一模型离线回放提问音轨的结果。公网麦克风入口另测了一道新题，模型听到“中国的首都是哪里”，用中文回答了北京。</p></section>
 <section id="native-duplex"><h2>和 Emma 对话</h2>
 <p><a href="https://lesser-kind-heroes-twice.trycloudflare.com/">打开新版在线模型</a> · <a href="https://display-freight-visitor-pacific.trycloudflare.com/">打开上一版</a> · <a href="native-live-example.mp4">直接播放 19.2 秒实录</a> · <a href="https://potential-basis-herb-nested.trycloudflare.com/">备用在线入口</a></p>
 <p>可以打开麦克风，也可以点示例试听。模型一边听，一边生成自己的声音，每 80 毫秒预测两帧口型。肩部动作也随头部姿态调整。网页端已实测显示 480 帧。同样的 19.2 秒输入，原服务端耗时 31.6 秒，新服务端开启双帧并行渲染后用时 19.25 秒。两次输出的语音逐样本一致。下方实录取自原服务端。实际对话还需计入网络、播放缓冲和模型决定何时开口的时间。</p>
