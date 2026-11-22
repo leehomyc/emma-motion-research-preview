@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="native-duplex"><h2>联合模型自己生成的声音与口型</h2>
+<p>左边是 Nuplex 公开录像里的对话者，右边是我们的模型。模型只接收左边的声音和摄像头画面。它在听过前 20 秒之后，自行生成了下面这 8.32 秒的声音和动作。建议打开声音，看它在什么时候接话。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="native-free-duplex.mp4" aria-label="左边为真实对话者，右边为联合生成声音与口型的研究原型"></video>
+<p>同一条模型生成的声音，每 80 毫秒生成两个不同的嘴部动作后，有声窗口的 SyncNet 距离从 7.97 降到 6.60（越低越好）。模型在对方说完前就已经停声，漏掉了原版 Emma 随后的回应。视频由模型输出离线渲染。<a href="native-free-duplex.mp4">直接播放有声录像</a> · <a href="#nuplex-comparison">对比 Nuplex 的原声口型</a></p></section>
 <section id="nuplex-comparison"><h2>同一句话，Nuplex 和我们的口型</h2>
 <p>左边是 Nuplex 公开的 Emma 画面，右边是我们的模型。两边共用 Nuplex 原声，可以直接看闭唇和张嘴的时机。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="nuplex-shared-voice.mp4" aria-label="相同原声，左边是 Nuplex，右边是研究原型"></video>
