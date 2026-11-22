@@ -23,6 +23,7 @@
 <figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="左侧真人，中间为语音预测动作，右侧为真人骨架驱动"><source src="torso-ceiling.mp4" type="video/mp4"></video>
 <figcaption>左为真人，中为在线身体模型，右为把真人的 11 个关节位置直接送入同一个渲染器。观察第 16 秒真人抬手时，右侧能还原多少。三栏用同一段公开录音。</figcaption></figure>
 <p>从这段 24 秒视频的最终画面重新追踪，肩肘活动范围依次为肩宽的 26.0%、12.4%、14.0%。即便输入实测轨迹，当前单照片渲染也会压掉相当一部分动作。</p>
+<details><summary>看第 16 秒抬手的画面</summary><figure><img width="960" height="320" loading="lazy" style="max-width:100%;height:auto" src="raised-arm-control.jpg" alt="左侧真人把手抬过头，中间的手停在腰部，右侧加大变形把袖子拉长"><figcaption>左为真人，中、右两栏输入同样的真人关节。右侧用关节的目标位置重新计算图像变形，检测器测到的肩肘幅度已接近真人，但袖子和手明显变形。</figcaption></figure></details>
 <details><summary>看加训 400 步后的上半身</summary>
 <video controls playsinline preload="none" width="1536" height="512" aria-label="真人、旧身体模型、加入速度连续性约束的新身体模型"><source src="torso-continuity.mp4" type="video/mp4"></video>
 <p>左为真人，中为旧身体模型，右为加训候选。对 24 条留出轨迹，肩肘在动作片段交界处的平均加速度中位数下降了 27%。在这段视频里，新模型渲染后的肩肘活动范围从 12.2% 降到 9.7%，所以在线版沿用原身体模型。</p></details>
