@@ -23,6 +23,10 @@
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="衣袖下缘变形修正前后的对照"><source src="sleeve-motion.mp4" type="video/mp4"></video>
 <figcaption>两边使用同一组动作。看衣服下缘，尤其是人物倾身时右侧袖子的轮廓。这段对照无声。</figcaption></figure>
 <p><a href="shoulder-comparison.mp4">查看先前的头肩拼接对照</a></p></section>
+<section id="spontaneous-closure"><h2>模型即时回答时的嘴形</h2>
+<figure><video controls playsinline preload="metadata" width="1024" height="550" aria-label="同音频下，左边是原版，右边是加闭唇识别的版本"><source src="spontaneous-closure.mp4" type="video/mp4"></video>
+<figcaption>这是八次双轮问答中的第一场。左边是线上原版，右边加入闭唇识别。两次运行收到相同提问，生成了逐字节相同的回答音频。片中可以听到双方声音。</figcaption></figure>
+<p>八场共 160 秒。用两套语音识别结果交叉核对，再逐帧测量双唇间距。在 16 个应闭唇的 /p/、/b/、/m/ 帧中，正确闭唇从 1 帧增至 11 帧。在 220 个元音帧中，误闭唇也从 1 帧增至 12 帧。音素由自动对齐得到。</p></section>
 <section id="lip-closure"><h2>听 /p/、/b/、/m/ 时的闭唇</h2>
 <p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?view=portrait&amp;mouth=phonetic&amp;head=posear3">试用闭唇识别版</a></p>
 <figure><div class="labels"><span>现行口型</span><span>加闭唇识别器</span></div>
