@@ -19,6 +19,13 @@
 <figcaption>24 秒，上半身和声音相同，只有头部的三个旋转角采用不同模型。可以先看视频，再展开结果。</figcaption></figure>
 <details><summary>看左右两边分别用了什么</summary><p>左边是先前的头身联合模型，右边采用 PoseAR v2 预测头部旋转，肩膀与手臂沿用同一个模型。真人左右转头幅度为 25.8°，左边为 33.9°，右边为 24.5°。真人侧倾为 18.6°，左边为 15.4°，右边为 12.8°。数字取自最终画面的第 5 到第 95 百分位。</p>
 <p>在另外 64 段对话、128 条人物轨迹上，用真实音频预测的头部转动速度与真人的相关性中位数为 0.146，两路语音同时错开后为 −0.045。单独错开对方语音的影响尚不明确。</p></details>
+<h2 id="torso">肩膀和手肘的动作去哪了？</h2>
+<figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="左侧真人，中间为语音预测动作，右侧为真人骨架驱动"><source src="torso-ceiling.mp4" type="video/mp4"></video>
+<figcaption>左为真人，中为在线身体模型，右为把真人的 11 个关节位置直接送入同一个渲染器。观察第 16 秒真人抬手时，右侧能还原多少。三栏用同一段公开录音。</figcaption></figure>
+<p>从这段 24 秒视频的最终画面重新追踪，肩肘活动范围依次为肩宽的 26.0%、12.4%、14.0%。即便输入实测轨迹，当前单照片渲染也会压掉相当一部分动作。</p>
+<details><summary>看加训 400 步后的上半身</summary>
+<video controls playsinline preload="none" width="1536" height="512" aria-label="真人、旧身体模型、加入速度连续性约束的新身体模型"><source src="torso-continuity.mp4" type="video/mp4"></video>
+<p>左为真人，中为旧身体模型，右为加训候选。对 24 条留出轨迹，肩肘在动作片段交界处的平均加速度中位数下降了 27%。在这段视频里，新模型渲染后的肩肘活动范围从 12.2% 降到 9.7%，所以在线版沿用原身体模型。</p></details>
 <h2 id="voice-test">两种语音模型如何回答同一道题</h2>
 <p>按测试集原顺序播放前三题。每题都能听到提问和模型原声。请留意它能否准确复述 acorn、barrel 和 carrot。</p>
 <figure><figcaption>Moshika · 在线版使用的语音模型</figcaption><audio controls preload="none" src="receipts-moshika.m4a"></audio></figure>
