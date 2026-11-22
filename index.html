@@ -13,6 +13,13 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="https://display-freight-visitor-pacific.trycloudflare.com/">打开在线模型</a> · <a href="native-live-example.mp4">直接播放 19.2 秒实录</a> · <a href="https://potential-basis-herb-nested.trycloudflare.com/">备用在线入口</a></p>
 <p>可以打开麦克风，也可以点示例试听。模型一边听，一边生成自己的声音，每 80 毫秒预测两帧口型。肩部动作也随头部姿态调整。网页端已实测显示 480 帧。同样的 19.2 秒输入，原服务端耗时 31.6 秒，新服务端开启双帧并行渲染后用时 19.25 秒。两次输出的语音逐样本一致。下方实录取自原服务端。实际对话还需计入网络、播放缓冲和模型决定何时开口的时间。</p>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="native-live-example.mp4" aria-label="联合模型在线运行的音视频实录"></video></section>
+<section id="conversation-test"><h2>实时对话实测</h2>
+<p>这些录音来自公开 Demo 的麦克风入口。浏览器把预录问题作为麦克风输入，左侧声道偏重提问，右侧偏重 Emma 的回答。两条音轨按浏览器实际发送和安排播放的时刻对齐。</p>
+<div class="pair"><div class="sample"><h3>连续追问</h3><p>第一次会话因积压约四秒而提前结束。相同问题复测成功，三角形和正方形分别答三和四。两个数字在各自问题结束约 2.5 秒和 2.3 秒后开始播放。</p><audio controls preload="none" src="conversation-two-turn-retest.m4a" aria-label="先问三角形，再问正方形"></audio></div>
+<div class="sample"><h3>说话中途打断</h3><p>在 Emma 出声时要求她停止数数、只说 blue。她当时那段语音约 0.95 秒后停顿，接着继续说题外话。</p><audio controls preload="none" src="conversation-barge.m4a" aria-label="打断与改口指令"></audio></div>
+<div class="sample"><h3>中文算术</h3><p>问“三加四等于几”，她用英语谈起了滚石乐队。</p><audio controls preload="none" src="conversation-chinese.m4a" aria-label="中文算术"></audio></div>
+<div class="sample"><h3>全程静音</h3><p>12.8 秒无人说话，Emma 仍然问好并继续说话，检测到约 2.74 秒有声。</p><audio controls preload="none" src="conversation-silence.m4a" aria-label="无用户语音时模型的行为"></audio></div></div>
+<p>另两场对话先分别告诉她名字 Nora 和 Milo，随后用完全相同的问题请她复述名字。可以直接听她记住了什么。<a href="conversation-nora.m4a">听 Nora 的对话</a> · <a href="conversation-milo.m4a">听 Milo 的对话</a></p></section>
 <section id="native-offline"><h2>联合模型在真实对话中何时接话？</h2>
 <p>左边是 Nuplex 公开录像里的对话者，右边是我们的模型。模型只接收左边的声音和摄像头画面。它在听过前 20 秒之后，自行生成了下面这 8.32 秒的声音和动作。建议打开声音，看它在什么时候接话。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="native-free-duplex.mp4" aria-label="左边为真实对话者，右边为联合生成声音与口型的研究原型"></video>
