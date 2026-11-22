@@ -12,6 +12,15 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
+<section id="audio-first"><h2>试用双卡实时对话</h2>
+<p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3&amp;torso=learned&amp;motion=steady&amp;mouth=width&amp;cadence=adaptive">打开双卡头肩对话</a></p>
+<p>语音和画面分别在一张 H100 上运行。同一段五分钟输入在服务器本机回放时，95% 的音频包在 73 毫秒内返回，原版为 2.01 秒。两版生成的语音逐字节一致。双卡版每秒平均发送 11.7 帧。公网传输和人物决定何时开口还会带来额外延迟。</p></section>
+<section id="calmer-head"><h2>比较近景里的摆头幅度</h2>
+<p>先看人物转头听人说话时，哪一格最自然。三个画面共用语音、表情和肩膀。每段约十秒。</p>
+<figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="第一段近景头部动作对照"><source src="scaled-head-1.mp4" type="video/mp4"></video></figure>
+<figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="第二段近景头部动作对照"><source src="scaled-head-2.mp4" type="video/mp4"></video></figure>
+<details><summary>查看 A、B、C 的模型和实测幅度</summary><p>第一段依次是减幅 PoseAR4、滤波 PoseAR3、原幅 PoseAR4。第二段依次是原幅 PoseAR4、减幅 PoseAR4、滤波 PoseAR3。减幅版的转头和侧倾幅度减半，点头保留八成。在每个宽 512 像素的画面中，鼻尖水平位置的第 5 至 95 百分位范围分别从 28.9 减到 15.1 像素、从 38.8 减到 19.7 像素。</p></details>
+<p>语音和驱动表情取自 Meta 的 Seamless Interaction，两段对话编号为 V00_S1061_I00000176 和 V00_S0925_I00000538。<a href="https://huggingface.co/datasets/facebook/seamless-interaction">素材与作者</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p></section>
 <section id="steady-motion"><h2>减少头肩左右晃动</h2>
 <p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?view=portrait&amp;head=posear3&amp;mouth=phonetic&amp;torso=learned&amp;motion=steady">打开实时对话</a></p>
 <figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="第五分钟的同一段对话，左侧为上一版，右侧保留点头并减轻缓慢横摆"><source src="pose-bands-one.mp4" type="video/mp4"></video>
