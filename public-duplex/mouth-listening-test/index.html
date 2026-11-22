@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>嘴形同步盲测</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#111814;color:#f1f4ef}*{box-sizing:border-box}
+body{max-width:960px;margin:auto;padding:clamp(16px,4vw,42px)}a{color:#b6d7c0}h1{font-size:clamp(1.5rem,4.5vw,2.7rem);line-height:1.22;margin:1em 0 .36em}
+p{color:#c0cbc4;line-height:1.6}canvas{display:block;width:100%;height:auto;aspect-ratio:2/1;background:#242a26;border-radius:12px}canvas:fullscreen{width:100%;height:100%;object-fit:contain;background:#111}
+video{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:12px 0}
+button{padding:.7em 1em;font:inherit;cursor:pointer;border-radius:8px;color:#e8f3e9;border:1px solid #486452;background:#23372a;min-height:44px}
+button:disabled{opacity:.5;cursor:default}#votes button{flex:1}#progress{font-variant-numeric:tabular-nums}#result{font-size:1.25rem;color:#f1f4ef}button:focus-visible,a:focus-visible{outline:3px solid #b6d7c0;outline-offset:3px}
+</style>
+<main><a href="../#voiced-width">返回实时演示</a><h1>哪一边的嘴形更合拍？</h1>
+<p id="intro">两边共用一条音轨和相同的头肩动作。每段 8 秒，左右顺序随机。选择只保存在当前浏览器。</p>
+<section id="trial"><p id="progress" aria-live="polite"></p><video id="source" playsinline preload="auto" aria-hidden="true"></video><canvas id="view" width="1024" height="512" aria-label="左右同步嘴形对照"></canvas>
+<div class="row"><button id="play">播放</button><button id="expand" hidden>全屏查看</button></div>
+<div class="row" id="votes"><button data-choice="left">左边更合拍</button><button data-choice="tie">差不多</button><button data-choice="right">右边更合拍</button></div>
+<p id="notice" role="status"></p></section>
+<section id="done" hidden><h2>你的选择</h2><p id="result" aria-live="polite"></p><button id="again">重新随机盲测</button></section></main>
+<script>
+const ids=["qa-02","qa-04","qa-06","qa-07","qa-08","qa-11","qa-12","qa-13","qa-14"];
+const key="nuplex-public-mouth-choice-v1";
+const el=id=>document.getElementById(id),video=el("source"),canvas=el("view"),ctx=canvas.getContext("2d");
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function fresh(){const first=Math.random()<.5;const sides=shuffle(ids.map((_,i)=>i%2===0?first:!first));return {cases:shuffle([...ids]).map((id,i)=>({id,swap:sides[i]})),answers:[]}}
+function valid(v){return v&&Array.isArray(v.cases)&&v.cases.length===9&&new Set(v.cases.map(c=>c.id)).size===9&&v.cases.every(c=>ids.includes(c.id)&&typeof c.swap==="boolean")&&Array.isArray(v.answers)&&v.answers.length<=9&&v.answers.every(a=>["left","right","tie"].includes(a))}
+let state;try{state=JSON.parse(localStorage.getItem(key))}catch{}if(!valid(state))state=fresh();
+function persist(){try{localStorage.setItem(key,JSON.stringify(state))}catch{}}
+const votes=[...document.querySelectorAll("[data-choice]")];let watched=false, generation=0;
+function setVotes(on){for(const b of votes)b.disabled=!on}
+function paint(){if(video.readyState<2||video.videoWidth!==1024)return;
+ const c=state.cases[state.answers.length];if(!c)return;
+ const x=c.swap?512:0;ctx.drawImage(video,x,0,512,512,0,0,512,512);ctx.drawImage(video,512-x,0,512,512,512,0,512,512)}
+function animate(g){if(g!==generation||video.paused)return;paint();
+ if(video.requestVideoFrameCallback)video.requestVideoFrameCallback(()=>animate(g));else requestAnimationFrame(()=>animate(g))}
+function resetView(){
+ generation++;video.pause();setVotes(false);watched=false;el("notice").textContent="";
+ const n=state.answers.length;el("trial").hidden=n===9;el("done").hidden=n!==9;
+ if(n===9){let newer=0,original=0,ties=0;
+   state.answers.forEach((a,i)=>{if(a==="tie"){ties++;return}const newerOnLeft=state.cases[i].swap;
+   if((a==="left")===newerOnLeft)newer++;else original++});
+   el("result").textContent="新版 "+newer+" 段，原版 "+original+" 段，差不多 "+ties+" 段。";return}
+ el("progress").textContent="第 "+(n+1)+" 段，共 9 段";el("play").textContent="播放";ctx.clearRect(0,0,1024,512);
+ video.src=state.cases[n].id+".mp4";video.load();persist()}
+video.addEventListener("loadeddata",paint);
+video.addEventListener("playing",()=>{watched=true;setVotes(true);el("play").textContent="暂停";animate(++generation)});
+video.addEventListener("pause",()=>{el("play").textContent=video.ended?"重播":"播放"});
+video.addEventListener("ended",()=>{paint();el("play").textContent="重播"});
+video.addEventListener("error",()=>{el("notice").textContent="视频加载失败。点击播放重试。"});
+el("play").onclick=async()=>{if(!video.paused){video.pause();return}try{if(video.error)video.load();if(video.ended)video.currentTime=0;await video.play()}catch{el("notice").textContent="暂时无法播放，请重试。"}};
+if(canvas.requestFullscreen){el("expand").hidden=false;el("expand").onclick=()=>canvas.requestFullscreen().catch(()=>{})}
+for(const b of votes)b.onclick=()=>{if(!watched||state.answers.length>=9)return;state.answers.push(b.dataset.choice);persist();resetView()};
+el("again").onclick=()=>{state=fresh();persist();resetView()};resetView();
+</script></html>
