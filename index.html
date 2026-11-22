@@ -11,9 +11,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
 <section id="video-quality"><h2>新版实时视频</h2>
 <p><a href="https://tramadol-response-artists-coordinate.trycloudflare.com/">打开新版，与 Emma 对话</a>。点击「用中文示例提问」即可看她听题和回答，也可以打开麦克风。画面为 512 × 512，说话时每秒生成 25 帧口型。</p>
-<video controls playsinline preload="metadata" width="1024" height="512" src="emma-quality-comparison.mp4" aria-label="同一段中文对话，左侧旧版，右侧新版"></video>
-<p>左边是旧版，右边是新版。两边是同一条 17 秒中文音轨。可以观察她听题时的眼睑和说话时的嘴唇。<a href="emma-quality-mandarin.mp4">只看新版视频</a></p>
-<p>新版从参考画面提取纹理，按运动对齐，并按参考录像里观察到的间隔和时长生成眨眼。用同一录像中留出的 103 帧做重建测试，模拟网页编码后的像素误差下降 10.6%，帧间变化误差下降 9.6%。这些数值衡量画面还原，口型同步仍需单独评估。</p></section>
+<video controls playsinline preload="metadata" width="1024" height="512" src="emma-quality-comparison.mp4?v=2" aria-label="同一段中文对话，左侧旧版，右侧新版"></video>
+<p>左边是旧版，右边是新版。两边是同一条 17 秒中文音轨。可以观察她听题时的眼睑和说话时的嘴唇。<a href="emma-quality-mandarin.mp4?v=2">只看新版视频</a></p>
+<p>新版按运动对齐参考画面的纹理，用 17 个眼睑姿态还原闭眼和睁眼过程。视频和实时通话使用同一个固定机位嘴部渲染器。它用 96 段对话产生的 1,152 张训练图蒸馏而成。完整渲染器在同一录像留出的 103 帧上测试，模拟网页编码后的像素误差下降 10.6%，帧间变化误差下降 9.6%。轻量渲染器另外在 24 段留出对话上核验，嘴唇区域与完整渲染器的像素差平均为 1.51/255。这些数值衡量画面还原，口型同步仍需单独评估。</p></section>
 <section id="long-live"><h2>和 Emma 连续聊几分钟</h2>
 <p><a href="https://suggest-population-devon-mesa.trycloudflare.com/">打开长对话训练版</a> · 中英文均可，单次上限 12 分钟。另有<a href="https://speeds-dodge-italiano-comic.trycloudflare.com/">5 分钟入口</a>。</p>
 <p>可以先告诉 Emma 一个名字和一个约定，换个话题，中途改一次约定，最后再问她。这个版本在 MiniCPM-o 4.5 上做了长对话后训练，按每句语音的实际时长分配生成时间，并为句尾单独留出时间。</p>
