@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="long-live"><h2>和 Emma 连续聊几分钟</h2>
+<p><a href="https://moral-betting-craft-addressing.trycloudflare.com/">打开长对话 Demo</a> · 单次最多 5 分钟，中英文均可。</p>
+<p>下面是一段公开网页实测。左声道是测试用户，右声道是模型，按返回包到达时间重建。可以跳到 3 分 12 秒听用户追问最初说过的项目代号，或从 3 分 26 秒听最后的安排。</p>
+<audio aria-label="完整英语长对话实测" controls preload="none" src="long-english-call.m4a"></audio>
+<p>这段录音使用合成的用户语音，通过 Chrome 麦克风输入。连续发送的 224 个输入包全部收到了回复。当前长对话入口使用 MiniCPM-o 4.5 和实验室训练的口型模型。</p></section>
 <section id="bilingual-live"><h2>和双语版 Emma 对话</h2>
 <p><a href="https://slow-verbal-block-jeffrey.trycloudflare.com/">打开双语实时 Demo</a></p>
 <p>可以打开麦克风，或播放页面上的中文示例。双语语音骨干每秒读取一段输入。我们用 1,024 段公开对话训练口型模型，让合成声音使用的同一组语音 token 驱动每秒 25 帧的嘴部动作。这个版本固定头部和眼睛，便于检查中文发音和口型。</p>
