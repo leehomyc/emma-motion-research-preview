@@ -10,9 +10,13 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
 <section id="native-duplex"><h2>和 Emma 对话</h2>
-<p><a href="https://display-freight-visitor-pacific.trycloudflare.com/">打开在线模型</a> · <a href="native-live-example.mp4">直接播放 19.2 秒实录</a> · <a href="https://potential-basis-herb-nested.trycloudflare.com/">备用在线入口</a></p>
+<p><a href="https://lesser-kind-heroes-twice.trycloudflare.com/">打开新版在线模型</a> · <a href="https://display-freight-visitor-pacific.trycloudflare.com/">打开上一版</a> · <a href="native-live-example.mp4">直接播放 19.2 秒实录</a> · <a href="https://potential-basis-herb-nested.trycloudflare.com/">备用在线入口</a></p>
 <p>可以打开麦克风，也可以点示例试听。模型一边听，一边生成自己的声音，每 80 毫秒预测两帧口型。肩部动作也随头部姿态调整。网页端已实测显示 480 帧。同样的 19.2 秒输入，原服务端耗时 31.6 秒，新服务端开启双帧并行渲染后用时 19.25 秒。两次输出的语音逐样本一致。下方实录取自原服务端。实际对话还需计入网络、播放缓冲和模型决定何时开口的时间。</p>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="native-live-example.mp4" aria-label="联合模型在线运行的音视频实录"></video></section>
+<section id="same-response"><h2>同一段回答，新版口型有多少改善？</h2>
+<p>左边是上一版，右边是用 1,024 段训练对话学习口型的新版。两边播放同一段 19.2 秒的模型回答，语音逐样本一致。<a href="https://lesser-kind-heroes-twice.trycloudflare.com/">和新版实时对话</a> · <a href="emma-same-response.mp4">直接播放对照录像</a></p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="emma-same-response.mp4" aria-label="同一段生成语音对应的口型，左为上一版，右为新版"></video>
+<p>另测了 12 场独立的留出对话。8 场有足够的模型发声可评分，其中 7 场口型更同步。358 个有声窗口按数量加权后，SyncNet 距离从 8.06 降到 7.62，越低越好。其余 4 场发声不足。这个比较只衡量两个版本生成的口型。</p></section>
 <section id="timing-test"><h2>晚一点开口，Emma 能答对吗？</h2>
 <p>三道题各开两场新会话，相同的录音分别在接通后 0.8 秒和 3.6 秒送进网页麦克风。六场共收齐 1,155 个音频包。每组可直接听两次回答。</p>
 <div class="sample"><h3>星期一之后是哪一天？只说星期几。</h3><p>早问时她在问题结束约 3.0 秒后说出 Tuesday，也复述了题干。晚问时她重复 Monday，两套语音转写都没有识别到 Tuesday。<a href="conversation-weekday.m4a">听早问</a> · <a href="conversation-weekday-late.m4a">听晚问</a></p></div>
