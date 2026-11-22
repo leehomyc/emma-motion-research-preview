@@ -3,14 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>同一段对话，两种人脸模型</title>
+<title>实时数字人对话与模型对照</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#101312;color:#f4f5f0;font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1050px;margin:auto;padding:clamp(24px,5vw,60px) 18px}h1{margin:.6em 0 .4em;font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.2}p,figure{margin:.7em 0}video{display:block;width:100%;height:auto;background:#000;border-radius:8px}.labels{display:grid;grid-template-columns:1fr 1fr;text-align:center;gap:8px;font-weight:600;margin:1.3em 0 .4em}figcaption,footer{color:#b7c1ba}footer{margin-top:2em;padding-top:.7em;border-top:1px solid #38423c;font-size:.85em}a{color:#abe6be}a:focus-visible{outline:2px solid #fff}
+.live{display:inline-block;background:#b8eaca;color:#142b1b;padding:.55rem 1.1rem;border-radius:7px;font-weight:650;text-decoration:none}.live:hover{background:#d4f7de}h2{margin:2rem 0 .3rem}
 </style>
 </head>
 <body><main>
 <a href="../">返回实验目录</a>
-<h1>同一段对话，两种人脸模型</h1>
+<h1>实时数字人对话</h1>
+<p><a class="live" href="https://jennifer-setting-cruises-groups.trycloudflare.com/">进入实时对话</a></p>
+<p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
+<h2>同一段对话，两种人脸模型</h2>
 <p>听一段 20 秒的双向问答。两边使用同一位公开数据参与者的参考画面，以及同一条 Moshika 生成的回复音轨。</p>
 <figure><div class="labels"><span>原生视觉头 · 第 1,000 步</span><span>运动预测 · 512 像素渲染</span></div>
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="20 秒同步视频，左侧原生视觉头，右侧高分辨率渲染器"><source src="matched-call.mp4" type="video/mp4"></video>
