@@ -12,8 +12,14 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear-energy">试用新版头部动作</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear-energy">试用独立头部模型</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
+<h2 id="joint-phase">同一段对话里的头、肩和手势</h2>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=joint-flow">试用头部与身体联合生成</a></p>
+<figure><div class="labels" style="grid-template-columns:repeat(3,1fr)"><span>真人录像</span><span>旧身体模型</span><span>新联合动作模型</span></div>
+<video controls playsinline preload="metadata" width="960" height="576" aria-label="真人与两种语音驱动模型的动作对照"><source src="joint-phase.mp4" type="video/mp4"></video>
+<figcaption>第 4 秒左右，真人把手举过头顶，旧版的手停在身下，新版抬到胸前。两种模型听到同一段对话，各自从同一张照片预测动作。中、右使用同一 MusePose 渲染器和固定种子。实时入口使用较快的照片变形渲染器。</figcaption></figure>
+<p>在来自 64 场独立对话的测试片段中，真人、旧身体模型、新模型的头部侧倾范围中位数分别为 11.2°、20.0°、13.0°。肩部位移分别为 0.164、0.116、0.209 个肩宽。侧倾幅度接近了真人，新版肩部仍摆得偏大。每段模型取五个固定种子，指标来自二维关节点。</p>
 <h2 id="pretrained-body">真人抬手时，语音模型和渲染器各自做到了什么？</h2>
 <figure><div class="labels" style="grid-template-columns:repeat(3,1fr)"><span>真人录像</span><span>语音预测动作</span><span>真人关节驱动</span></div>
 <video controls playsinline preload="metadata" width="960" height="576" aria-label="真人、语音预测身体和真人骨架驱动的 MusePose 三栏对照"><source src="musepose-wrist.mp4" type="video/mp4"></video>
