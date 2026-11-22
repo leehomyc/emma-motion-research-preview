@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="speech-8179"><h2>说到一半被打断，能答对吗？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="speech-8179-addition.mp4" aria-label="模型讲灯塔故事时被打断，回答七加九"></video>
+<p><a href="speech-8179-addition.mp4">听它回答七加九</a> · <a href="speech-8179-metal.mp4">听它漏答哪种金属在室温下是液体</a></p>
+<p>两段各 24 秒，使用同一模型和随机种子。12.8 秒时插入问题，第一段中模型在问题结束约 1.35 秒后说出“十六”。第二段继续讲故事。两段均保留了提问和模型实际生成的声音。</p>
+<p>这次从 8,179 段公开录音中取出 3,674 个问答片段，微调全双工语音模型。四个问题各测三个随机种子。12 次中有 4 次在模型正在说话时成功打断，只有算术这一段被两套语音识别同时判为答对，展示的是这一次答对和同种子的一次漏答。在另 22 场自然问答上，这个版本有 0 场接话时刻落在真人前后 240 毫秒内，同设置的原版有 2 场。</p></section>
 <section id="natural-camera"><h2>自然对话中，模型什么时候接话？</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="natural-camera-paired.mp4" aria-label="视觉微调后的模型对自然对话的有声反应"></video>
 <p><a href="natural-camera-paired.mp4">看视觉微调后的视频</a> · <a href="natural-camera-base.mp4">对比微调前的视频</a></p>
