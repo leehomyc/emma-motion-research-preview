@@ -12,8 +12,14 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear">试用新版头部动作</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear-energy">试用新版头部动作</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
+<h2 id="pretrained-body">真人抬手时，语音模型和渲染器各自做到了什么？</h2>
+<figure><div class="labels" style="grid-template-columns:repeat(3,1fr)"><span>真人录像</span><span>语音预测动作</span><span>真人关节驱动</span></div>
+<video controls playsinline preload="metadata" width="960" height="576" aria-label="真人、语音预测身体和真人骨架驱动的 MusePose 三栏对照"><source src="musepose-wrist.mp4" type="video/mp4"></video>
+<figcaption>看第 4 秒（原录像第 16 秒）。后两栏使用同一张起始照片、同一个预训练 MusePose 渲染器和同一个随机种子。中间的身体模型接收对话双方的声音，右边额外使用录像里的姿态和手指位置。音轨是原录音。</figcaption></figure>
+<p>真人的右手腕有 12 帧高过鼻子。独立追踪生成的画面，右栏在其中 11 帧抬到相应高度，中栏是 0 帧。这一段 7.68 秒，右栏在共享 H100 上生成约需 73 秒。</p>
+<details><summary>看骨架与手指</summary><figure><img width="960" height="576" loading="lazy" style="max-width:100%;height:auto" src="musepose-hand.jpg" alt="同一时刻的真人、手部与身体关节输入、扩散模型输出"><figcaption>左为真人，中为模型看到的骨架，右为生成结果。画面上沿裁掉了部分抬起的手指。</figcaption></figure></details>
 <h2 id="posear">同一句话，转头的时机和幅度有变化吗？</h2>
 <figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一张公开参考照片、两种头部驱动的并排对照"><source src="paired-head.mp4" type="video/mp4"></video>
 <figcaption>24 秒，上半身和声音相同，只有头部的三个旋转角采用不同模型。可以先看视频，再展开结果。</figcaption></figure>
