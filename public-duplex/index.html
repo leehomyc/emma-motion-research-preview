@@ -20,5 +20,9 @@
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="20 秒同步视频，左侧原生视觉头，右侧高分辨率渲染器"><source src="matched-call.mp4" type="video/mp4"></video>
 <figcaption>左侧以 64 × 64 生成再放大，右侧从同一参考帧生成 512 × 512 画面。在这个样本中，左侧的五官逐渐漂移。可观察右侧说话和听对方提问时的嘴部变化。</figcaption></figure>
 <p>这是预先指定的第一段测试录音。第一题问 2 加 3，模型回答了 2；第二题问新雪是什么颜色，模型说出了白色。整组 8 段对话、16 道题中，有 10 个回答命中预设关键词。</p>
-<footer>参考画面来自 Meta 的 Seamless Interaction 公开研究数据，片段 V00_S0080_I00000135_P0115。此页包含从参考画面合成的研究视频。 <a href="https://huggingface.co/datasets/facebook/seamless-interaction">数据来源</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></footer>
+<h2>新训练的嘴形</h2>
+<p>三栏使用同一段真人说话录音。从左到右依次是真实录像、当前在线版的嘴形算法和新训练的嘴形模型。</p>
+<figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="六秒嘴形对比，真实录像、原模型、新模型"><source src="trained-lips.mp4" type="video/mp4"></video>
+<figcaption>新模型使用 8,059 段公开双人对话训练。14 段留出视频中有 9 段语音足够评分，其中 7 段的 SyncNet 置信度提高，中位数从 3.54 到 4.04。此处展示预先选定的第一段。</figcaption></figure>
+<footer>参考画面来自 Meta 的 Seamless Interaction 公开研究数据，片段 V00_S0080_I00000135_P0115 和 V00_S0648_I00000504。此页包含从参考画面合成的研究视频。 <a href="https://huggingface.co/datasets/facebook/seamless-interaction">数据来源</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></footer>
 </main></body></html>
