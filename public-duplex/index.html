@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>同一段对话，两种人脸模型</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101312;color:#f4f5f0;font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1050px;margin:auto;padding:clamp(24px,5vw,60px) 18px}h1{margin:.6em 0 .4em;font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.2}p,figure{margin:.7em 0}video{display:block;width:100%;height:auto;background:#000;border-radius:8px}.labels{display:grid;grid-template-columns:1fr 1fr;text-align:center;gap:8px;font-weight:600;margin:1.3em 0 .4em}figcaption,footer{color:#b7c1ba}footer{margin-top:2em;padding-top:.7em;border-top:1px solid #38423c;font-size:.85em}a{color:#abe6be}a:focus-visible{outline:2px solid #fff}
+</style>
+</head>
+<body><main>
+<a href="../">返回实验目录</a>
+<h1>同一段对话，两种人脸模型</h1>
+<p>听一段 20 秒的双向问答。两边使用同一位公开数据参与者的参考画面，以及同一条 Moshika 生成的回复音轨。</p>
+<figure><div class="labels"><span>原生视觉头 · 第 1,000 步</span><span>运动预测 · 512 像素渲染</span></div>
+<video controls playsinline preload="metadata" width="1024" height="512" aria-label="20 秒同步视频，左侧原生视觉头，右侧高分辨率渲染器"><source src="matched-call.mp4" type="video/mp4"></video>
+<figcaption>左侧以 64 × 64 生成再放大，右侧从同一参考帧生成 512 × 512 画面。在这个样本中，左侧的五官逐渐漂移。可观察右侧说话和听对方提问时的嘴部变化。</figcaption></figure>
+<p>这是预先指定的第一段测试录音。第一题问 2 加 3，模型回答了 2；第二题问新雪是什么颜色，模型说出了白色。整组 8 段对话、16 道题中，有 10 个回答命中预设关键词。</p>
+<footer>参考画面来自 Meta 的 Seamless Interaction 公开研究数据，片段 V00_S0080_I00000135_P0115。此页包含从参考画面合成的研究视频。 <a href="https://huggingface.co/datasets/facebook/seamless-interaction">数据来源</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></footer>
+</main></body></html>
