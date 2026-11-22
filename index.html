@@ -13,6 +13,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p>左边是 Nuplex 公开录像里的对话者，右边是我们的模型。模型只接收左边的声音和摄像头画面。它在听过前 20 秒之后，自行生成了下面这 8.32 秒的声音和动作。建议打开声音，看它在什么时候接话。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="native-free-duplex.mp4" aria-label="左边为真实对话者，右边为联合生成声音与口型的研究原型"></video>
 <p>同一条模型生成的声音，每 80 毫秒生成两个不同的嘴部动作后，有声窗口的 SyncNet 距离从 7.97 降到 6.60（越低越好）。模型在对方说完前就已经停声，漏掉了原版 Emma 随后的回应。视频由模型输出离线渲染。<a href="native-free-duplex.mp4">直接播放有声录像</a> · <a href="#nuplex-comparison">对比 Nuplex 的原声口型</a></p></section>
+<section id="second-conversation"><h2>换一段对话，口型还能跟上吗？</h2>
+<p>左边是 Nuplex 另一场公开对话的前 6.4 秒，右边是用 512 段对话训练的口型模型。两边用同一条原声。右边固定了头部姿态，便于观察双唇闭合和张嘴的变化。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="nuplex-second-native.mp4" aria-label="第二场对话的同声口型对照，左为 Nuplex，右为研究模型"></video>
+<p>在 114 个有声窗口里，原版同步距离为 6.66，我们的模型为 8.43（越低越好）。两边的最佳音画偏移都是 0 帧。这段录像使用单声道，两套声纹模型均将开头这段话匹配到了 Emma。<a href="nuplex-second-native.mp4">直接播放有声对照</a></p></section>
 <section id="nuplex-comparison"><h2>同一句话，Nuplex 和我们的口型</h2>
 <p>左边是 Nuplex 公开的 Emma 画面，右边是我们的模型。两边共用 Nuplex 原声，可以直接看闭唇和张嘴的时机。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="nuplex-shared-voice.mp4" aria-label="相同原声，左边是 Nuplex，右边是研究原型"></video>
