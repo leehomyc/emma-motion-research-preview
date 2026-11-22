@@ -13,6 +13,12 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="https://display-freight-visitor-pacific.trycloudflare.com/">打开在线模型</a> · <a href="native-live-example.mp4">直接播放 19.2 秒实录</a> · <a href="https://potential-basis-herb-nested.trycloudflare.com/">备用在线入口</a></p>
 <p>可以打开麦克风，也可以点示例试听。模型一边听，一边生成自己的声音，每 80 毫秒预测两帧口型。肩部动作也随头部姿态调整。网页端已实测显示 480 帧。同样的 19.2 秒输入，原服务端耗时 31.6 秒，新服务端开启双帧并行渲染后用时 19.25 秒。两次输出的语音逐样本一致。下方实录取自原服务端。实际对话还需计入网络、播放缓冲和模型决定何时开口的时间。</p>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="native-live-example.mp4" aria-label="联合模型在线运行的音视频实录"></video></section>
+<section id="timing-test"><h2>晚一点开口，Emma 能答对吗？</h2>
+<p>三道题各开两场新会话，相同的录音分别在接通后 0.8 秒和 3.6 秒送进网页麦克风。六场共收齐 1,155 个音频包。每组可直接听两次回答。</p>
+<div class="sample"><h3>星期一之后是哪一天？只说星期几。</h3><p>早问时她在问题结束约 3.0 秒后说出 Tuesday，也复述了题干。晚问时她重复 Monday，两套语音转写都没有识别到 Tuesday。<a href="conversation-weekday.m4a">听早问</a> · <a href="conversation-weekday-late.m4a">听晚问</a></p></div>
+<div class="sample"><h3>请只说一个词，purple。</h3><p>两次都说了 purple，也都继续解释。晚问时提问和回答没有重叠。<a href="conversation-color.m4a">听早问</a> · <a href="conversation-color-late.m4a">听晚问</a></p></div>
+<div class="sample"><h3>请用中文回答，六减二等于几？</h3><p>早问时她用英语谈电视节目。晚问时双方没有抢话，她仍用英语做了另一道算术题。两次都没答四。<a href="conversation-mathcn.m4a">听早问</a> · <a href="conversation-mathcn-late.m4a">听晚问</a></p></div>
+</section>
 <section id="conversation-test"><h2>实时对话实测</h2>
 <p>这些录音来自公开 Demo 的麦克风入口。浏览器把预录问题作为麦克风输入，左侧声道偏重提问，右侧偏重 Emma 的回答。两条音轨按浏览器实际发送和安排播放的时刻对齐。</p>
 <div class="pair"><div class="sample"><h3>连续追问</h3><p>第一次会话因积压约四秒而提前结束。相同问题复测成功，三角形和正方形分别答三和四。两个数字在各自问题结束约 2.5 秒和 2.3 秒后开始播放。</p><audio controls preload="none" src="conversation-two-turn-retest.m4a" aria-label="先问三角形，再问正方形"></audio></div>
