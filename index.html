@@ -10,9 +10,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
 <section id="live-head"><h2>Emma 的口型修正版</h2>
-<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="emma-mouth-25fps.mp4" aria-label="Emma 口型修正版，19.2 秒，含提问和模型原声"></video>
-<p><a href="emma-mouth-25fps.mp4">播放修正版</a> · <a href="emma-mouth-25fps.mp4#t=4.9,6.2">看 “melting point” 的唇形</a> · <a href="live-trained-head.mp4#t=4.9,6.2">对比原录像的同一句</a></p>
-<p>这段对话长 19.2 秒。Emma 的回答、声音和头部动作来自同一次公网通话。修正版只用她自己的声音生成每秒 25 帧的嘴部动作。“melting point” 在 5.3 秒左右，可以看清双唇闭合、再张开的过程。</p>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="emma-mouth-25fps.mp4?v=2" aria-label="Emma 口型修正版，19.2 秒，含提问和模型原声"></video>
+<p><a href="emma-mouth-25fps.mp4?v=2">播放修正版</a> · <a href="emma-mouth-25fps.mp4?v=2#t=4.9,6.2">看 “melting point” 的唇形</a> · <a href="live-trained-head.mp4#t=4.9,6.2">对比原录像的同一句</a></p>
+<p>这段对话长 19.2 秒。Emma 的回答、声音和头部动作来自同一次公网通话。修正版只用她自己的声音生成每秒 25 帧的嘴部动作。“melting point” 在 5.3 秒左右，可以看清双唇闭合、再张开的过程。10 到 13 秒有一段较长停顿，可以对比 Emma 安静时的嘴形。</p>
 <p><a href="https://june-detect-sound-stan.trycloudflare.com/?profile=head4051">打开实时对话原型</a> · <a href="live-trained-head.mp4">播放原始通话录像</a>。实时对话沿用原口型，修正版为离线渲染。示例里，Emma 对冰的密度给出了错误解释。</p></section>
 <section id="head-calibration"><h2>Emma 会在什么时候转头？</h2>
 <figure><video controls playsinline preload="metadata" width="1024" height="512" src="trained-head-emma.mp4" aria-label="左为原生模型，右为校准后的头部运动"></video>
