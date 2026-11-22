@@ -9,6 +9,14 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="nuplex-comparison"><h2>同一句话，Nuplex 和我们的口型</h2>
+<p>左边是 Nuplex 公开的 Emma 画面，右边是我们的模型。两边共用 Nuplex 原声，可以直接看闭唇和张嘴的时机。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="nuplex-shared-voice.mp4" aria-label="相同原声，左边是 Nuplex，右边是研究原型"></video>
+<p>这 8.32 秒留自同一场对话，较早的片段用于校准。只计有声窗口，口型同步距离（SyncNet，越低越好）为 Nuplex 7.23、我们的模型 7.73。按每帧 40 毫秒测量，两边的最佳音画偏移均为 0 帧。<a href="nuplex-shared-voice.mp4">打开有声视频</a></p></section>
+<section id="shoulder-coupling"><h2>肩部晃动修正前后</h2>
+<p>左边是上一版，右边是修正版。两边播放同一段 19.2 秒的回答。右边保留了点头和转头，减少了双肩跟随头部上下移动的幅度。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="emma-shoulder-pair.mp4" aria-label="肩部动作，左边修正前，右边修正后"></video>
+<p>在 512 像素画面上，左肩的垂直活动范围从 32 降至 20 像素，右肩从 41 降至 26 像素（第 5 至第 95 百分位）。此修正目前用于离线录像。<a href="emma-shoulder-pair.mp4">打开有声视频</a></p></section>
 <section id="live-head"><h2>Emma 的口型修正版</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="emma-mouth-25fps.mp4?v=2" aria-label="Emma 口型修正版，19.2 秒，含提问和模型原声"></video>
 <p><a href="emma-mouth-25fps.mp4?v=2">播放修正版</a> · <a href="emma-mouth-25fps.mp4?v=2#t=4.9,6.2">看 “melting point” 的唇形</a> · <a href="live-trained-head.mp4#t=4.9,6.2">对比原录像的同一句</a></p>
