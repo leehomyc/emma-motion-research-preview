@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同一段对话，两种头肩动画</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#121716;color:#eef3ef;font:17px/1.65 system-ui,sans-serif}main{max-width:990px;margin:auto;padding:30px 16px 60px}h1{font-size:clamp(24px,5vw,38px);line-height:1.3}h2{font-size:20px;margin:26px 0 8px}p{max-width:46em;color:#ced8d1}video{width:100%;aspect-ratio:2/1;display:block;background:#242b28}figcaption{display:grid;grid-template-columns:1fr 1fr;text-align:center;padding:5px 0;font-size:14px}figure{margin:0}a{color:#9ae2bd}
+</style><main>
+<h1>同一段对话，两种头肩动画</h1>
+<p>这两段各 20 秒的实验录像共用一条对话音轨。左侧使用当前演示的动作模型，右侧从生成回复的 Moshiko 语音主干预测头肩动作，再从生成的语音预测口型。</p>
+<h2>加法与雪的颜色</h2>
+<figure><video playsinline controls preload="metadata" src="qa-01-articulated-pair.mp4"></video><figcaption><span>左 · 当前动作模型</span><span>右 · 新训练的模型</span></figcaption></figure>
+<h2>香蕉的颜色与加法</h2>
+<figure><video playsinline controls preload="metadata" src="qa-02-articulated-pair.mp4"></video><figcaption><span>左 · 当前动作模型</span><span>右 · 新训练的模型</span></figcaption></figure>
+<p>听人物回答时，可以观察闭唇的瞬间是否跟声音对齐。两段录像里，新模型的唇音同步评分都低于左侧；较大的左右转头仍然可见。</p>
+</main></html>
