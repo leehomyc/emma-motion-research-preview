@@ -13,7 +13,8 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="emma-mouth-25fps.mp4?v=2" aria-label="Emma 口型修正版，19.2 秒，含提问和模型原声"></video>
 <p><a href="emma-mouth-25fps.mp4?v=2">播放修正版</a> · <a href="emma-mouth-25fps.mp4?v=2#t=4.9,6.2">看 “melting point” 的唇形</a> · <a href="live-trained-head.mp4#t=4.9,6.2">对比原录像的同一句</a></p>
 <p>这段对话长 19.2 秒。Emma 的回答、声音和头部动作来自同一次公网通话。修正版只用她自己的声音生成每秒 25 帧的嘴部动作。“melting point” 在 5.3 秒左右，可以看清双唇闭合、再张开的过程。10 到 13 秒有一段较长停顿，可以对比 Emma 安静时的嘴形。</p>
-<p><a href="https://june-detect-sound-stan.trycloudflare.com/?profile=head4051">打开实时对话原型</a> · <a href="live-trained-head.mp4">播放原始通话录像</a>。实时对话沿用原口型，修正版为离线渲染。示例里，Emma 对冰的密度给出了错误解释。</p></section>
+<p><a href="https://infrared-raleigh-maiden-newark.trycloudflare.com/?profile=mouth4051">和 Emma 对话，试用新版口型</a> · <a href="emma-stream-mouth.mp4">看流式版实际输出</a> · <a href="live-trained-head.mp4">对比原始通话录像</a></p>
+<p>对话入口可选择“用示例提问”或用麦克风自选问题。流式版边听边生成，每秒返回 12.5 帧。这次 H100 测试生成 19.2 秒对话用了 20.2 秒。上方 25 帧/秒的录像经过离线渲染。示例里，Emma 对冰的密度给出了错误解释。</p></section>
 <section id="head-calibration"><h2>Emma 会在什么时候转头？</h2>
 <figure><video controls playsinline preload="metadata" width="1024" height="512" src="trained-head-emma.mp4" aria-label="左为原生模型，右为校准后的头部运动"></video>
 <figcaption>左边是原生模型，右边使用新的头部运动模型。两边听到同一个人说话，也播放完全相同的模型生成语音。<a href="trained-head-emma.mp4">打开有声 MP4</a></figcaption></figure>
