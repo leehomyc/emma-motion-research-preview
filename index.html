@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="video-quality"><h2>新版实时视频</h2>
+<p><a href="https://tramadol-response-artists-coordinate.trycloudflare.com/">打开新版，与 Emma 对话</a>。点击「用中文示例提问」即可看她听题和回答，也可以打开麦克风。画面为 512 × 512，说话时每秒生成 25 帧口型。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="emma-quality-comparison.mp4" aria-label="同一段中文对话，左侧旧版，右侧新版"></video>
+<p>左边是旧版，右边是新版。两边是同一条 17 秒中文音轨。可以观察她听题时的眼睑和说话时的嘴唇。<a href="emma-quality-mandarin.mp4">只看新版视频</a></p>
+<p>新版从参考画面提取纹理，按运动对齐，并按参考录像里观察到的间隔和时长生成眨眼。用同一录像中留出的 103 帧做重建测试，模拟网页编码后的像素误差下降 10.6%，帧间变化误差下降 9.6%。这些数值衡量画面还原，口型同步仍需单独评估。</p></section>
 <section id="long-live"><h2>和 Emma 连续聊几分钟</h2>
 <p><a href="https://suggest-population-devon-mesa.trycloudflare.com/">打开长对话训练版</a> · 中英文均可，单次上限 12 分钟。另有<a href="https://speeds-dodge-italiano-comic.trycloudflare.com/">5 分钟入口</a>。</p>
 <p>可以先告诉 Emma 一个名字和一个约定，换个话题，中途改一次约定，最后再问她。这个版本在 MiniCPM-o 4.5 上做了长对话后训练，按每句语音的实际时长分配生成时间，并为句尾单独留出时间。</p>
@@ -21,7 +26,7 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <figure><figcaption>实验版中文网页通话，4 分 46 秒。可以听最后的出口和贴纸核对，其中有些词听起来接近同音词。</figcaption><audio aria-label="参考音色实验版中文通话" controls preload="none" src="emma-reference-mandarin.m4a"></audio></figure></div>
 <div id="blink-study"><h3>看中文对话中的眨眼</h3>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="emma-blink-mandarin.mp4" aria-label="带眨眼的中文算术对话离线样片"></video>
-<p>这段离线样片长 17 秒。眼睑由双人语音和过去的眼部状态驱动，嘴形沿用同一段语音生成结果。逐帧检测到 13 次双眼闭合后重新睁开，眨眼偏频繁。实时通话目前使用上一版面部动画。</p></div>
+<p>这段离线样片长 17 秒。眼睑由双人语音和过去的眼部状态驱动，嘴形沿用同一段语音生成结果。逐帧检测到 13 次双眼闭合后重新睁开，眨眼偏频繁。早期通话使用上一版面部动画，页面顶部有新版实时入口。</p></div>
 <h3>听接近 10 分钟的换话题测试</h3>
 <p>用户在开场约定了活动地点和日期，中间聊了三个其他话题。Chrome 发送的 599 个语音包全部返回。可以直接跳到最后一分钟，听她回忆项目代号和总结安排。这一通最后答出了 Orchard 和 Thursday，项目代号 Jasper 的发音被识别成了 “just par”。</p>
 <p>在四场约 10 至 11 分钟的中英文离线重放里，同一个识别器从 24 次回答中准确识别出目标事实的次数分别为：原始骨干 14 次，当前线上版 12 次，额外训练了十分钟对话的新权重 13 次。判断长对话质量时，也可以听下面的整段录音。</p>
