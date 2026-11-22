@@ -12,16 +12,26 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined">进入实时上半身对话</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined&amp;head=posear">试用新版头部动作</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
-<h2 id="joint-body">新实时模型与真人对照</h2>
-<figure><div class="labels"><span>真人录像</span><span>实时版的头、脸与身体模型</span></div>
+<h2 id="posear">同一句话，转头的时机和幅度有变化吗？</h2>
+<figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一张公开参考照片、两种头部驱动的并排对照"><source src="paired-head.mp4" type="video/mp4"></video>
+<figcaption>24 秒，上半身和声音相同，只有头部的三个旋转角采用不同模型。可以先看视频，再展开结果。</figcaption></figure>
+<details><summary>看左右两边分别用了什么</summary><p>左边是先前的头身联合模型，右边采用 PoseAR v2 预测头部旋转，肩膀与手臂沿用同一个模型。真人左右转头幅度为 25.8°，左边为 33.9°，右边为 24.5°。真人侧倾为 18.6°，左边为 15.4°，右边为 12.8°。数字取自最终画面的第 5 到第 95 百分位。</p>
+<p>在另外 64 段对话、128 条人物轨迹上，用真实音频预测的头部转动速度与真人的相关性中位数为 0.146，两路语音同时错开后为 −0.045。单独错开对方语音的影响尚不明确。</p></details>
+<h2 id="voice-test">两种语音模型如何回答同一道题</h2>
+<p>按测试集原顺序播放前三题。每题都能听到提问和模型原声。请留意它能否准确复述 acorn、barrel 和 carrot。</p>
+<figure><figcaption>Moshika · 在线版使用的语音模型</figcaption><audio controls preload="none" src="receipts-moshika.m4a"></audio></figure>
+<figure><figcaption>MiniCPM-o 4.5 · 离线测试</figcaption><audio controls preload="none" src="receipts-minicpm.m4a"></audio></figure>
+<p>在全部 16 道即时复述题上，两者分别答对 6 道和 13 道。另做五分钟通话，MiniCPM-o 在 6 次应回忆关键词的末轮中答对 2 次，两次更新关键词后均未答对。</p>
+<h2 id="joint-body">上半身模型与真人对照</h2>
+<figure><div class="labels"><span>真人录像</span><span>上一版头部与身体模型</span></div>
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段录音，左侧真人、右侧实时模型的上半身动作"><source src="joint-live-body.mp4" type="video/mp4"></video>
 <figcaption>两边播放同一段 24 秒的真人对话。右边从一张参考照片出发，接收双方的语音，根据 127 条公开训练轨迹学到的动作驱动脸、肩膀和手臂。约在第 16 秒，真人转头并举手，模型转了头，双手仍在身前。</figcaption></figure>
 <p>点击上方的「进入实时上半身对话」可以直接试自己的声音，也可以选「试听示例提问」。实时版会即时生成回答。上面的视频使用录音，方便逐帧比较动作。</p>
 <h2 id="head-body">转头、点头和侧倾</h2>
-<p>左边是当前在线版的动作算法，右边是用 192 段公开双人对话建立的头部动作模型。两边接收完全相同的两路语音，使用同一张脸、同一组嘴形和同一个渲染器。右边每次只根据已听到的声音和刚做过的动作选择下一段转动。</p>
-<figure><div class="labels"><span>当前模型</span><span>新头部模型</span></div>
+<p>左边是早期在线版的动作算法，右边是用 192 段公开双人对话建立的头部动作模型。两边接收完全相同的两路语音，使用同一张脸、同一组嘴形和同一个渲染器。右边每次只根据已听到的声音和刚做过的动作选择下一段转动。</p>
+<figure><div class="labels"><span>早期模型</span><span>头部候选模型</span></div>
 <video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段对话，新旧模型头部动作对照"><source src="head-candidate.mp4" type="video/mp4"></video>
 <figcaption>24 秒公开测试录音。用独立检测器逐帧测量，左右转头幅度从 3.8° 增至 12.6°，真人为 25.8°。幅度按第 5 到第 95 百分位计算。另测 24 段对话、48 条人物轨迹，预测和真人的动作速度相关性中位数为 −0.04。新模型能转得更开，动作时机还不准确。</figcaption></figure>
 <details><summary>同一段真人录像：渲染器能跟上多少动作？</summary>
