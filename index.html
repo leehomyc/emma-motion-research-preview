@@ -12,7 +12,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <section id="speech-expression"><h2>同一段声音，口型能跟上多少？</h2>
 <label for="expression-select">对照片段</label><select id="expression-select"><option value="first">第一段 · 8 秒</option><option value="second">第二段 · 6 秒</option><option value="sadness">悲伤表情 · 6 秒</option></select>
 <figure><video id="expression-player" controls playsinline preload="metadata" src="expression-14k-first.mp4" aria-label="Nuplex 原片与语音驱动表情逐帧对照"></video><figcaption>左侧为 Nuplex 参考片段，右侧从同一张首帧和同一段录音生成。可暂停比较嘴形和眼神。</figcaption></figure>
-<p class="note" id="expression-result">第一段的张嘴时序相关系数为 0.885，张嘴幅度约为原片的 4 倍。</p></section>
+<p class="note" id="expression-result">第一段的张嘴时序相关系数为 0.885，张嘴幅度约为原片的 4 倍。</p>
+<details id="jaw-calibration"><summary>对比张嘴幅度校准前后</summary><p>三栏依次为原片、校准前、校准后。第二段的张嘴幅度从原片的 0.04 倍提高到 0.96 倍；第一段和悲伤片段的嘴张得过大。</p>
+<p><a href="jaw-control-first.mp4">第一段</a> · <a href="jaw-control-second.mp4">第二段</a> · <a href="jaw-control-sadness.mp4">悲伤片段</a></p></details></section>
 <script>
 const expressionResults={first:'第一段的张嘴时序相关系数为 0.885，张嘴幅度约为原片的 4 倍。',second:'第二段的张嘴时序相关系数为 0.039，生成的嘴部动作很小。',sadness:'悲伤片段的张嘴时序相关系数为 0.355，眨眼幅度约为原片的 4%。'};
 document.getElementById('expression-select').addEventListener('change',event=>{
