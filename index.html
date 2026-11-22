@@ -12,9 +12,9 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <section id="matched-original"><h2>同一段原声下，和 Nuplex 原片逐帧对照</h2>
 <p>左侧是 Nuplex 原片。右侧是研究模型，听同一段声音生成脸部动作。三段测试录音都留在训练集之外。</p>
 <label for="paired-source">对照片段</label><select id="paired-source"><option value="first">片段一 · 8 秒</option><option value="second">片段二 · 6 秒</option><option value="sadness">悲伤表情 · 6 秒</option></select>
-<video id="paired-player" controls playsinline preload="metadata" width="1024" height="512" aria-label="左侧 Nuplex 参考，右侧研究模型" src="emma-nuplex-paired-first.mp4?v=1"></video>
-<p>片段一后半段可观察原片从抬眉过渡到笑的过程。右边的眉眼反应、眨眼和笑容时机仍有差异。<a href="https://allergy-byte-rank-drivers.trycloudflare.com/">用自己的声音试眉眼实验版</a></p></section>
-<script>document.getElementById('paired-source').addEventListener('change',event=>{const v=document.getElementById('paired-player');v.src='emma-nuplex-paired-'+event.target.value+'.mp4?v=1';v.load();});</script>
+<video id="paired-player" controls playsinline preload="metadata" width="1024" height="512" aria-label="左侧 Nuplex 参考，右侧研究模型" src="emma-nuplex-paired-first.mp4?v=2"></video>
+<p>片段一后半段可观察原片从抬眉过渡到笑的过程。右边的眉眼反应、眨眼和笑容时机仍有差异。<a href="https://allergy-byte-rank-drivers.trycloudflare.com/">用自己的声音试眉眼与嘴角实验版</a></p></section>
+<script>document.getElementById('paired-source').addEventListener('change',event=>{const v=document.getElementById('paired-player');v.src='emma-nuplex-paired-'+event.target.value+'.mp4?v=2';v.load();});</script>
 <section id="dialogue-motion"><h2>Emma 听你说话时也会动</h2>
 <p><a href="https://next-secret-configuration-futures.trycloudflare.com/">和新版 Emma 实时对话</a>。点「用中文示例提问」可直接试，也可以打开麦克风。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="emma-listens-and-speaks.mp4?v=2" aria-label="同一段中文问题和回答，左边旧版，右边新版"></video>
