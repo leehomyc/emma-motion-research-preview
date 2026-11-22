@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="joint-rollout"><h2>中文问答 · 连续动作后训练</h2>
+<figure><video id="joint-player" controls playsinline preload="metadata" src="emma-joint-rollout.mp4" aria-label="同一段中文问答，左为上一版，右为动作后训练版"></video>
+<figcaption>左侧是上一版，右侧是动作后训练版。两边播放相同的中文语音和口型，可以比较听题时的头部动作、闭眼与重新睁眼。</figcaption></figure>
+<p>新模型从双方语音、上一帧姿态及眼睑状态共同预测下一步动作。在另外 24 段公开对话中，连续生成约 40 秒的平均位移为 2.05，真人为 2.11（按动作轴归一化）。每分钟眨眼 30.8 次，真人为 23.9 次。</p></section>
 <section id="scaled-motion"><h2>90.51 小时双人对话训练版</h2>
 <p>左边是 Nuplex 原片，右边是新模型。两个画面使用同一段原声，可以直接看抬眉、睁眼和眨眼的时机。</p>
 <label for="scale-source">选择录像</label><select id="scale-source"><option value="first">原片对照一 · 8 秒</option><option value="second">原片对照二 · 6 秒</option><option value="sadness">悲伤表情对照 · 6 秒</option><option value="mandarin">模型自己听题和回答 · 中文 17 秒</option></select>
