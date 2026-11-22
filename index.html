@@ -9,6 +9,20 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="speech-expression"><h2>同一段声音，口型能跟上多少？</h2>
+<label for="expression-select">对照片段</label><select id="expression-select"><option value="first">第一段 · 8 秒</option><option value="second">第二段 · 6 秒</option><option value="sadness">悲伤表情 · 6 秒</option></select>
+<figure><video id="expression-player" controls playsinline preload="metadata" src="expression-14k-first.mp4" aria-label="Nuplex 原片与语音驱动表情逐帧对照"></video><figcaption>左侧为 Nuplex 参考片段，右侧从同一张首帧和同一段录音生成。可暂停比较嘴形和眼神。</figcaption></figure>
+<p class="note" id="expression-result">第一段的张嘴时序相关系数为 0.885，张嘴幅度约为原片的 4 倍。</p></section>
+<script>
+const expressionResults={first:'第一段的张嘴时序相关系数为 0.885，张嘴幅度约为原片的 4 倍。',second:'第二段的张嘴时序相关系数为 0.039，生成的嘴部动作很小。',sadness:'悲伤片段的张嘴时序相关系数为 0.355，眨眼幅度约为原片的 4%。'};
+document.getElementById('expression-select').addEventListener('change',event=>{
+  const key=event.target.value;
+  const player=document.getElementById('expression-player');
+  player.src='expression-14k-'+key+'.mp4';
+  document.getElementById('expression-result').textContent=expressionResults[key];
+  player.load();
+});
+</script>
 <section id="native-av"><h2>全双工语音与整脸视觉 token 实验</h2>
 <label for="native-av-select">播放样例</label><select id="native-av-select"><option value="first">Nuplex 同声对照一 · 8 秒</option><option value="second">Nuplex 同声对照二 · 6 秒</option><option value="sadness">Nuplex 悲伤表情 · 6 秒</option><option value="microphone">仅给麦克风输入 · 英语问答 24 秒</option></select>
 <figure><video id="native-av-player" controls playsinline preload="metadata" src="native-av-first-512.mp4" aria-label="整脸视觉 token 生成实验"></video><figcaption id="native-av-caption">左为 Nuplex 原片，右为研究模型。右侧只使用首帧和截至当时的双方原声，后续画面逐步生成。</figcaption></figure>
