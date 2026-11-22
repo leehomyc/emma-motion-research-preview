@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="natural-camera"><h2>自然对话中，模型什么时候接话？</h2>
+<video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="natural-camera-paired.mp4" aria-label="视觉微调后的模型对自然对话的有声反应"></video>
+<p><a href="natural-camera-paired.mp4">看视觉微调后的视频</a> · <a href="natural-camera-base.mp4">对比微调前的视频</a></p>
+<p>对方问 “So if we were to develop an app, what would it be?”（如果我们一起开发一款应用，会做什么？）。两个版本收到相同的语音和脸部动作，使用相同的随机种子。播放器里只收录模型生成的声音，整段 9.36 秒。</p>
+<p>这段按会话编号选自 17 场独立测试的第一场。原对话中的人等了 1.52 秒才开口，微调前后模型都在问题结束后 0.64 秒接话，比人早了 0.88 秒。自然对话来自公开的 Seamless Interaction 数据集，画面为研究原型生成。</p></section>
 <section id="conditional-reply"><h2>听到打断后，能接住哪个问题？</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="conditional-pacific.mp4" aria-label="听模型被打断后回答世界上最大的大洋"></video>
 <p><a href="conditional-pacific.mp4">听它答出太平洋</a> · <a href="conditional-freezing.mp4">听它漏答水的冰点</a></p>
