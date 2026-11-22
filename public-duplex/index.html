@@ -17,11 +17,15 @@
 <figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="第五分钟的同一段对话，左侧为上一版，右侧保留点头并减轻缓慢横摆"><source src="pose-bands-one.mp4" type="video/mp4"></video>
 <figcaption>左侧是上一版，右侧减轻了缓慢横摆。两边的音频相同。看最后一个问题时人物的鼻尖和灰色上衣的标志。画面宽 512 像素，鼻尖横向范围从 26.0 降到 19.5 像素，衣服标志从 12.0 降到 5.6 像素。</figcaption></figure>
 <p><a href="native-correction.m4a">听一段 40 秒的原始对话</a>。用户把口令从 pencil 改成 basket。数字人当场说对了，回答一道加法题后又说回 pencil。</p></section>
+<section id="mouth-shape"><h2>同一句话的两种口型</h2>
+<p>来电者先问披萨喜欢放什么，再追问味道。左边是线上口型，右边是从公开对话训练的新模型，同时预测嘴唇的间距和宽度。两边使用同一次数字人回答，共用声音、头部和肩膀。</p>
+<figure><video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段二十秒通话，左侧线上口型，右侧同时控制嘴宽与开合"><source src="acoustic-mouth-1.mp4" type="video/mp4"></video></figure>
+<p>留出测试中，新模型在发声时的嘴宽更接近真人。但在另四通合成来电中，22 个应闭唇的采样帧里左边合拢 15 次，右边合拢 11 次。右边仍是实验版本。</p></section>
 <section id="head-four"><h2>新训练的头部动作</h2>
 <p>看人物在听到对方说话时怎样摆头，以及点头能否跟上对话。三个画面使用相同的音频、表情和肩膀。每段长约十秒，可横屏观看。</p>
 <figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="第一段，相同声音下的三种头部动作"><source src="posear4-1.mp4" type="video/mp4"></video></figure>
 <figure><video controls playsinline preload="metadata" width="1536" height="512" aria-label="第二段，相同声音下的三种头部动作"><source src="posear4-2.mp4" type="video/mp4"></video></figure>
-<details><summary>查看两个片段中 A、B、C 的来源</summary><p>第一段依次为旧模型训练到八万步并加近景稳定、真人实测角度经近景稳定处理、新模型 PoseAR4。第二段依次为旧模型、PoseAR4、真人实测角度。PoseAR4 在训练时就使用减弱缓慢摆动的目标。</p></details>
+<details><summary>查看两个片段中 A、B、C 的来源</summary><p>第一段依次为旧模型训练到八万步并加近景稳定、真人实测角度减去过去 3.84 秒的均值、新模型 PoseAR4。第二段依次为旧模型、PoseAR4、真人实测角度。PoseAR4 在训练时就使用减弱缓慢摆动的目标。</p></details>
 <p>音频与动作来自 Meta 的 Seamless Interaction，片段编号为 V00_S1061_I00000176 和 V00_S0925_I00000538。双人音频混合，头部转角及表情映射到同一张研究肖像。<a href="https://huggingface.co/datasets/facebook/seamless-interaction">素材与作者</a> · <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a></p></section>
 <section id="head-comparison"><h2>哪一种点头更合拍？</h2>
 <p>听两段各十秒的对话，观察人物何时点头、何时转向对方。每段的 A、B、C 使用同一张脸、同一段声音和表情，只有头部转动的来源不同。手机上可横屏或全屏观看。</p>
