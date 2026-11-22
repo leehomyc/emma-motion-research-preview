@@ -24,6 +24,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p>左边是 Nuplex 公开录像里的对话者，右边是我们的模型。模型只接收左边的声音和摄像头画面。它在听过前 20 秒之后，自行生成了下面这 8.32 秒的声音和动作。建议打开声音，看它在什么时候接话。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="native-free-duplex.mp4" aria-label="左边为真实对话者，右边为联合生成声音与口型的研究原型"></video>
 <p>同一条模型生成的声音，每 80 毫秒生成两个不同的嘴部动作后，有声窗口的 SyncNet 距离从 7.97 降到 6.60（越低越好）。模型在对方说完前就已经停声，漏掉了原版 Emma 随后的回应。视频由模型输出离线渲染。<a href="native-free-duplex.mp4">直接播放有声录像</a> · <a href="#nuplex-comparison">对比 Nuplex 的原声口型</a></p></section>
+<section id="expression-test"><h2>口型问题出在哪里？</h2>
+<p>从左到右分别是 Nuplex 的原片、我们的模型根据相同语音预测的嘴部动作，以及把原片中测得的嘴部动作交给我们的渲染器。后两栏使用同一个渲染器和固定头部姿态。右栏需要原片，只用于诊断。</p>
+<video controls playsinline preload="metadata" width="1536" height="512" src="nuplex-sadness-mouth.mp4" aria-label="悲伤样片三栏对照，依次为 Nuplex、预测口型、原片嘴部动作重渲染"></video>
+<p>在这段悲伤独白的 85 个有声窗口中，三栏的同步距离依次是 6.65、9.20、6.79。距离越低，口型与发音越贴合。原片动作经同一渲染器仍能保留大部分同步度，这段的主要误差来自嘴部动作预测。<a href="nuplex-sadness-mouth.mp4">直接播放三栏对照</a> · <a href="https://www.nuancelabs.ai/research/meet-emma-the-first-nuplex-persona">Nuance 官方表情样片</a></p></section>
 <section id="second-conversation"><h2>换一段对话，口型还能跟上吗？</h2>
 <p>左边是 Nuplex 另一场公开对话的前 6.4 秒，右边是用 1,024 段公开对话训练的口型模型，训练时加入了每 40 毫秒的语音频谱监督。两边用同一条原声。右边固定了头部姿态，便于观察双唇闭合和张嘴的变化。</p>
 <video controls playsinline preload="metadata" width="1024" height="512" src="nuplex-second-native1024.mp4" aria-label="第二场对话的同声口型对照，左为 Nuplex，右为研究模型"></video>
