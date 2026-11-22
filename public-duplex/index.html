@@ -14,6 +14,25 @@
 <h1>实时数字人对话</h1>
 <p><a class="live" href="https://jennifer-setting-cruises-groups.trycloudflare.com/">进入实时对话</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
+<h2 id="head-body">转头、点头和侧倾</h2>
+<p>左边是当前在线版的动作算法，右边是用 192 段公开双人对话建立的头部动作模型。两边接收完全相同的两路语音，使用同一张脸、同一组嘴形和同一个渲染器。右边每次只根据已听到的声音和刚做过的动作选择下一段转动。</p>
+<figure><div class="labels"><span>当前模型</span><span>新头部模型</span></div>
+<video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段对话，新旧模型头部动作对照"><source src="head-candidate.mp4" type="video/mp4"></video>
+<figcaption>24 秒公开测试录音。在输入渲染器的轨迹上，左右转头幅度从 4.6° 增至 14.7°，真人为 28.6°。幅度按第 5 到第 95 百分位计算。可以留意人物在对方讲话时转头的时机。</figcaption></figure>
+<details><summary>同一段真人录像：渲染器能跟上多少动作？</summary>
+<p>从左到右是真人、当前模型、输入真人头部姿态后的同一渲染器。最右栏用到了测试录像里的真实动作，用于检查渲染能力。</p>
+<video controls playsinline preload="none" width="1536" height="512" aria-label="真人、当前模型、真人头部姿态驱动的渲染器"><source src="head-motion-ceiling.mp4" type="video/mp4"></video></details>
+<h2 id="upper-body">肩膀和上半身</h2>
+<p>同一段对话，左边是真人，右边从一张静止照片出发，用听到的声音驱动头、肩、肘和手腕。动作来自另外 8 位参与者的录像。这个实验单独评估身体，右侧保留了照片里的嘴形。</p>
+<video controls playsinline preload="metadata" width="576" height="384" aria-label="上半身对照，左侧真人，右侧生成动作"><source src="upper-body.mp4" type="video/mp4"></video>
+<p>看两肩一高一低时的变化。两肩高度差的变动范围在真人轨迹上为肩宽的 22.4%，模型轨迹上为 4.5%。</p>
+<h2 id="blinks">眨眼</h2>
+<figure><div class="labels"><span>原模型</span><span>加入眨眼控制</span></div>
+<video controls playsinline preload="none" width="1024" height="512" aria-label="同一条生成语音与同一张脸，眨眼对照"><source src="blink-comparison.mp4" type="video/mp4"></video>
+<figcaption>这段 24 秒的生成对话里，新模型安排了四次眨眼。在四个指定峰值处，渲染视频的双眼闭合分数中位数由 0.33 增至 0.65。</figcaption></figure>
+<h2 id="visual-grounding">能听懂问题，也能看见画面吗？</h2>
+<p>H100 上的 MiniCPM-o 4.5 接收四次相同的提问录音，依次看到红圆、蓝圆、绿圆，最后一次没有画面。这里可以听到每一次的原始回答。前三次颜色都说对了，第四次它猜了白色。</p>
+<video controls playsinline preload="none" width="768" height="512" aria-label="颜色变化与无图对照，四次原声回答"><source src="visual-grounding.mp4" type="video/mp4"></video>
 <h2>同一段对话，两种人脸模型</h2>
 <p>听一段 20 秒的双向问答。两边使用同一位公开数据参与者的参考画面，以及同一条 Moshika 生成的回复音轨。</p>
 <figure><div class="labels"><span>原生视觉头 · 第 1,000 步</span><span>运动预测 · 512 像素渲染</span></div>
