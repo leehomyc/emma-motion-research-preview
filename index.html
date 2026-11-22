@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="native-av"><h2>全双工语音与整脸视觉 token 实验</h2>
+<label for="native-av-select">播放样例</label><select id="native-av-select"><option value="first">Nuplex 同声对照一 · 8 秒</option><option value="second">Nuplex 同声对照二 · 6 秒</option><option value="sadness">Nuplex 悲伤表情 · 6 秒</option><option value="microphone">仅给麦克风输入 · 英语问答 24 秒</option></select>
+<figure><video id="native-av-player" controls playsinline preload="metadata" src="native-av-first-512.mp4" aria-label="整脸视觉 token 生成实验"></video><figcaption id="native-av-caption">左为 Nuplex 原片，右为研究模型。右侧只使用首帧和截至当时的双方原声，后续画面逐步生成。</figcaption></figure>
+<p>麦克风实验只给一张登记录像中的静帧和两句英语提问，回答语音与整脸动作均由研究模型生成。此次回答未命中香蕉和草的颜色。三段同声对照用来观察嘴形、眨眼及动作时机。</p></section>
+<script>document.getElementById('native-av-select').addEventListener('change',e=>{const k=e.target.value,v=document.getElementById('native-av-player');v.src='native-av-'+k+'-512.mp4';document.getElementById('native-av-caption').textContent=k==='microphone'?'左声道为用户提问，右声道为模型回答。人物画面从一张静帧生成。':'左为 Nuplex 原片，右为研究模型。右侧只使用首帧和截至当时的双方原声，后续画面逐步生成。';v.load();});</script>
 <section id="joint-rollout"><h2>连续动作后训练 · 中文问答与 Nuplex 原片对照</h2>
 <label for="joint-source">选择对照片段</label><select id="joint-source"><option value="mandarin">中文问答 · 17 秒</option><option value="first">Nuplex 原片一 · 8 秒</option><option value="second">Nuplex 原片二 · 6 秒</option><option value="sadness">Nuplex 悲伤表情 · 6 秒</option></select>
 <figure><video id="joint-player" controls playsinline preload="metadata" src="emma-joint-actor-mandarin.mp4" aria-label="连续动作后训练对照"></video>
