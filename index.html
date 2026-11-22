@@ -9,6 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="head-calibration"><h2>Emma 会在什么时候转头？</h2>
+<figure><video controls playsinline preload="metadata" width="1024" height="512" src="trained-head-emma.mp4" aria-label="左为原生模型，右为校准后的头部运动"></video>
+<figcaption>左边是原生模型，右边使用新的头部运动模型。两边听到同一个人说话，也播放完全相同的模型生成语音。<a href="trained-head-emma.mp4">打开有声 MP4</a></figcaption></figure>
+<p>头部运动模型用 4,051 段双人对话训练，再用 17.92 秒 Emma 的公开画面校准动作幅度。视频展示同一录制中留出的 8.32 秒，采用预设的第一个随机种子。三个种子的平均头部角度误差从 5.18° 降到 4.33°。用另一位对话者校准也达到 4.15°，因此这段视频还无法证明模型学到了 Emma 特有的习惯。</p>
+<p>在另一段独立的 16 秒画面里，我们让模型只看对方，关闭音频输入。原生模型的角度误差为 3.67°，校准后为 4.01°。模型能转头，转动时机和方向仍需改善。</p></section>
 <section id="flow-paired"><h2>同一句话，两种头部动作</h2>
 <video controls playsinline preload="metadata" width="1024" height="512" src="paired-head-flow.mp4" aria-label="左侧是原生头部运动，右侧使用训练后的头部运动流模型"></video>
 <p><strong>左边</strong>是模型原生的动作，<strong>右边</strong>用训练过的 rectified flow 生成头部动作。两边都看到和听到官方留出片段中的同一位对话者，播出的是模型自己生成的声音。两边的声音逐采样相同，脸部表情保持一致。</p>
