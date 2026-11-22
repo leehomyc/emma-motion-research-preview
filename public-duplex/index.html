@@ -27,6 +27,9 @@
 <details><summary>看加训 400 步后的上半身</summary>
 <video controls playsinline preload="none" width="1536" height="512" aria-label="真人、旧身体模型、加入速度连续性约束的新身体模型"><source src="torso-continuity.mp4" type="video/mp4"></video>
 <p>左为真人，中为旧身体模型，右为加训候选。对 24 条留出轨迹，肩肘在动作片段交界处的平均加速度中位数下降了 27%。在这段视频里，新模型渲染后的肩肘活动范围从 12.2% 降到 9.7%，所以在线版沿用原身体模型。</p></details>
+<details id="pose-pilot"><summary>从真人视频学习的身体渲染器</summary>
+<video controls playsinline preload="none" width="640" height="576" aria-label="左侧真人，右侧由参考照片和真人骨架生成的低分辨率研究样片"><source src="pose-pilot.mp4" type="video/mp4"></video>
+<p>左为真人，右为新训练的渲染器。模型输入第一帧和后续各帧的真实关节位置。训练集共 128 段公开录像，留出 24 段，训练了 600 步。与一直显示参考图相比，肩、肘、腕附近的平均绝对像素误差从 0.0603 降至 0.0467（像素范围 0–1）。右边原始分辨率为 80×144，第 16 秒仍未画出完整抬起的手臂。</p></details>
 <h2 id="voice-test">两种语音模型如何回答同一道题</h2>
 <p>按测试集原顺序播放前三题。每题都能听到提问和模型原声。请留意它能否准确复述 acorn、barrel 和 carrot。</p>
 <figure><figcaption>Moshika · 在线版使用的语音模型</figcaption><audio controls preload="none" src="receipts-moshika.m4a"></audio></figure>
