@@ -15,6 +15,15 @@
 <section id="audio-first"><h2>试用双卡实时对话</h2>
 <p><a class="live" href="https://turtle-mount-pushing-skiing.trycloudflare.com/?view=portrait&amp;head=posear3&amp;torso=learned&amp;motion=steady&amp;mouth=width&amp;cadence=adaptive">打开双卡头肩对话</a></p>
 <p>语音和画面分别在一张 H100 上运行。同一段五分钟输入在服务器本机回放时，95% 的音频包在 73 毫秒内返回，原版为 2.01 秒。两版生成的语音逐字节一致。双卡版每秒平均发送 11.7 帧。公网传输和人物决定何时开口还会带来额外延迟。</p></section>
+<section id="long-recall"><h2>隔四分钟还能记住更正吗？</h2>
+<p>两位新测试声音分别在第 28 秒更改口令，第 283 秒追问。两次之间有四道无关问题。下面保留更正和最后回答的原始声音，剪去了中间等待。</p>
+<h3>口令 wombat</h3>
+<figure><figcaption>原版 Moshiko</figcaption><audio controls preload="none" aria-label="wombat，原版 Moshiko" src="0-replace-native.m4a"></audio></figure>
+<figure><figcaption>带口令记忆的实验版</figcaption><audio controls preload="none" aria-label="wombat，带口令记忆的实验版" src="0-replace-paced.m4a"></audio></figure>
+<h3>口令 badger</h3>
+<figure><figcaption>原版 Moshiko</figcaption><audio controls preload="none" aria-label="badger，原版 Moshiko" src="1-replace-native.m4a"></audio></figure>
+<figure><figcaption>带口令记忆的实验版</figcaption><audio controls preload="none" aria-label="badger，带口令记忆的实验版" src="1-replace-paced.m4a"></audio></figure>
+<details><summary>查看这两次通话的结果</summary><p>第一通原版说 lunch，实验版说对了 wombat。第二通的输入识别把 badger 听成 batcher，实验版最后的语音被转写为 bachelor。两个回答都由 Moshiko 的语音解码器生成。</p></details></section>
 <section id="spoken-recall"><h2>听数字人能否记住更正后的口令</h2>
 <p>两个人说出相同的更正，把 beacon 改为 walrus，之后各问一道无关的问题，再请数字人说出口令。录音保留更正和最后的提问，中间的对话已剪去。每组的两版使用同一段来电音频。</p>
 <h3>来电声音 Tessa</h3>
