@@ -12,8 +12,13 @@
 <body><main>
 <a href="../">返回实验目录</a>
 <h1>实时数字人对话</h1>
-<p><a class="live" href="https://jennifer-setting-cruises-groups.trycloudflare.com/">进入实时对话</a></p>
+<p><a class="live" href="https://aerospace-cameras-simpson-medications.trycloudflare.com/?mouth=refined">进入实时上半身对话</a>　<a href="https://jennifer-setting-cruises-groups.trycloudflare.com/">面部特写版</a></p>
 <p>用麦克风提问，或播放一段示例问题，由 H100 当场生成回答和 512 像素画面。</p>
+<h2 id="joint-body">新实时模型与真人对照</h2>
+<figure><div class="labels"><span>真人录像</span><span>实时版的头、脸与身体模型</span></div>
+<video controls playsinline preload="metadata" width="1024" height="512" aria-label="同一段录音，左侧真人、右侧实时模型的上半身动作"><source src="joint-live-body.mp4" type="video/mp4"></video>
+<figcaption>两边播放同一段 24 秒的真人对话。右边从一张参考照片出发，接收双方的语音，根据 127 条公开训练轨迹学到的动作驱动脸、肩膀和手臂。约在第 16 秒，真人转头并举手，模型转了头，双手仍在身前。</figcaption></figure>
+<p>点击上方的「进入实时上半身对话」可以直接试自己的声音，也可以选「试听示例提问」。实时版会即时生成回答。上面的视频使用录音，方便逐帧比较动作。</p>
 <h2 id="head-body">转头、点头和侧倾</h2>
 <p>左边是当前在线版的动作算法，右边是用 192 段公开双人对话建立的头部动作模型。两边接收完全相同的两路语音，使用同一张脸、同一组嘴形和同一个渲染器。右边每次只根据已听到的声音和刚做过的动作选择下一段转动。</p>
 <figure><div class="labels"><span>当前模型</span><span>新头部模型</span></div>
