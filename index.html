@@ -9,11 +9,11 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
-<section id="dialogue-motion"><h2>听题和回答时的头部动作</h2>
-<video controls playsinline preload="metadata" width="1024" height="512" src="emma-listens-and-speaks.mp4" aria-label="同一段问题和回答，左侧固定头姿，右侧对话驱动的头部"></video>
-<p>左边是上版，右边是新版。请先看她听完中文问题，再看她开口。两个版本共用同一段声音和嘴部动作。新版同时生成头部俯仰、转向、侧倾和面部表情，肩部下缘保持稳定。<a href="emma-head-motion-mandarin.mp4">单独看新版</a></p></section>
-<section id="video-quality"><h2>新版实时视频</h2>
-<p><a href="https://tramadol-response-artists-coordinate.trycloudflare.com/">打开新版，与 Emma 对话</a>。点击「用中文示例提问」即可看她听题和回答，也可以打开麦克风。画面为 512 × 512，说话时每秒生成 25 帧口型。</p>
+<section id="dialogue-motion"><h2>Emma 听你说话时也会动</h2>
+<p><a href="https://next-secret-configuration-futures.trycloudflare.com/">和新版 Emma 实时对话</a>。点「用中文示例提问」可直接试，也可以打开麦克风。</p>
+<video controls playsinline preload="metadata" width="1024" height="512" src="emma-listens-and-speaks.mp4?v=2" aria-label="同一段中文问题和回答，左边旧版，右边新版"></video>
+<p>左边是旧版，右边是新版，两边共用同一条音轨。看开头她听题的几秒，再看开口前后头和肩膀的动作。新版从双方的声音预测转头、侧倾、前后移动和上半脸表情。<a href="emma-head-motion-mandarin.mp4?v=2">单看右侧中文版</a> · <a href="emma-motion-interruption.mp4?v=2">看英文打断样例</a></p></section>
+<section id="video-quality"><h2>上版口型与画质对照</h2>
 <video controls playsinline preload="metadata" width="1024" height="512" src="emma-quality-comparison.mp4?v=2" aria-label="同一段中文对话，左侧旧版，右侧新版"></video>
 <p>左边是旧版，右边是新版。两边是同一条 17 秒中文音轨。可以观察她听题时的眼睑和说话时的嘴唇。<a href="emma-quality-mandarin.mp4?v=2">只看新版视频</a></p>
 <p>新版按运动对齐参考画面的纹理，用 17 个眼睑姿态还原闭眼和睁眼过程。视频和实时通话使用同一个固定机位嘴部渲染器。它用 96 段对话产生的 1,152 张训练图蒸馏而成。完整渲染器在同一录像留出的 103 帧上测试，模拟网页编码后的像素误差下降 10.6%，帧间变化误差下降 9.6%。轻量渲染器另外在 24 段留出对话上核验，嘴唇区域与完整渲染器的像素差平均为 1.51/255。这些数值衡量画面还原，口型同步仍需单独评估。</p></section>
