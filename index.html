@@ -9,6 +9,10 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 </style>
 <style>button{font:inherit;background:#273c30;border:1px solid #749882;color:#e6f2e8;padding:.4rem .8rem;border-radius:6px;cursor:pointer}button[hidden]{display:none}</style></head>
 <body><main><header><h1>Emma 全脸生成实验</h1><p>这里展示学校研究原型生成的有声视频。</p></header>
+<section id="flow-paired"><h2>同一句话，两种头部动作</h2>
+<video controls playsinline preload="metadata" width="1024" height="512" src="paired-head-flow.mp4" aria-label="左侧是原生头部运动，右侧使用训练后的头部运动流模型"></video>
+<p><strong>左边</strong>是模型原生的动作，<strong>右边</strong>用训练过的 rectified flow 生成头部动作。两边都看到和听到官方留出片段中的同一位对话者，播出的是模型自己生成的声音。两边的声音逐采样相同，脸部表情保持一致。</p>
+<p>这段对话长 8.32 秒。去掉开头 0.96 秒后，在三个随机种子上，按归一化的面部运动参数计算，平均每帧变化幅度从官方 Emma 的 18% 升到 25%，但三个头部角度的平均绝对误差也从 5.18° 增到 6.87°。这个片段显示了动作幅度与转头方向之间的差距。</p></section>
 <section id="speech-8179"><h2>说到一半被打断，能答对吗？</h2>
 <video controls playsinline preload="metadata" width="512" height="512" style="max-width:512px" src="speech-8179-addition.mp4" aria-label="模型讲灯塔故事时被打断，回答七加九"></video>
 <p><a href="speech-8179-addition.mp4">听它回答七加九</a> · <a href="speech-8179-metal.mp4">听它漏答哪种金属在室温下是液体</a></p>
