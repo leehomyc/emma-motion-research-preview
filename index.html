@@ -13,6 +13,12 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p><a href="https://suggest-population-devon-mesa.trycloudflare.com/">打开长对话训练版</a> · 中英文均可，单次上限 12 分钟。另有<a href="https://speeds-dodge-italiano-comic.trycloudflare.com/">5 分钟入口</a>。</p>
 <p>可以先告诉 Emma 一个名字和一个约定，换个话题，中途改一次约定，最后再问她。这个版本在 MiniCPM-o 4.5 上做了长对话后训练，按每句语音的实际时长分配生成时间，并为句尾单独留出时间。</p>
 <p>在 4 段各 3 分 43 秒的中英文测试里，同一个语音识别器对 24 个事实的命中数从 13 提高到 18。改过的地点和最后的安排各答对 3/4，开场代号的读音只命中 1/4。另用 4 段各 4 分 46 秒的失物招领对话测试，训练版命中 8/16，训练前是 9/16。</p>
+<div id="voice-reference"><h3>试用 Emma 参考音色</h3>
+<p><a href="https://tried-visited-was-mods.trycloudflare.com/">打开参考音色实验版</a> · 可直接用麦克风对话。这个版本用一段 4 秒的 Emma 训练录音作声码器参考，也使用了经过十分钟对话训练的权重。</p>
+<p>下面两段播放相同的语音 token，方便单独比较音色。另用四段约十分钟的自由对话测试，实验版从 24 次播音中命中 15 个目标事实。较短的活动安排测试是 13/24，失物招领测试是 10/16。</p>
+<figure><figcaption>默认参考音色</figcaption><audio aria-label="默认参考音色英语样本" controls preload="none" src="speaker-reference-stock.m4a"></audio></figure>
+<figure><figcaption>Emma 参考音色</figcaption><audio aria-label="Emma 参考音色英语样本" controls preload="none" src="speaker-reference-actor.m4a"></audio></figure>
+<figure><figcaption>实验版中文网页通话，4 分 46 秒。可以听最后的出口和贴纸核对，其中有些词听起来接近同音词。</figcaption><audio aria-label="参考音色实验版中文通话" controls preload="none" src="emma-reference-mandarin.m4a"></audio></figure></div>
 <h3>听接近 10 分钟的换话题测试</h3>
 <p>用户在开场约定了活动地点和日期，中间聊了三个其他话题。Chrome 发送的 599 个语音包全部返回。可以直接跳到最后一分钟，听她回忆项目代号和总结安排。这一通最后答出了 Orchard 和 Thursday，项目代号 Jasper 的发音被识别成了 “just par”。</p>
 <p>在四场约 10 至 11 分钟的中英文离线重放里，同一个识别器从 24 次回答中准确识别出目标事实的次数分别为：原始骨干 14 次，当前线上版 12 次，额外训练了十分钟对话的新权重 13 次。判断长对话质量时，也可以听下面的整段录音。</p>
