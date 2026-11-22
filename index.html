@@ -13,7 +13,7 @@ section{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid #36423b}.pair{
 <p>左边是 Nuplex 原片，右边是新模型。两个画面使用同一段原声，可以直接看抬眉、睁眼和眨眼的时机。</p>
 <label for="scale-source">选择录像</label><select id="scale-source"><option value="first">原片对照一 · 8 秒</option><option value="second">原片对照二 · 6 秒</option><option value="sadness">悲伤表情对照 · 6 秒</option><option value="mandarin">模型自己听题和回答 · 中文 17 秒</option></select>
 <video id="scale-player" controls playsinline preload="metadata" src="emma-scale-first.mp4" aria-label="Nuplex 与训练版同声对照"></video>
-<p><a href="https://poor-scotia-controls-pizza.trycloudflare.com/">和训练版实时对话</a>。生成面部动作的模型用 7,955 段公开双人对话训练。另留出 129 段选模型、24 段做最终评估。三段 Nuplex 对照均未用于训练；这三段里的 9 次眨眼，新版有 3 次落在原片时刻前后 0.2 秒内。</p></section>
+<p><a href="https://poor-scotia-controls-pizza.trycloudflare.com/">和训练版实时对话</a>。生成面部动作的模型用 7,955 段公开双人对话训练。另留出 129 段选模型、24 段做最终评估。在这三段留出的 Nuplex 原片中，共有 9 次眨眼。页面展示的这次生成命中了其中 3 次（允许前后 0.2 秒）。用 128 个随机种子重复测试，眨眼模型排定的闭眼时刻平均命中 0.93 次。</p></section>
 <script>document.getElementById('scale-source').addEventListener('change',e=>{const v=document.getElementById('scale-player');v.src='emma-scale-'+e.target.value+'.mp4';v.setAttribute('aria-label',e.target.value==='mandarin'?'模型生成的中文对话':'Nuplex 与训练版同声对照');v.load();});</script>
 <section id="matched-original"><h2>同一段原声下，和 Nuplex 原片逐帧对照</h2>
 <p>左侧是 Nuplex 原片。右侧是研究模型，听同一段声音生成脸部动作。三段测试录音都留在训练集之外。</p>
