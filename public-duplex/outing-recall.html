@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>五分钟对话 · 听最后两问</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f5f1;color:#172522;font:17px/1.65 "Hiragino Sans GB","PingFang SC",sans-serif}
+main{max-width:740px;margin:auto;padding:32px 20px 56px}h1{font-size:clamp(28px,6vw,42px);line-height:1.2;letter-spacing:-.03em;margin:0 0 14px}
+h2{font-size:23px;margin:0 0 6px}p{margin:2px 0 16px}section{background:white;border:1px solid #d5dcd7;border-radius:12px;padding:18px 20px;margin:16px 0}
+label{display:block;font-weight:600;margin:12px 0 4px}audio{display:block;width:100%}a{color:#1f5b43}
+</style><main><h1>五分钟对话，听最后两问</h1>
+<p>同一位来电者在通话中改了集合地点和时间。这里保留每次通话最后连续的 35 秒，包括停顿和双方说话重叠的部分。先听票面该印几点，再听最后去哪里集合。</p>
+<section><h2>行程一</h2><p>来电者最终确定在十一点去花园。</p>
+<label for="a1">当前线上语音模型</label><audio id="a1" controls preload="metadata" src="outing-1-original.m4a"></audio>
+<label for="a2">加入对话历史的实验版</label><audio id="a2" controls preload="metadata" src="outing-1-planner.m4a"></audio></section>
+<section><h2>行程二</h2><p>来电者最终确定在三点去图书馆。</p>
+<label for="b1">当前线上语音模型</label><audio id="b1" controls preload="metadata" src="outing-2-original.m4a"></audio>
+<label for="b2">加入对话历史的实验版</label><audio id="b2" controls preload="metadata" src="outing-2-planner.m4a"></audio></section>
+<p>两版都由 Moshiko 生成回答的声音。实验版由 Qwen 根据截至当时的来电转写，提供要说的文字。语音中偶尔会听到模型声称发了提醒，这套实验没有发送提醒的功能。</p>
+<a href="motion-conversation.html">打开实时对话入口</a></main>
+<script>document.querySelectorAll('audio').forEach(a=>a.addEventListener('play',()=>{for(const other of document.querySelectorAll('audio'))if(other!==a)other.pause()}));</script></html>
