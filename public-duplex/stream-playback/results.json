@@ -1,0 +1,508 @@
+{
+  "before": {
+    "summary": {
+      "received": 3380,
+      "scheduled_audio_s": 270.4,
+      "last_playout_wall_s": 419.27,
+      "gaps_over_20ms": 2676,
+      "gap_seconds_over_20ms": 145.65,
+      "worst_gap_s": 0.5,
+      "heard": 42,
+      "answered": 42,
+      "dropped_mic": 0,
+      "guide_fallbacks": 0,
+      "ordinary_targets": 13,
+      "ordinary_count": 24,
+      "memory_hits": 1
+    },
+    "rows": [
+      {
+        "turn": 5,
+        "key": "q0",
+        "question": "What color is grass? Give a short answer.",
+        "expected": "green",
+        "text": "Friday.",
+        "target_detected": false,
+        "onset_s": 0.02
+      },
+      {
+        "turn": 6,
+        "key": "q1",
+        "question": "How many days in a week? Give a short answer.",
+        "expected": "seven|7",
+        "text": "seven.",
+        "target_detected": true,
+        "onset_s": 5.78
+      },
+      {
+        "turn": 8,
+        "key": "q3",
+        "question": "What is two plus five? Give a short answer.",
+        "expected": "seven|7",
+        "text": "seven.",
+        "target_detected": true,
+        "onset_s": 5.78
+      },
+      {
+        "turn": 10,
+        "key": "q5",
+        "question": "What is the opposite of hot? Give a short answer.",
+        "expected": "cold",
+        "text": "cold.",
+        "target_detected": true,
+        "onset_s": 6.16
+      },
+      {
+        "turn": 11,
+        "key": "q6",
+        "question": "Which month follows April? Give a short answer.",
+        "expected": "may",
+        "text": "May.",
+        "target_detected": true,
+        "onset_s": 6.2
+      },
+      {
+        "turn": 13,
+        "key": "q8",
+        "question": "What color is a ripe banana? Give a short answer.",
+        "expected": "yellow",
+        "text": "yellow.",
+        "target_detected": true,
+        "onset_s": 6.18
+      },
+      {
+        "turn": 15,
+        "key": "q10",
+        "question": "What do bees make? Give a short answer.",
+        "expected": "honey",
+        "text": "Honey.",
+        "target_detected": true,
+        "onset_s": 5.78
+      },
+      {
+        "turn": 16,
+        "key": "q11",
+        "question": "How many sides on a triangle? Give a short answer.",
+        "expected": "three|3",
+        "text": "So",
+        "target_detected": false,
+        "onset_s": 6.52
+      },
+      {
+        "turn": 18,
+        "key": "q13",
+        "question": "What is the opposite of north? Give a short answer.",
+        "expected": "south",
+        "text": "",
+        "target_detected": false,
+        "onset_s": 5.5
+      },
+      {
+        "turn": 19,
+        "key": "q14",
+        "question": "How many hours in a day? Give a short answer.",
+        "expected": "24|twenty four",
+        "text": "24.",
+        "target_detected": true,
+        "onset_s": 6.14
+      },
+      {
+        "turn": 20,
+        "key": "q15",
+        "question": "What season follows winter? Give a short answer.",
+        "expected": "spring",
+        "text": "spring file.",
+        "target_detected": true,
+        "onset_s": 6.16
+      },
+      {
+        "turn": 21,
+        "key": "q16",
+        "question": "What is two times six? Give a short answer.",
+        "expected": "12|twelve",
+        "text": "12",
+        "target_detected": true,
+        "onset_s": 6.34
+      },
+      {
+        "turn": 23,
+        "key": "q18",
+        "question": "How many wheels on a bicycle? Give a short answer.",
+        "expected": "2|two",
+        "text": "",
+        "target_detected": false,
+        "onset_s": 6.58
+      },
+      {
+        "turn": 25,
+        "key": "q20",
+        "question": "What is the opposite of tall? Give a short answer.",
+        "expected": "short",
+        "text": "short answer.",
+        "target_detected": true,
+        "onset_s": 6.02
+      },
+      {
+        "turn": 28,
+        "key": "q23",
+        "question": "What is the opposite of night? Give a short answer.",
+        "expected": "day|daytime",
+        "text": "Thank you.",
+        "target_detected": false,
+        "onset_s": 5.3
+      },
+      {
+        "turn": 29,
+        "key": "q24",
+        "question": "What do cows drink? Give a short answer.",
+        "expected": "water",
+        "text": "milk.",
+        "target_detected": false,
+        "onset_s": 5.94
+      },
+      {
+        "turn": 30,
+        "key": "q25",
+        "question": "What is nine minus five? Give a short answer.",
+        "expected": "four|4|for",
+        "text": "",
+        "target_detected": false,
+        "onset_s": 6.14
+      },
+      {
+        "turn": 32,
+        "key": "q27",
+        "question": "What is one plus eight? Give a short answer.",
+        "expected": "nine|9",
+        "text": "Thank you.",
+        "target_detected": false,
+        "onset_s": 5.42
+      },
+      {
+        "turn": 34,
+        "key": "q29",
+        "question": "What is the opposite of slow? Give a short answer.",
+        "expected": "fast|quick|rapid",
+        "text": "fast.",
+        "target_detected": true,
+        "onset_s": 6.52
+      },
+      {
+        "turn": 35,
+        "key": "q30",
+        "question": "What color is fresh snow? Give a short answer.",
+        "expected": "white",
+        "text": "white.",
+        "target_detected": true,
+        "onset_s": 6.14
+      },
+      {
+        "turn": 36,
+        "key": "q31",
+        "question": "What is seven plus three? Give a short answer.",
+        "expected": "10|ten",
+        "text": "",
+        "target_detected": false,
+        "onset_s": null
+      },
+      {
+        "turn": 37,
+        "key": "q32",
+        "question": "What do you use to write on a blackboard? Give a short answer.",
+        "expected": "chalk",
+        "text": "",
+        "target_detected": false,
+        "onset_s": 6.36
+      },
+      {
+        "turn": 39,
+        "key": "q34",
+        "question": "What is the opposite of dry? Give a short answer.",
+        "expected": "wet",
+        "text": "wet.",
+        "target_detected": true,
+        "onset_s": 6.24
+      },
+      {
+        "turn": 40,
+        "key": "q35",
+        "question": "How many fingers on one hand? Give a short answer.",
+        "expected": "5|five",
+        "text": "Bye.",
+        "target_detected": false,
+        "onset_s": 6.5
+      },
+      {
+        "turn": 41,
+        "key": "museum",
+        "question": "Which time did we settle on for the museum booking?",
+        "expected": "evening",
+        "text": "",
+        "target_detected": false,
+        "onset_s": 5.96
+      },
+      {
+        "turn": 42,
+        "key": "garden",
+        "question": "Which day did we settle on for the garden delivery?",
+        "expected": "friday",
+        "text": "Friday.",
+        "target_detected": true,
+        "onset_s": 5.56
+      }
+    ]
+  },
+  "after": {
+    "summary": {
+      "received": 5221,
+      "scheduled_audio_s": 417.68,
+      "last_playout_wall_s": 421.55,
+      "gaps_over_20ms": 13,
+      "gap_seconds_over_20ms": 0.84,
+      "worst_gap_s": 0.25,
+      "heard": 42,
+      "answered": 42,
+      "dropped_mic": 0,
+      "guide_fallbacks": 0,
+      "ordinary_targets": 20,
+      "ordinary_count": 24,
+      "memory_hits": 2
+    },
+    "rows": [
+      {
+        "turn": 5,
+        "key": "q0",
+        "question": "What color is grass? Give a short answer.",
+        "expected": "green",
+        "text": "green.",
+        "target_detected": true,
+        "onset_s": 3.92
+      },
+      {
+        "turn": 6,
+        "key": "q1",
+        "question": "How many days in a week? Give a short answer.",
+        "expected": "seven|7",
+        "text": "seven days.",
+        "target_detected": true,
+        "onset_s": 2.64
+      },
+      {
+        "turn": 8,
+        "key": "q3",
+        "question": "What is two plus five? Give a short answer.",
+        "expected": "seven|7",
+        "text": "seven.",
+        "target_detected": true,
+        "onset_s": 3.14
+      },
+      {
+        "turn": 10,
+        "key": "q5",
+        "question": "What is the opposite of hot? Give a short answer.",
+        "expected": "cold",
+        "text": "cold.",
+        "target_detected": true,
+        "onset_s": 3.04
+      },
+      {
+        "turn": 11,
+        "key": "q6",
+        "question": "Which month follows April? Give a short answer.",
+        "expected": "may",
+        "text": "May.",
+        "target_detected": true,
+        "onset_s": 2.98
+      },
+      {
+        "turn": 13,
+        "key": "q8",
+        "question": "What color is a ripe banana? Give a short answer.",
+        "expected": "yellow",
+        "text": "yellow.",
+        "target_detected": true,
+        "onset_s": 3.46
+      },
+      {
+        "turn": 15,
+        "key": "q10",
+        "question": "What do bees make? Give a short answer.",
+        "expected": "honey",
+        "text": "honey.",
+        "target_detected": true,
+        "onset_s": 3.18
+      },
+      {
+        "turn": 16,
+        "key": "q11",
+        "question": "How many sides on a triangle? Give a short answer.",
+        "expected": "three|3",
+        "text": "three sides.",
+        "target_detected": true,
+        "onset_s": 3.04
+      },
+      {
+        "turn": 18,
+        "key": "q13",
+        "question": "What is the opposite of north? Give a short answer.",
+        "expected": "south",
+        "text": "So.",
+        "target_detected": false,
+        "onset_s": 2.64
+      },
+      {
+        "turn": 19,
+        "key": "q14",
+        "question": "How many hours in a day? Give a short answer.",
+        "expected": "24|twenty four",
+        "text": "24 hours.",
+        "target_detected": true,
+        "onset_s": 3.1
+      },
+      {
+        "turn": 20,
+        "key": "q15",
+        "question": "What season follows winter? Give a short answer.",
+        "expected": "spring",
+        "text": "Spring follows winter.",
+        "target_detected": true,
+        "onset_s": 3.4
+      },
+      {
+        "turn": 21,
+        "key": "q16",
+        "question": "What is two times six? Give a short answer.",
+        "expected": "12|twelve",
+        "text": "12",
+        "target_detected": true,
+        "onset_s": 3.24
+      },
+      {
+        "turn": 23,
+        "key": "q18",
+        "question": "How many wheels on a bicycle? Give a short answer.",
+        "expected": "2|two",
+        "text": "two wheels.",
+        "target_detected": true,
+        "onset_s": 3.58
+      },
+      {
+        "turn": 25,
+        "key": "q20",
+        "question": "What is the opposite of tall? Give a short answer.",
+        "expected": "short",
+        "text": "Short answer. Short.",
+        "target_detected": true,
+        "onset_s": 3.18
+      },
+      {
+        "turn": 28,
+        "key": "q23",
+        "question": "What is the opposite of night? Give a short answer.",
+        "expected": "day|daytime",
+        "text": "day.",
+        "target_detected": true,
+        "onset_s": 2.5
+      },
+      {
+        "turn": 29,
+        "key": "q24",
+        "question": "What do cows drink? Give a short answer.",
+        "expected": "water",
+        "text": "Milk.",
+        "target_detected": false,
+        "onset_s": 2.94
+      },
+      {
+        "turn": 30,
+        "key": "q25",
+        "question": "What is nine minus five? Give a short answer.",
+        "expected": "four|4|for",
+        "text": "for.",
+        "target_detected": true,
+        "onset_s": 2.94
+      },
+      {
+        "turn": 32,
+        "key": "q27",
+        "question": "What is one plus eight? Give a short answer.",
+        "expected": "nine|9",
+        "text": "tonight.",
+        "target_detected": false,
+        "onset_s": 2.5
+      },
+      {
+        "turn": 34,
+        "key": "q29",
+        "question": "What is the opposite of slow? Give a short answer.",
+        "expected": "fast|quick|rapid",
+        "text": "fast.",
+        "target_detected": true,
+        "onset_s": 3.02
+      },
+      {
+        "turn": 35,
+        "key": "q30",
+        "question": "What color is fresh snow? Give a short answer.",
+        "expected": "white",
+        "text": "white.",
+        "target_detected": true,
+        "onset_s": 3.28
+      },
+      {
+        "turn": 36,
+        "key": "q31",
+        "question": "What is seven plus three? Give a short answer.",
+        "expected": "10|ten",
+        "text": "10",
+        "target_detected": true,
+        "onset_s": 4.22
+      },
+      {
+        "turn": 37,
+        "key": "q32",
+        "question": "What do you use to write on a blackboard? Give a short answer.",
+        "expected": "chalk",
+        "text": "Blackboard Eraser.",
+        "target_detected": false,
+        "onset_s": 2.88
+      },
+      {
+        "turn": 39,
+        "key": "q34",
+        "question": "What is the opposite of dry? Give a short answer.",
+        "expected": "wet",
+        "text": "wet.",
+        "target_detected": true,
+        "onset_s": 2.92
+      },
+      {
+        "turn": 40,
+        "key": "q35",
+        "question": "How many fingers on one hand? Give a short answer.",
+        "expected": "5|five",
+        "text": "five fingers.",
+        "target_detected": true,
+        "onset_s": 3.12
+      },
+      {
+        "turn": 41,
+        "key": "museum",
+        "question": "Which time did we settle on for the museum booking?",
+        "expected": "evening",
+        "text": "evening.",
+        "target_detected": true,
+        "onset_s": 2.78
+      },
+      {
+        "turn": 42,
+        "key": "garden",
+        "question": "Which day did we settle on for the garden delivery?",
+        "expected": "friday",
+        "text": "Friday.",
+        "target_detected": true,
+        "onset_s": 2.74
+      }
+    ]
+  }
+}
