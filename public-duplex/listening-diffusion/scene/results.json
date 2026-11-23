@@ -1,0 +1,20 @@
+[
+  {
+    "arm": "red",
+    "text": "Red. So, what do you think about the colors?",
+    "seconds": 4.906168477988103,
+    "reply_wave": "red-reply.wav"
+  },
+  {
+    "arm": "blue",
+    "text": "Blue. So, what do you think about the colors?",
+    "seconds": 4.4409307219902985,
+    "reply_wave": "blue-reply.wav"
+  },
+  {
+    "arm": "no-image",
+    "text": "It's blue. What else do you want to know?",
+    "seconds": 4.120257992006373,
+    "reply_wave": "no-image-reply.wav"
+  }
+]

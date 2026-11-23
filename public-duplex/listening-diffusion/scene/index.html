@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同一个语音问题，两张不同的图</title>
+<style>
+html{color-scheme:dark}body{margin:32px auto;padding:0 20px;max-width:940px;font:1rem/1.6 system-ui;color:#eef1f1;background:#151719}
+h1{font-size:clamp(1.65rem,5vw,2.4rem)}h2{font-size:1.2rem}audio{display:block;width:min(100%,450px)}
+section{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,310px),1fr));gap:24px}
+video,img{width:100%;display:block;border-radius:8px}img{margin-bottom:12px}
+</style>
+</head>
+<body>
+<h1>同一个语音问题，两张不同的图</h1>
+<p>语音提问是「绿杯左边的物体是什么颜色？」</p>
+<audio controls preload="metadata" src="caller.wav" aria-label="播放语音问题"></audio>
+<section aria-label="两组场景和生成回复">
+<article>
+<h2>场景 A · 红色</h2>
+<img src="left-red.png" alt="绿杯左侧的物体为红色">
+<video controls playsinline preload="metadata" src="red-omni-avatar.mp4" aria-label="数字人回答红色"></video>
+</article>
+<article>
+<h2>场景 B · 蓝色</h2>
+<img src="left-blue.png" alt="绿杯左侧的物体为蓝色">
+<video controls playsinline preload="metadata" src="blue-omni-avatar.mp4" aria-label="数字人回答蓝色"></video>
+</article>
+</section>
+<p>Qwen2.5-Omni-3B 从静态图和语音生成回答，AURA 扩散模型根据生成的语音离线渲染整帧。此测试用两组样例验证画面变化能改变回答。</p>
+</body>
+</html>
