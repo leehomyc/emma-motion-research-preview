@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does the avatar react when the caller speaks?</title>
+<style>html{color-scheme:dark}body{margin:36px auto;padding:0 20px;max-width:980px;font:1rem/1.6 system-ui;color:#eef1f1;background:#151719}h1{font-size:clamp(1.65rem,5vw,2.4rem)}video,img{width:100%;display:block;border-radius:8px}img{max-width:780px}</style>
+<h1>Does the avatar react when the caller speaks?</h1>
+<video controls playsinline preload="metadata" src="compare.mp4"></video>
+<p>The caller audio is original, delayed by exactly one second, or silent before model encoding. All three panels use the same generated reply, portrait, checkpoint, and random seed. This player contains only the shared reply audio.</p>
+<p>All three head-pitch peaks landed at 4.56 s, just before the reply. None reached the 1.5° excursion-and-return criterion for a visible nod. This is one controlled replay.</p>
+<img src="pitch.png" alt="The three pitch curves stay within 1.5 degrees before the avatar replies.">
+</html>
