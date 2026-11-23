@@ -1,0 +1,25 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同一段话的三种嘴形</title><style>
+:root{color-scheme:dark}body{margin:0 auto;max-width:38rem;padding:1.2rem;background:#101611;color:#f2f4ee;font:1rem/1.55 system-ui,sans-serif}h1{font-size:1.5rem}video{width:100%;background:#181b18;display:block;border-radius:.6rem}a{color:#ade2bc}button{font:inherit;padding:.5rem .9rem;border:1px solid #66806b;border-radius:.5rem;background:#1c291f;color:inherit}button[aria-pressed=true]{background:#cee6cf;color:#142116}p{margin:.85rem 0}
+</style><main><h1>同一段话的三种嘴形</h1><p>六段公开对话，每段八秒。切换按钮会保留播放位置。三个版本使用同一张脸、同一段原声和相同的头肩动作。</p>
+<p><button data-src="articulation-serving.mp4" aria-pressed="false">当前嘴形</button> <button data-src="articulation-trained.mp4" aria-pressed="true">新训练嘴形</button> <button data-src="articulation-measured.mp4" aria-pressed="false">真人动作驱动</button></p>
+<video src="articulation-trained.mp4" controls playsinline preload="metadata"></video>
+<p>新训练嘴形把声音预测的三维嘴部动作与当前模型各取一半。第三个版本使用录像中实测的嘴部动作，用来检验渲染器能呈现多少细节。</p>
+<p><a href="https://pays-suits-calculate-excitement.trycloudflare.com/?history=1&amp;head=native-calm&amp;lips=contour&amp;v=mic-window-3">进入当前实时对话</a></p>
+<p>音频和动作来源于 Meta 的 <a href="https://ai.meta.com/research/seamless-interaction">Seamless Interaction</a>。这里的头像视频均由研究原型重新渲染。</p></main>
+<script>
+const video=document.querySelector('video'), buttons=[...document.querySelectorAll('button')];
+let pending=null;
+for(const button of buttons)button.onclick=()=>{
+ if(button.getAttribute('aria-pressed')==='true')return;
+ const resume=pending||{time:video.currentTime,playing:!video.paused};
+ pending=resume;
+ for(const b of buttons)b.setAttribute('aria-pressed',String(b===button));
+ video.onloadedmetadata=()=>{
+   video.currentTime=Math.min(resume.time,video.duration);
+   if(resume.playing)video.play().catch(()=>{});
+   pending=null;
+ };
+ video.src=button.dataset.src;
+};
+</script></html>
