@@ -15,7 +15,14 @@
         "I don't know. Can I have a seeing hint? This is a test, and it's not the right answer.",
         "Thank you."
       ],
-      "model_text": "I'm afraid I can't help you with that. I  don't know.  Can I have a hint?  This is a test, and it's not the right answer."
+      "model_text": "I'm afraid I can't help you with that. I  don't know.  Can I have a hint?  This is a test, and it's not the right answer.",
+      "official_card": {
+        "window_asr": [
+          "I'm Haffu. I'm 22. I like to run every morning. It's good for my head. I'm senior in college. I'm like",
+          "to think about a lot of things like new technology, startups, in business, economics, history. And quite an easygoing guy. Uffs, I'd like my friends."
+        ],
+        "model_text": "I'm just getting to know you.  I'm Haru. I'm twenty-two. I like to run every morning.  It's good for my head.  I'm a senior in college.  I like to think about a lot of things, like new technology, startups in business,  economics, history.  I am quite an easygoing guy.  I like my friends."
+      }
     },
     {
       "language": "zh",
@@ -23,7 +30,18 @@
         "今天勸起很好,我們坐下來聊天",
         "有点不错这次是好"
       ],
-      "model_text": "今天是二零二二年十二月。 今天天气很好，我们坐下来来聊天。"
+      "model_text": "今天是二零二二年十二月。 今天天气很好，我们坐下来来聊天。",
+      "official_card": {
+        "window_asr": [
+          "你好,我是叉入,我的爱上是跑步,你几岁了。",
+          "22回你是做什么"
+        ],
+        "model_text": "哎， 你好，我是 Haru。 我的爱好是跑步。 你几岁了？ 二十二岁。 你是做什么的？"
+      }
     }
+  ],
+  "prompt_conditions": [
+    "short language-specific instruction",
+    "official chat character card"
   ]
 }

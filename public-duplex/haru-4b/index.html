@@ -1,6 +1,6 @@
 <!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Haru-4B 中英文实测</title><style>body{max-width:38rem;margin:2rem auto;padding:0 1rem;font:1.06rem/1.65 system-ui,sans-serif;color:#202922}audio{display:block;width:100%}section{margin:2rem 0}summary{cursor:pointer}</style><main>
-<h1>听 Haru-4B 用中英文接电话</h1><p>官方基础权重，两个独立的 26 秒会话，每通两次提问。输入和参考音色均为合成语音。直接播放可以听到双方，展开下方控件可单听模型。服务节点 CPU 离线逐帧推理，录音保留原始媒体时间。</p>
-<section><h2>英语</h2><p>先问草是什么颜色，再问新雪是什么颜色。</p><audio controls src="en.wav"></audio><details><summary>单听模型</summary><audio controls src="en-model.wav"></audio></details></section>
-<section><h2>普通话</h2><p>先问二加二等于几，再问新下的雪是什么颜色。</p><audio controls src="zh.wav"></audio><details><summary>单听模型</summary><audio controls src="zh-model.wav"></audio></details></section>
-<p>两通使用相同采样种子，并分别以简短英文和中文提示指定答话方式。<a href="results.json">查看识别器听写、模型文字及版本</a>。<a href="https://blog.higurashi.ai/melte/haru4b/">官方技术报告</a>。</p></main>
+<h1>听 Haru-4B 用中英文接电话</h1><p>官方基础权重，中英文各两通 26 秒会话，每通两次提问。输入和参考音色均为合成语音。直接播放可以听到双方，展开下方控件可单听模型。服务节点 CPU 离线逐帧推理，录音保留原始媒体时间。</p>
+<section><h2>英语</h2><p>先问草是什么颜色，再问新雪是什么颜色。</p><p>简短问答提示</p><audio controls src="en.wav"></audio><details><summary>单听模型</summary><audio controls src="en-model.wav"></audio></details><p>官方聊天角色卡</p><audio controls src="en-card.wav"></audio><details><summary>单听模型</summary><audio controls src="en-card-model.wav"></audio></details></section>
+<section><h2>普通话</h2><p>先问二加二等于几，再问新下的雪是什么颜色。</p><p>简短问答提示</p><audio controls src="zh.wav"></audio><details><summary>单听模型</summary><audio controls src="zh-model.wav"></audio></details><p>官方聊天角色卡</p><audio controls src="zh-card.wav"></audio><details><summary>单听模型</summary><audio controls src="zh-card-model.wav"></audio></details></section>
+<p>四通使用同一采样种子。每种语言分别试了简短问答提示和官方聊天角色卡。<a href="results.json">查看识别器听写、模型文字及版本</a>。<a href="https://blog.higurashi.ai/melte/haru4b/">官方技术报告</a>。</p></main>
