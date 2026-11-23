@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>因果 Wan 语音与口型对照</title>
+<style>
+html{color-scheme:dark}body{margin:32px auto;padding:0 18px;max-width:920px;font:1rem/1.6 system-ui;color:#f4f4f4;background:#171819}
+h1{font-size:clamp(1.65rem,5vw,2.4rem)}h2{font-size:1.25rem}section{margin:28px 0}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}figure{margin:0}video{display:block;width:100%;border-radius:8px}
+figcaption{margin-bottom:5px}
+</style>
+</head>
+<body>
+<h1>因果 Wan 语音与口型对照</h1>
+<p>四段短片播放同一段 Omni 语音。左侧使用固定嘴型，右侧用语音预测口部关键点，再由四步因果 Wan 生成整帧。测试分别固定姿态和加入点头指令。</p>
+<section>
+<h2>固定姿态</h2>
+<div class="pair">
+<figure><figcaption>固定嘴型</figcaption><video controls playsinline preload="metadata" src="neutral_fixed.mp4"></video></figure>
+<figure><figcaption>语音驱动嘴型</figcaption><video controls playsinline preload="metadata" src="neutral_speech.mp4"></video></figure>
+</div>
+</section>
+<section>
+<h2>加入点头</h2>
+<div class="pair">
+<figure><figcaption>固定嘴型</figcaption><video controls playsinline preload="none" src="pitch_a1_fixed.mp4"></video></figure>
+<figure><figcaption>语音驱动嘴型</figcaption><video controls playsinline preload="none" src="pitch_a1_speech.mp4"></video></figure>
+</div>
+</section>
+<p>离线生成。语音控制改善了零偏移口型分数，但单句测试仍显示明显时间偏差。</p>
+<p><a href="../causal/">看头肩动作对照</a> · <a href="../video/">看六组场景理解</a></p>
+</body>
+</html>

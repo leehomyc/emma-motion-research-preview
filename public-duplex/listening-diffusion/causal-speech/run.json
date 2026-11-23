@@ -1,0 +1,33 @@
+{
+ "alpha": 1.0,
+ "runs": {
+  "neutral_fixed": {
+   "frames": 81,
+   "input_s": 2.12,
+   "denoise_s": 3.608,
+   "decode_s": 1.721,
+   "media_s": 7.864
+  },
+  "neutral_speech": {
+   "frames": 81,
+   "input_s": 1.532,
+   "denoise_s": 3.429,
+   "decode_s": 1.711,
+   "media_s": 7.083
+  },
+  "pitch_a1_fixed": {
+   "frames": 81,
+   "input_s": 1.626,
+   "denoise_s": 3.519,
+   "decode_s": 1.714,
+   "media_s": 7.164
+  },
+  "pitch_a1_speech": {
+   "frames": 81,
+   "input_s": 1.485,
+   "denoise_s": 3.537,
+   "decode_s": 1.719,
+   "media_s": 7.073
+  }
+ }
+}
