@@ -504,5 +504,58 @@
         "onset_s": 2.74
       }
     ]
+  },
+  "public_example_timing": {
+    "source": "Nuplex character_a published example, evaluation replay only",
+    "question_end_s": [
+      15.16,
+      24.8
+    ],
+    "original_gaps_s": [
+      0.68,
+      0.6
+    ],
+    "browser": {
+      "grouped": {
+        "trials_seconds": [
+          [
+            2.66,
+            2.72
+          ],
+          [
+            2.36,
+            2.82
+          ],
+          [
+            2.58,
+            3.26
+          ]
+        ],
+        "median_seconds": [
+          2.58,
+          2.82
+        ]
+      },
+      "adaptive": {
+        "trials_seconds": [
+          [
+            3.08,
+            3.46
+          ],
+          [
+            2.6,
+            2.84
+          ],
+          [
+            2.28,
+            2.92
+          ]
+        ],
+        "median_seconds": [
+          2.6,
+          2.92
+        ]
+      }
+    }
   }
 }
