@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>同一段追问，两种回答</title>
+<style>body{max-width:44rem;margin:2rem auto;padding:0 1.15rem;font:1.05rem/1.6 system-ui,sans-serif;color:#16271f;background:#f6f8f4}h1{line-height:1.25}h2{font-size:1.13rem;margin-bottom:.3rem}audio{width:100%}section{margin:1.5rem 0}details{margin:2rem 0}</style>
+<main><h1>同一段追问，两种回答</h1><p>同一段合成来电，先请助手给船取名，再问“你刚才选的是哪种动物？” 两段都是 H100 上生成的完整通话回放，第二个问题从第 16 秒开始。</p>
+<section><h2>原版</h2><audio controls preload="metadata" src="memory-original.mp3"></audio></section>
+<section><h2>加入助手自己的对话历史</h2><audio controls preload="metadata" src="memory-both-roles.mp3"></audio></section>
+<p>两次文字模型都选了 Sapphire Seal。追问时，原版文字模型把动物改成 Penguin，记忆修正版答 Seal。留意实际语音里有没有额外的词，以及两轮念出的名字是否一致。</p>
+<details><summary>听三种语音生成方式的对照</summary><p>这三段都在同一时刻收到完全相同的两句文字答案，区别只在语音模型何时获得每个词，以及在答案前后能否自由说话。</p>
+<h2>固定词间隔，前后自由生成</h2><audio controls preload="none" src="memory-fixed-free.mp3"></audio>
+<h2>固定词间隔，等待和结束时抑制发言</h2><audio controls preload="none" src="memory-fixed-hold.mp3"></audio>
+<h2>由模型选择词的起点，等待和结束时抑制发言</h2><audio controls preload="none" src="memory-native-word-clock.mp3"></audio></details></main></html>
