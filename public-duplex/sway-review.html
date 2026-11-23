@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>头肩动作盲评</title><style>
+:root{color-scheme:dark;font:17px/1.5 system-ui,-apple-system,sans-serif;background:#111714;color:#edf5ee}*{box-sizing:border-box}main{width:min(100%,640px);margin:0 auto;padding:20px 15px 40px}h1{font-size:1.65rem;margin:0}p{color:#c5d1c8;margin:6px 0 15px}button,select{font:inherit;color:inherit;background:#25342d;border:1px solid #68786b;border-radius:6px;padding:6px 12px;min-height:40px}button[aria-pressed=true]{background:#bbebcb;color:#122519}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e8cc85}.viewport{aspect-ratio:1;overflow:hidden;border-radius:8px;margin:.7rem 0;background:#272e2a}video{display:block;width:200%;max-width:none;height:100%;object-fit:fill}video.b{transform:translateX(-50%)}.bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bar input{flex:1;min-width:65px;accent-color:#b8e4c8}.top{justify-content:space-between}.buttons{display:flex;gap:4px}output{font-variant-numeric:tabular-nums}
+</style><main><h1>头肩动作盲评</h1><p>播放时可以切换 A 和 B，两版共用同一条音轨。请留意左右晃动的幅度，以及转头时脖子和肩膀是否连贯。</p>
+<div class="bar top"><label>对话 <select id="clip"><option value="1">1 · 加法与雪的颜色</option><option value="2">2 · 香蕉的颜色与加法</option><option value="3">3 · 天数与动物叫声</option><option value="4">4 · 地球与减法</option></select></label>
+<div class="buttons" role="group" aria-label="切换动作版本"><button id="a" aria-pressed="true">A</button><button id="b" aria-pressed="false">B</button></div></div>
+<div class="viewport"><video id="v" aria-label="头肩动作样片" playsinline preload="metadata" src="sway-review-1.mp4"></video></div>
+<div class="bar"><button id="play">播放</button><input id="seek" aria-label="播放位置" type="range" min="0" max="20" step=".04" value="0"><output id="time">0 / 20 秒</output></div><p id="msg" aria-live="polite"></p>
+<script>
+const el=id=>document.getElementById(id),v=el('v'),slider=el('seek'),msg=el('msg');
+function side(b){v.classList.toggle('b',b);el('a').setAttribute('aria-pressed',String(!b));el('b').setAttribute('aria-pressed',String(b))}
+el('a').onclick=()=>side(false);el('b').onclick=()=>side(true);
+async function play(){try{await v.play();msg.textContent=''}catch{msg.textContent='暂时无法播放，请再试一次。'}}
+el('play').onclick=()=>v.paused?play():v.pause();
+v.onplay=()=>el('play').textContent='暂停';v.onpause=v.onended=()=>el('play').textContent='播放';
+function time(){const d=Number.isFinite(v.duration)?v.duration:20;slider.max=d;slider.value=v.currentTime;el('time').textContent=Math.floor(v.currentTime)+' / '+Math.round(d)+' 秒'}
+v.ontimeupdate=v.onloadedmetadata=time;slider.oninput=()=>{v.currentTime=Number(slider.value)};
+el('clip').onchange=()=>{const resume=!v.paused;v.pause();side(false);v.src='sway-review-'+el('clip').value+'.mp4';v.load();time();if(resume)play()};
+v.onerror=()=>msg.textContent='视频加载失败，请重新选择对话。';
+</script></main></html>
