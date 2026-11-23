@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "turn": 41,
+      "question": "Which time did we settle on for the museum booking?",
+      "expected": "evening",
+      "superseded": "morning",
+      "asr": "",
+      "match": false,
+      "seconds": 7.0
+    },
+    {
+      "turn": 42,
+      "question": "Which day did we settle on for the garden delivery?",
+      "expected": "friday",
+      "superseded": "monday",
+      "asr": "Friday.",
+      "match": true,
+      "seconds": 15.0
+    }
+  ],
+  "received": 3380,
+  "voiced": 205,
+  "rendered": 2590,
+  "dropped": 0,
+  "capacity": 512,
+  "errors": []
+}

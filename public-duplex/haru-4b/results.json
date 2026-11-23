@@ -1,0 +1,29 @@
+{
+  "checkpoint": "higurashi-ai/Haru-4B",
+  "revision": "8d6e83bcd3701a76fc27a764965665da1df7da78",
+  "seed": 17,
+  "device": "CPU on lab server",
+  "duration_per_conversation_s": 26,
+  "language_models": [
+    "Whisper small.en",
+    "Whisper base multilingual"
+  ],
+  "examples": [
+    {
+      "language": "en",
+      "window_asr": [
+        "I don't know. Can I have a seeing hint? This is a test, and it's not the right answer.",
+        "Thank you."
+      ],
+      "model_text": "I'm afraid I can't help you with that. I  don't know.  Can I have a hint?  This is a test, and it's not the right answer."
+    },
+    {
+      "language": "zh",
+      "window_asr": [
+        "今天勸起很好,我們坐下來聊天",
+        "有点不错这次是好"
+      ],
+      "model_text": "今天是二零二二年十二月。 今天天气很好，我们坐下来来聊天。"
+    }
+  ]
+}
