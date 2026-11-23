@@ -1,0 +1,124 @@
+{
+  "continuous": {
+    "segments": [
+      {
+        "seg": 0,
+        "recall": 0.788,
+        "slots": "9/10",
+        "targets": "9/10",
+        "murmur": 0.223
+      },
+      {
+        "seg": 1,
+        "recall": 0.65,
+        "slots": "6/10",
+        "targets": "6/10",
+        "murmur": 0.149
+      },
+      {
+        "seg": 2,
+        "recall": 0.0,
+        "slots": "0/10",
+        "targets": "0/10",
+        "murmur": 0.08
+      },
+      {
+        "seg": 3,
+        "recall": 0.0,
+        "slots": "0/10",
+        "targets": "0/10",
+        "murmur": 0.648
+      }
+    ],
+    "samples": [
+      {
+        "question": "Which city did I give you?",
+        "start": 639.5394583333333,
+        "file": "continuous-2.wav",
+        "seg": 2,
+        "turn": 36,
+        "plan": "The first address is in Boston.",
+        "said": "Silas F.S.",
+        "recall": 0.0,
+        "slot_hit": 0,
+        "slot_n": 1,
+        "target": false
+      },
+      {
+        "question": "Which city did I give you?",
+        "start": 939.5394583333333,
+        "file": "continuous-3.wav",
+        "seg": 3,
+        "turn": 53,
+        "plan": "The first address is in Dallas.",
+        "said": ".",
+        "recall": 0.0,
+        "slot_hit": 0,
+        "slot_n": 1,
+        "target": false
+      }
+    ]
+  },
+  "reset": {
+    "segments": [
+      {
+        "seg": 0,
+        "recall": 0.788,
+        "slots": "9/10",
+        "targets": "9/10",
+        "murmur": 0.223
+      },
+      {
+        "seg": 1,
+        "recall": 0.623,
+        "slots": "7/10",
+        "targets": "7/10",
+        "murmur": 0.089
+      },
+      {
+        "seg": 2,
+        "recall": 0.917,
+        "slots": "9/10",
+        "targets": "9/10",
+        "murmur": 0.282
+      },
+      {
+        "seg": 3,
+        "recall": 0.77,
+        "slots": "8/10",
+        "targets": "8/10",
+        "murmur": 0.121
+      }
+    ],
+    "samples": [
+      {
+        "question": "Which city did I give you?",
+        "start": 639.5394583333333,
+        "file": "reset-2.wav",
+        "seg": 2,
+        "turn": 36,
+        "plan": "The first address is in Boston.",
+        "said": "You gave me Boston, so I'm just confronting the first address in Boston.",
+        "recall": 0.8333333333333334,
+        "slot_hit": 1,
+        "slot_n": 1,
+        "target": true
+      },
+      {
+        "question": "Which city did I give you?",
+        "start": 939.5394583333333,
+        "file": "reset-3.wav",
+        "seg": 3,
+        "turn": 53,
+        "plan": "The first address is in Dallas.",
+        "said": "You're provided the address in Dallas. The first address is in Dallas.",
+        "recall": 1.0,
+        "slot_hit": 1,
+        "slot_n": 1,
+        "target": true
+      }
+    ]
+  },
+  "matched_first_300_seconds_pcm_sha256": "9599b9a83adf8aa05e7e8ebf9b52f146c21f718a1e20f6bdd65f908bb45cd4ec",
+  "fixed_plans": 68
+}
