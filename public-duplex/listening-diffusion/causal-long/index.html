@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>因果 Wan 12 秒身份稳定性对照</title>
+<style>
+html{color-scheme:dark}body{margin:30px auto;padding:0 18px;max-width:920px;font:1rem/1.6 system-ui;color:#f4f4f4;background:#171819}
+h1{font-size:clamp(1.65rem,5vw,2.4rem)}section{margin:26px 0}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+figure{margin:0}video{display:block;width:100%;border-radius:8px}figcaption{margin-bottom:6px}button{margin-top:12px;padding:.45rem .7rem}
+</style>
+</head>
+<body>
+<h1>因果 Wan 的 12 秒身份稳定性对照</h1>
+<p>每组固定同一个虚构肖像和动作轨迹，用四步因果 Wan 生成 189 帧。右侧每隔一个模型窗口重新加入参考图，主要观察最后几秒的脸和衣服。</p>
+<section>
+<h2>左右转头</h2>
+<div class="pair">
+<figure><figcaption>仅在开头给参考图</figcaption><video controls playsinline muted preload="metadata" src="long189-yaw.mp4"></video></figure>
+<figure><figcaption>定期重新加入参考图</figcaption><video controls playsinline muted preload="metadata" src="long189_y12-yaw.mp4"></video></figure>
+</div>
+<button type="button">同时播放</button>
+</section>
+<section>
+<h2>静止姿态</h2>
+<div class="pair">
+<figure><figcaption>仅在开头给参考图</figcaption><video controls playsinline muted preload="none" src="long189-neutral.mp4"></video></figure>
+<figure><figcaption>定期重新加入参考图</figcaption><video controls playsinline muted preload="none" src="long189_y12-neutral.mp4"></video></figure>
+</div>
+<button type="button">同时播放</button>
+</section>
+<p>这是固定动作的离线测试。<a href="../causal-speech/">看语音与口型对照</a></p>
+<script>
+for (const button of document.querySelectorAll("button")) {
+  button.addEventListener("click", () => {
+    for (const video of button.closest("section").querySelectorAll("video")) {
+      video.currentTime = 0
+      video.play().catch(() => {})
+    }
+  })
+}
+</script>
+</body>
+</html>

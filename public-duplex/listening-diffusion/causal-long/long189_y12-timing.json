@@ -1,0 +1,13 @@
+{
+ "alpha": 1.0,
+ "runs": {
+  "p4_neutral": {
+   "frames": 189,
+   "denoise_s": 7.88
+  },
+  "p4_yaw_a1": {
+   "frames": 189,
+   "denoise_s": 7.93
+  }
+ }
+}
