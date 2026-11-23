@@ -1,0 +1,23 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>面部动作对照</title><style>
+:root{color-scheme:dark}body{margin:0 auto;max-width:38rem;padding:1.2rem;background:#101611;color:#f2f4ee;font:1rem/1.55 system-ui,sans-serif}h1{font-size:1.5rem}video{width:100%;background:#181b18;display:block;border-radius:.6rem}a{color:#ade2bc}button{font:inherit;padding:.5rem .9rem;border:1px solid #66806b;border-radius:.5rem;background:#1c291f;color:inherit}button[aria-pressed=true]{background:#cee6cf;color:#142116}p{margin:.85rem 0}
+</style><main><h1>面部动作对照</h1><p>四段对话各六秒。切换版本时会停留在同一处，可观察转头时脸颊和鼻子的移动，以及说辅音时的闭唇。</p>
+<p><button data-src="midpoint-before.mp4" aria-pressed="false">原版</button> <button data-src="midpoint-after.mp4" aria-pressed="true">缩小闭唇保护区域</button></p>
+<video src="midpoint-after.mp4" controls playsinline preload="metadata"></video>
+<p><a href="https://pays-suits-calculate-excitement.trycloudflare.com/?history=1&amp;lips=contour&amp;v=mic-window-3">用麦克风试新版</a></p></main>
+<script>
+const video=document.querySelector('video'), buttons=[...document.querySelectorAll('button')];
+let pending=null;
+for(const button of buttons)button.onclick=()=>{
+ if(button.getAttribute('aria-pressed')==='true')return;
+ const resume=pending||{time:video.currentTime,playing:!video.paused};
+ pending=resume;
+ for(const b of buttons)b.setAttribute('aria-pressed',String(b===button));
+ video.onloadedmetadata=()=>{
+   video.currentTime=Math.min(resume.time,video.duration);
+   if(resume.playing)video.play().catch(()=>{});
+   pending=null;
+ };
+ video.src=button.dataset.src;
+};
+</script></html>
