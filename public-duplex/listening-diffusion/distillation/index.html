@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wan 与 AURA 蒸馏对照</title>
+<style>html{color-scheme:dark}body{margin:32px auto;padding:0 18px;max-width:1050px;font:1rem/1.55 system-ui;background:#171819;color:#f4f4f3}h1{font-size:clamp(1.65rem,5vw,2.5rem)}article{margin:30px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}figure{margin:0;min-width:0}video{display:block;width:100%;aspect-ratio:1;object-fit:fill;border-radius:8px}figcaption{font-size:.9rem;margin-bottom:5px}button{padding:.45rem .7rem;cursor:pointer}</style>
+</head><body>
+<h1>同一动作指令的蒸馏对照</h1>
+<p>同一虚构肖像从训练中留出。每组使用同一条 1 倍幅度的动作轨迹，展示生成后的前 49 帧。动作幅度为成片中测得的幅度与指令幅度之比。</p>
+<article><h2>点头</h2><div class="grid"><figure><figcaption>Wan 教师 · 114%</figcaption><video controls playsinline muted preload="none" src="p4_pitch_a1-teacher.mp4"></video></figure><figure><figcaption>公开数据 AURA · 9%</figcaption><video controls playsinline muted preload="none" src="p4_pitch_a1-public_only.mp4"></video></figure><figure><figcaption>蒸馏后 AURA · 16%</figcaption><video controls playsinline muted preload="none" src="p4_pitch_a1-distilled.mp4"></video></figure></div><p><button type="button">同时播放</button></p></article>
+<article><h2>转头</h2><div class="grid"><figure><figcaption>Wan 教师 · 80%</figcaption><video controls playsinline muted preload="none" src="p4_yaw_a1-teacher.mp4"></video></figure><figure><figcaption>公开数据 AURA · 3%</figcaption><video controls playsinline muted preload="none" src="p4_yaw_a1-public_only.mp4"></video></figure><figure><figcaption>蒸馏后 AURA · 2%</figcaption><video controls playsinline muted preload="none" src="p4_yaw_a1-distilled.mp4"></video></figure></div><p><button type="button">同时播放</button></p></article>
+<article><h2>歪头</h2><div class="grid"><figure><figcaption>Wan 教师 · 105%</figcaption><video controls playsinline muted preload="none" src="p4_roll_a1-teacher.mp4"></video></figure><figure><figcaption>公开数据 AURA · 9%</figcaption><video controls playsinline muted preload="none" src="p4_roll_a1-public_only.mp4"></video></figure><figure><figcaption>蒸馏后 AURA · 10%</figcaption><video controls playsinline muted preload="none" src="p4_roll_a1-distilled.mp4"></video></figure></div><p><button type="button">同时播放</button></p></article>
+<article><h2>耸肩</h2><div class="grid"><figure><figcaption>Wan 教师 · 103%</figcaption><video controls playsinline muted preload="none" src="p4_shrug_a1-teacher.mp4"></video></figure><figure><figcaption>公开数据 AURA · 2%</figcaption><video controls playsinline muted preload="none" src="p4_shrug_a1-public_only.mp4"></video></figure><figure><figcaption>蒸馏后 AURA · 1%</figcaption><video controls playsinline muted preload="none" src="p4_shrug_a1-distilled.mp4"></video></figure></div><p><button type="button">同时播放</button></p></article>
+<p>静音离线生成。蒸馏后点头有所改善，幅度仍偏小。<a href="../video/">看场景理解和语音回复</a></p>
+<script>
+for (const button of document.querySelectorAll("button")) {
+  button.addEventListener("click", () => {
+    for (const video of button.closest("article").querySelectorAll("video")) {
+      video.currentTime = 0
+      video.play().catch(() => {})
+    }
+  })
+}
+</script>
+</body></html>
