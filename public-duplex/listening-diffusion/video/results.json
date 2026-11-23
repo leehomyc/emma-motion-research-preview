@@ -1,0 +1,58 @@
+[
+  {
+    "arm": "red-to-blue",
+    "initial_color": "red",
+    "expected": "blue",
+    "text": "The square at the very end of the video is blue. So, what do you think about the video?",
+    "seconds": 8.71003830601694,
+    "reply_wave": "red-to-blue-reply.wav"
+  },
+  {
+    "arm": "red-to-yellow",
+    "initial_color": "red",
+    "expected": "yellow",
+    "text": "The square at the very end of the video is yellow. So, what do you think about the colors in the video?",
+    "seconds": 8.488354725006502,
+    "reply_wave": "red-to-yellow-reply.wav"
+  },
+  {
+    "arm": "blue-to-red",
+    "initial_color": "blue",
+    "expected": "red",
+    "text": "The square at the very end of the video is red. So, what do you think about the video?",
+    "seconds": 7.990505253983429,
+    "reply_wave": "blue-to-red-reply.wav"
+  },
+  {
+    "arm": "blue-to-yellow",
+    "initial_color": "blue",
+    "expected": "yellow",
+    "text": "The square at the very end of the video is yellow. So, what do you think about the video?",
+    "seconds": 6.601442732993746,
+    "reply_wave": "blue-to-yellow-reply.wav"
+  },
+  {
+    "arm": "yellow-to-red",
+    "initial_color": "yellow",
+    "expected": "red",
+    "text": "The square at the very end of the video is red. So, what do you think about the video?",
+    "seconds": 6.2303915490047075,
+    "reply_wave": "yellow-to-red-reply.wav"
+  },
+  {
+    "arm": "yellow-to-blue",
+    "initial_color": "yellow",
+    "expected": "blue",
+    "text": "The square at the very end of the video is blue. So, what do you think about the video?",
+    "seconds": 6.111600730015198,
+    "reply_wave": "yellow-to-blue-reply.wav"
+  },
+  {
+    "arm": "no-image",
+    "initial_color": null,
+    "expected": null,
+    "text": "I'm not sure which video you're referring to. You need to tell me which video it is so I can answer your question. Go ahead and let me",
+    "seconds": 8.672198626009049,
+    "reply_wave": "no-image-reply.wav"
+  }
+]

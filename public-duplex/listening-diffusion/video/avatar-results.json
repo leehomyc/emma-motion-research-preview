@@ -1,0 +1,32 @@
+[
+  {
+    "video": "red-to-blue-omni-avatar.mp4",
+    "text": "The square at the very end of the video is blue. So, what do you think about the video?",
+    "render_seconds": 42.89674245700007
+  },
+  {
+    "video": "red-to-yellow-omni-avatar.mp4",
+    "text": "The square at the very end of the video is yellow. So, what do you think about the colors in the video?",
+    "render_seconds": 16.810402706003515
+  },
+  {
+    "video": "blue-to-red-omni-avatar.mp4",
+    "text": "The square at the very end of the video is red. So, what do you think about the video?",
+    "render_seconds": 17.015222477988573
+  },
+  {
+    "video": "blue-to-yellow-omni-avatar.mp4",
+    "text": "The square at the very end of the video is yellow. So, what do you think about the video?",
+    "render_seconds": 12.801384663995123
+  },
+  {
+    "video": "yellow-to-red-omni-avatar.mp4",
+    "text": "The square at the very end of the video is red. So, what do you think about the video?",
+    "render_seconds": 10.63658373299404
+  },
+  {
+    "video": "yellow-to-blue-omni-avatar.mp4",
+    "text": "The square at the very end of the video is blue. So, what do you think about the video?",
+    "render_seconds": 12.769826612988254
+  }
+]

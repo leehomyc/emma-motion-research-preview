@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>视频画面变化与数字人回答</title>
+<style>html{color-scheme:dark}body{margin:30px auto;padding:0 18px;max-width:960px;font:1rem/1.5 system-ui;color:#f5f4f3;background:#171819}h1{font-size:clamp(1.65rem,5vw,2.4rem)}article{margin:28px 0}h2{font-size:1.18rem}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}figure{margin:0}figcaption{margin-bottom:8px}video{width:100%;display:block;border-radius:8px}audio{width:min(100%,420px)}</style>
+</head>
+<body>
+<h1>视频画面变化与数字人回答</h1>
+<p>向六段视频提出同一个语音问题「视频最后一刻，方块是什么颜色？」六次均回答正确。仅提供语音时，模型要求提供视频。</p>
+<audio controls preload="none" src="caller.wav" aria-label="播放语音问题"></audio>
+<p>Qwen2.5-Omni-3B 读取视频并生成语音，AURA 根据语音离线生成整帧视频。</p>
+<article><h2>红色变蓝色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="red-to-blue.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="red-to-blue-omni-avatar.mp4"></video></figure>
+</div></article>
+<article><h2>红色变黄色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="red-to-yellow.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="red-to-yellow-omni-avatar.mp4"></video></figure>
+</div></article>
+<article><h2>蓝色变红色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="blue-to-red.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="blue-to-red-omni-avatar.mp4"></video></figure>
+</div></article>
+<article><h2>蓝色变黄色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="blue-to-yellow.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="blue-to-yellow-omni-avatar.mp4"></video></figure>
+</div></article>
+<article><h2>黄色变红色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="yellow-to-red.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="yellow-to-red-omni-avatar.mp4"></video></figure>
+</div></article>
+<article><h2>黄色变蓝色</h2><div class="pair">
+<figure><figcaption>输入视频</figcaption><video controls playsinline preload="none" src="yellow-to-blue.mp4"></video></figure>
+<figure><figcaption>数字人回复</figcaption><video controls playsinline preload="none" src="yellow-to-blue-omni-avatar.mp4"></video></figure>
+</div></article>
+</body></html>
