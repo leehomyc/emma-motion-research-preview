@@ -3,6 +3,11 @@
 <title>Full-frame diffusion listening test</title>
 <style>html{color-scheme:dark}body{margin:36px auto;padding:0 20px;max-width:980px;font:1rem/1.6 system-ui;color:#eef1f1;background:#151719}h1{font-size:clamp(1.65rem,5vw,2.4rem)}video{width:100%;display:block;border-radius:8px}.labels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:.4rem 0;font-weight:600}</style>
 <h1>Can a full-frame avatar nod while listening?</h1>
+<h2>After training the caller-audio adapter</h2>
+<div class="labels"><span>Caller muted for the model</span><span>Caller audio present</span></div>
+<video controls playsinline preload="metadata" src="trained.mp4"></video>
+<p>The adapter was optimized for 120 steps on 12 public training clips with AURA's video denoising loss. On two held-out clips the loss was 0.01333 with caller audio and 0.01845 with it muted. This example still shows no clear listener nod. The speech backbone and pretrained video model were frozen.</p>
+<h2>Earlier prompt-driven control</h2>
 <div class="labels"><span>Caller muted for the model</span><span>Caller triggers a listening prompt</span></div>
 <video controls playsinline preload="metadata" src="compare.mp4"></video>
 <p>Both sides use the same fictional portrait, reply waveform, and diffusion seed. Everyone hears the same conversation in this player. This test changes an explicit prompt on the right at 1.81 seconds. Neither clip shows a clear nod.</p>
