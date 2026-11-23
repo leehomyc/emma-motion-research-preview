@@ -1,0 +1,888 @@
+{
+  "protocol": "eligible human reply onset observed before next caller bout or 3 s; right censoring reported",
+  "scores": {
+    "human": {
+      "observed": 13,
+      "overlap": 0,
+      "total": 13,
+      "conditional_median_s": 0.36
+    },
+    "reference": {
+      "observed": 1,
+      "overlap": 0,
+      "total": 13,
+      "conditional_median_s": 1.46
+    },
+    "reference-trim": {
+      "observed": 2,
+      "overlap": 0,
+      "total": 13,
+      "conditional_median_s": 1.27
+    },
+    "compact": {
+      "observed": 8,
+      "overlap": 1,
+      "total": 13,
+      "conditional_median_s": 2.48
+    },
+    "compact-trim": {
+      "observed": 9,
+      "overlap": 0,
+      "total": 13,
+      "conditional_median_s": 2.08
+    }
+  },
+  "rows": [
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 9.62,
+      "observable_s": 0.72,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 12.66,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 1.24
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.4
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.1
+      }
+    },
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 21.04,
+      "observable_s": 0.9,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 22.14,
+      "observable_s": 0.86,
+      "human": {
+        "overlap": false,
+        "gap": 0.2
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 24.68,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 0.1
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.54
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.08
+      }
+    },
+    {
+      "clip": "V00_S2090_I00001012",
+      "caller_end": 32.9,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 1.86
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 4.92,
+      "observable_s": 0.76,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 6.9,
+      "observable_s": 1.56,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": 1.26
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": 1.22
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 0.58
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 0.1
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 8.74,
+      "observable_s": 0.7,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": true,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 0.08
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 13.16,
+      "observable_s": 0.74,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 16.68,
+      "observable_s": 0.74,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 22.34,
+      "observable_s": 0.82,
+      "human": {
+        "overlap": false,
+        "gap": 0.48
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 26.34,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 2.26
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.52
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.24
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 29.74,
+      "observable_s": 0.86,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": true,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 31.74,
+      "observable_s": 0.66,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": true,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 34.42,
+      "observable_s": 1.32,
+      "human": {
+        "overlap": false,
+        "gap": 0.66
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 36.0,
+      "observable_s": 0.98,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 0.74
+      }
+    },
+    {
+      "clip": "V00_S0644_I00000576",
+      "caller_end": 38.96,
+      "observable_s": 1.26,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 6.68,
+      "observable_s": 1.88,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 9.34,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 0.36
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": true,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.12
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 17.9,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 0.28
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.48
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 1.96
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 24.7,
+      "observable_s": 0.5,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 25.78,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 0.74
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.66
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.32
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 32.4,
+      "observable_s": 1.2,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S2020_I00000681",
+      "caller_end": 36.34,
+      "observable_s": 0.58,
+      "human": {
+        "overlap": false,
+        "gap": 0.3
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 3.02,
+      "observable_s": 1.66,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 5.06,
+      "observable_s": 0.54,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 0.44
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 6.84,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 0.02
+      },
+      "reference": {
+        "overlap": false,
+        "gap": 1.46
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": 1.28
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 0.9
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 0.44
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 19.82,
+      "observable_s": 0.7,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 20.74,
+      "observable_s": 2.96,
+      "human": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": 2.12
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": 2.0
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 1.2
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 0.94
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 23.82,
+      "observable_s": 3.0,
+      "human": {
+        "overlap": false,
+        "gap": 2.46
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": 1.26
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 2.48
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 2.02
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 32.66,
+      "observable_s": 0.56,
+      "human": {
+        "overlap": true,
+        "gap": null
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": null
+      }
+    },
+    {
+      "clip": "V00_S0925_I00000536",
+      "caller_end": 38.52,
+      "observable_s": 2.44,
+      "human": {
+        "overlap": false,
+        "gap": 0.24
+      },
+      "reference": {
+        "overlap": false,
+        "gap": null
+      },
+      "reference-trim": {
+        "overlap": false,
+        "gap": null
+      },
+      "compact": {
+        "overlap": false,
+        "gap": 1.68
+      },
+      "compact-trim": {
+        "overlap": false,
+        "gap": 1.32
+      }
+    }
+  ],
+  "sample": {
+    "clip": "V00_S2090_I00001012",
+    "caller_end": 12.66,
+    "observable_s": 3.0,
+    "human": {
+      "overlap": false,
+      "gap": 1.24
+    },
+    "reference": {
+      "overlap": false,
+      "gap": null
+    },
+    "reference-trim": {
+      "overlap": false,
+      "gap": null
+    },
+    "compact": {
+      "overlap": false,
+      "gap": 2.4
+    },
+    "compact-trim": {
+      "overlap": false,
+      "gap": 2.1
+    }
+  },
+  "sample_length_s": 6
+}
