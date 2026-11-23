@@ -1,0 +1,57 @@
+{
+ "alpha": 1.0,
+ "runs": {
+  "p4_neutral": {
+   "frames": 45,
+   "denoise_s": 1.98
+  },
+  "p4_yaw_a0.5": {
+   "frames": 45,
+   "denoise_s": 1.91
+  },
+  "p4_yaw_a1": {
+   "frames": 45,
+   "denoise_s": 1.89
+  },
+  "p4_yaw_a1.5": {
+   "frames": 45,
+   "denoise_s": 1.88
+  },
+  "p4_pitch_a0.5": {
+   "frames": 45,
+   "denoise_s": 1.88
+  },
+  "p4_pitch_a1": {
+   "frames": 45,
+   "denoise_s": 1.9
+  },
+  "p4_pitch_a1.5": {
+   "frames": 45,
+   "denoise_s": 1.88
+  },
+  "p4_roll_a0.5": {
+   "frames": 45,
+   "denoise_s": 1.86
+  },
+  "p4_roll_a1": {
+   "frames": 45,
+   "denoise_s": 1.87
+  },
+  "p4_roll_a1.5": {
+   "frames": 45,
+   "denoise_s": 1.86
+  },
+  "p4_shrug_a0.5": {
+   "frames": 45,
+   "denoise_s": 1.86
+  },
+  "p4_shrug_a1": {
+   "frames": 45,
+   "denoise_s": 1.87
+  },
+  "p4_shrug_a1.5": {
+   "frames": 45,
+   "denoise_s": 1.91
+  }
+ }
+}

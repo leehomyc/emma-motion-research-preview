@@ -1,0 +1,536 @@
+[
+  {
+    "id": "p4_neutral",
+    "identity": "p4",
+    "motion": "neutral",
+    "amp_mult": 0.0,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6939895717628956
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.5163913938189381
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6131559036764319
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6997131045724695
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6656877879476366
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6987727786201394
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.5935075242496247
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6218265002466665
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6063841819868268
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.460686587890911
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.3107987021702597
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.7581197483459967
+      }
+    }
+  },
+  {
+    "id": "p4_yaw_a1",
+    "identity": "p4",
+    "motion": "yaw",
+    "amp_mult": 1.0,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.998720295822229,
+        "amplitude_ratio": 0.7986073528056751,
+        "std": 18.216557650125647,
+        "best_lag_frames": 0
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6085228736263223
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.1596017664998509,
+        "amplitude_ratio": 26.758447542941987,
+        "std": 0.6176787802276915,
+        "best_lag_frames": -12
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.681779701356868
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.8391740215247971,
+        "amplitude_ratio": 0.3667479057268399,
+        "std": 8.365668490609906,
+        "best_lag_frames": 1
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.0578388705797663
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.2572843733323723,
+        "amplitude_ratio": 26.25135846703872,
+        "std": 0.6059733865807669,
+        "best_lag_frames": -12
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.0092118382408448
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.9968711855186373,
+        "amplitude_ratio": 0.544256431172973,
+        "std": 12.414709957380758,
+        "best_lag_frames": 0
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.9685969221263596
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.008164199132206482,
+        "amplitude_ratio": 34.179849973354585,
+        "std": 0.7889907665990833,
+        "best_lag_frames": -7
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.157718011228035
+      }
+    }
+  },
+  {
+    "id": "p4_pitch_a0.5",
+    "identity": "p4",
+    "motion": "pitch",
+    "amp_mult": 0.5,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.7238547636498296
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.9857731495700829,
+        "amplitude_ratio": 1.4928858570437267,
+        "std": 4.304621071130218,
+        "best_lag_frames": 0
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": 0.10432392299926377,
+        "amplitude_ratio": 194.82391500290953,
+        "std": 0.6059502311996884,
+        "best_lag_frames": 2
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.9911480907320235
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.5705901215152716
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.9072403941154679,
+        "amplitude_ratio": 0.7372806147778952,
+        "std": 2.125891711502637,
+        "best_lag_frames": 1
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.1465818856692188,
+        "amplitude_ratio": 193.94979775360835,
+        "std": 0.6032315118407136,
+        "best_lag_frames": -12
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6459809170760369
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.7924963561889189
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.8442103385706954,
+        "amplitude_ratio": 0.47065517732281414,
+        "std": 1.35709785445504,
+        "best_lag_frames": 0
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.2434163471865544,
+        "amplitude_ratio": 213.40721777234464,
+        "std": 0.6637488675191815,
+        "best_lag_frames": -8
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.9417505239442967
+      }
+    }
+  },
+  {
+    "id": "p4_pitch_a1",
+    "identity": "p4",
+    "motion": "pitch",
+    "amp_mult": 1.0,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.2027454067663668
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.977547475410713,
+        "amplitude_ratio": 1.1442100310497134,
+        "std": 6.574740514057003,
+        "best_lag_frames": 0
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.011302209464739142,
+        "amplitude_ratio": 65.10080772602385,
+        "std": 0.8067198953854773,
+        "best_lag_frames": -12
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 2.2273263502929592
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.5778336351168045
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.8998621305854589,
+        "amplitude_ratio": 0.37257394093387125,
+        "std": 2.1408455768321923,
+        "best_lag_frames": 0
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": 0.048749289575184374,
+        "amplitude_ratio": 45.780129037231426,
+        "std": 0.5673008092783715,
+        "best_lag_frames": 4
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.8856049652808581
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.085567034089086
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": 0.920017766797233,
+        "amplitude_ratio": 0.3192429841460309,
+        "std": 1.834400787211918,
+        "best_lag_frames": 1
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": -0.4242542682178129,
+        "amplitude_ratio": 49.69912388198441,
+        "std": 0.6158644327049905,
+        "best_lag_frames": -10
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.6271109113915891
+      }
+    }
+  },
+  {
+    "id": "p4_roll_a1",
+    "identity": "p4",
+    "motion": "roll",
+    "amp_mult": 1.0,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.9969651098151422,
+        "amplitude_ratio": 0.9655525028608026,
+        "std": 11.713049741098798,
+        "best_lag_frames": 0
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": -0.17079617492156932,
+        "amplitude_ratio": 2.064826298183935,
+        "std": 0.5258567650052891,
+        "best_lag_frames": -12
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": 0.9948324127345263,
+        "amplitude_ratio": 1.0453322813959256,
+        "std": 6.131031321108557,
+        "best_lag_frames": 0
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.0271510175780134
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.547846514421188,
+        "amplitude_ratio": 0.07221813096033049,
+        "std": 0.8760730852452517,
+        "best_lag_frames": 4
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": -0.11375939846100576,
+        "amplitude_ratio": 3.4015773850894866,
+        "std": 0.8662919884406501,
+        "best_lag_frames": -8
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": 0.15270833484145446,
+        "amplitude_ratio": 0.09990053189981137,
+        "std": 0.5859316706982692,
+        "best_lag_frames": 11
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6110223861066576
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": 0.9968004179394986,
+        "amplitude_ratio": 1.0111018988118896,
+        "std": 12.265606271035109,
+        "best_lag_frames": 0
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": -0.35792602128871326,
+        "amplitude_ratio": 2.770765584767431,
+        "std": 0.7056408707479553,
+        "best_lag_frames": 10
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": 0.9918789075703439,
+        "amplitude_ratio": 1.0419617433230162,
+        "std": 6.111262607502582,
+        "best_lag_frames": 0
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.3013838951008512
+      }
+    }
+  },
+  {
+    "id": "p4_shrug_a1",
+    "identity": "p4",
+    "motion": "shrug",
+    "amp_mult": 1.0,
+    "teacher": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.8885165364402475
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.7548351723116495
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.5897786006892618
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": 0.9994478581824452,
+        "amplitude_ratio": 1.034115425084707,
+        "std": 28.92682100900535,
+        "best_lag_frames": 0
+      }
+    },
+    "public_only": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 1.0361270041509811
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 4.326513321023082
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.8773201201695722
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": 0.8649481962599423,
+        "amplitude_ratio": 0.044675352881058644,
+        "std": 1.2496824870383092,
+        "best_lag_frames": -1
+      }
+    },
+    "distilled": {
+      "yaw": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.8591272255205604
+      },
+      "pitch": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.7747934075497976
+      },
+      "roll": {
+        "valid": 45,
+        "correlation": null,
+        "amplitude_ratio": null,
+        "std": 0.6749872092618986
+      },
+      "shrug": {
+        "valid": 45,
+        "correlation": 0.9945058845821186,
+        "amplitude_ratio": 1.0508880058323218,
+        "std": 29.395992466442607,
+        "best_lag_frames": 0
+      }
+    }
+  }
+]
