@@ -1,0 +1,86 @@
+{
+  "source": "Nuance Labs, character_a.mp4, partner channel 1",
+  "endpoint_seconds": [
+    9.78,
+    15.16,
+    24.8
+  ],
+  "reference_gaps": [
+    0.7,
+    0.68,
+    0.6
+  ],
+  "replays": {
+    "reference": [
+      [
+        null,
+        3.46,
+        4.3
+      ],
+      [
+        null,
+        4.34,
+        3.68
+      ],
+      [
+        null,
+        3.72,
+        4.4
+      ]
+    ],
+    "compact": [
+      [
+        null,
+        2.84,
+        2.52
+      ],
+      [
+        2.56,
+        2.34,
+        2.74
+      ],
+      [
+        2.76,
+        2.38,
+        2.94
+      ]
+    ],
+    "reference-trim": [
+      [
+        null,
+        null,
+        6.12
+      ],
+      [
+        null,
+        3.86,
+        3.5
+      ],
+      [
+        null,
+        3.62,
+        3.36
+      ]
+    ],
+    "compact-trim": [
+      [
+        2.48,
+        2.06,
+        2.26
+      ],
+      [
+        2.54,
+        2.28,
+        2.4
+      ],
+      [
+        2.36,
+        2.1,
+        1.98
+      ]
+    ]
+  },
+  "unit": "seconds",
+  "missing": "no new audible response before next caller bout",
+  "audio_repeat": 2
+}
