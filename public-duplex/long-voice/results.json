@@ -1,0 +1,179 @@
+{
+  "mode": "one uninterrupted synthetic microphone session, mobile WebKit, real H100 speech and portrait",
+  "seconds": 5125.04,
+  "ticks": 64067,
+  "questions": 128,
+  "lexical_hits": 85,
+  "phonetic_hits": 127,
+  "peak_idle_rms": 6.533423402288463e-06,
+  "dropped_microphone_packets": 0,
+  "scheduling_gaps_over_5ms": 8,
+  "max_scheduling_gap_s": 4.47733333367516,
+  "history": {
+    "heard": 128,
+    "answered": 128,
+    "interrupted": 0,
+    "errors": 1,
+    "discarded": 0,
+    "guided_replies": 128,
+    "guide_underruns": 0,
+    "guide_fallbacks": 0,
+    "guide_cancellations": 0
+  },
+  "opus_accelerated": {
+    "ticks": 66250,
+    "seconds": 5300,
+    "wall_s": 60.525,
+    "waveforms": {
+      "1600": "056b9da736b5666563184f034bb9968e87a6093a1766e529cd685f1cc0b87699",
+      "62480": "056b9da736b5666563184f034bb9968e87a6093a1766e529cd685f1cc0b87699",
+      "65520": "056b9da736b5666563184f034bb9968e87a6093a1766e529cd685f1cc0b87699"
+    }
+  },
+  "pairs": [
+    {
+      "early": {
+        "index": 0,
+        "start": 3,
+        "end": 5.56825,
+        "target": "green",
+        "text": "green.",
+        "hit": true,
+        "voice_onset_s": 3.02,
+        "active_s": 0.22,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 1.0
+      },
+      "late": {
+        "index": 126,
+        "start": 5043,
+        "end": 5045.56825,
+        "target": "green",
+        "text": "green.",
+        "hit": true,
+        "voice_onset_s": 4.5,
+        "active_s": 0.24,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 0.9842597842216492
+      }
+    },
+    {
+      "early": {
+        "index": 1,
+        "start": 40,
+        "end": 42.486958333333334,
+        "target": "four",
+        "text": "for.",
+        "hit": false,
+        "voice_onset_s": 3.02,
+        "active_s": 0.24,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 1.0
+      },
+      "late": {
+        "index": 127,
+        "start": 5080,
+        "end": 5082.486958333333,
+        "target": "four",
+        "text": "for.",
+        "hit": false,
+        "voice_onset_s": 4.58,
+        "active_s": 0.24,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 0.9915555119514465
+      }
+    },
+    {
+      "early": {
+        "index": 2,
+        "start": 80,
+        "end": 82.754,
+        "target": "white",
+        "text": "white.",
+        "hit": true,
+        "voice_onset_s": 3.2,
+        "active_s": 0.32,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 1.0000001192092896
+      },
+      "late": {
+        "index": 125,
+        "start": 5000,
+        "end": 5002.754,
+        "target": "white",
+        "text": "white.",
+        "hit": true,
+        "voice_onset_s": 4.46,
+        "active_s": 0.3,
+        "idle_rms": 6.533423402288463e-06,
+        "phonetic_hit": true,
+        "waveform_cosine": 0.9885308146476746
+      }
+    }
+  ],
+  "gap_batches": [
+    {
+      "first_packet": 575,
+      "last_packet": 599,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 2500,
+      "last_packet": 2524,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 11350,
+      "last_packet": 11374,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 16450,
+      "last_packet": 16474,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 48525,
+      "last_packet": 48549,
+      "new_gaps": 1,
+      "peak_rms_10ms": 0.0007891071145422757
+    },
+    {
+      "first_packet": 48575,
+      "last_packet": 48599,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 53275,
+      "last_packet": 53299,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    },
+    {
+      "first_packet": 53300,
+      "last_packet": 53324,
+      "new_gaps": 1,
+      "peak_rms_10ms": 8.357583283213899e-06
+    }
+  ],
+  "first_10_min": {
+    "probes": 15,
+    "phonetic_hits": 15,
+    "median_end_to_voice_s": 3.36
+  },
+  "last_10_min": {
+    "probes": 14,
+    "phonetic_hits": 13,
+    "median_end_to_voice_s": 4.58
+  }
+}
