@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>因果 Wan 画质与出帧速度</title>
+<style>html{color-scheme:dark}body{margin:32px auto;padding:0 18px;max-width:1000px;font:1rem/1.6 system-ui;color:#f4f4f4;background:#171819}h1{font-size:clamp(1.65rem,5vw,2.4rem)}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:20px}h2{font-size:1.16rem}video{width:100%;display:block;border-radius:8px}p{margin:.55rem 0}</style>
+</head>
+<body>
+<h1>因果 Wan 画质与出帧速度</h1>
+<p>同一虚构肖像、同一动作和同一句 Omni 语音。16 帧/秒时，每批 12 帧对应 0.75 秒视频。以下是单张 H100 的画面生成时间，未计入语音模型和网络。</p>
+<main>
+<article><h2>512 × 512</h2><video controls playsinline preload="metadata" src="512.mp4"></video><p>首批 9 帧 1.48 秒</p><p>后续每 12 帧 0.91 秒</p></article>
+<article><h2>448 × 448</h2><video controls playsinline preload="metadata" src="448.mp4"></video><p>首批 9 帧 1.27 秒</p><p>后续每 12 帧 0.70 秒</p></article>
+<article><h2>384 × 384</h2><video controls playsinline preload="metadata" src="384.mp4"></video><p>首批 9 帧 1.04 秒</p><p>后续每 12 帧 0.59 秒</p></article></main><p>短句与预设动作的离线回放。<a href="../causal-speech/">看口型对照</a> · <a href="../causal-long/">看 12 秒稳定性</a></p></body></html>

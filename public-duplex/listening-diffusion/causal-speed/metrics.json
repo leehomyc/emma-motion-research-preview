@@ -1,0 +1,41 @@
+{
+  "512": {
+    "first_rgb_s": 1.4777721699792892,
+    "steady_block_s": 0.9098944920115173,
+    "last_rgb_s": 6.8910196849901695,
+    "cached_rgb_mae": 0.0,
+    "pitch": {
+      "valid": 45,
+      "correlation": 0.9172916628890636,
+      "amplitude_ratio": 0.47541587406762387,
+      "std": 2.7317851822979016,
+      "best_lag_frames": 1
+    }
+  },
+  "448": {
+    "first_rgb_s": 1.2736148209951352,
+    "steady_block_s": 0.7005094155028928,
+    "last_rgb_s": 5.55429414199898,
+    "cached_rgb_mae": 0.0,
+    "pitch": {
+      "valid": 45,
+      "correlation": 0.8918755245799808,
+      "amplitude_ratio": 0.37882440951436364,
+      "std": 2.176761368420125,
+      "best_lag_frames": 1
+    }
+  },
+  "384": {
+    "first_rgb_s": 1.038106610008981,
+    "steady_block_s": 0.5888873550138669,
+    "last_rgb_s": 4.568515039019985,
+    "cached_rgb_mae": 0.0,
+    "pitch": {
+      "valid": 45,
+      "correlation": 0.8976650903542054,
+      "amplitude_ratio": 0.36039480221027287,
+      "std": 2.070863078322805,
+      "best_lag_frames": 1
+    }
+  }
+}
