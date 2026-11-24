@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>直接音频条件的口型对照</title>
+<style>html{color-scheme:dark}body{margin:32px auto;padding:0 18px;max-width:950px;font:1rem/1.6 system-ui;color:#f4f4f4;background:#171819}h1{font-size:clamp(1.65rem,5vw,2.4rem)}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px}figure{margin:0}video{width:100%;display:block;border-radius:8px}figcaption{margin-bottom:6px}</style>
+</head>
+<body>
+<h1>直接音频条件的口型对照</h1>
+<p>两段视频使用同一虚构肖像和同一句 Omni 语音。右侧模型直接读取语音特征，左侧先从语音预测嘴部关键点，再按关键点生成视频。</p>
+<section aria-label="口型生成对照">
+<figure><figcaption>四步因果 Wan · 嘴部关键点</figcaption><video controls playsinline preload="metadata" src="landmarks.mp4"></video></figure>
+<figure><figcaption>OmniAvatar · 直接音频</figcaption><video controls playsinline preload="metadata" src="direct.mp4"></video></figure>
+</section>
+<p>单句 SyncNet 测试中，最佳音画偏移分别为 440 毫秒和 40 毫秒。右侧为 50 步离线生成。</p>
+<p><a href="../pose-aware-refresh/">看转头与身份稳定性对照</a> · <a href="../causal-speed/">看四步版画质与速度</a></p>
+</body>
+</html>
