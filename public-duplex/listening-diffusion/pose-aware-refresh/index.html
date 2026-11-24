@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>转头时怎样保持同一张脸</title>
+<style>
+html{color-scheme:dark}body{margin:32px auto;padding:0 18px;max-width:900px;font:1rem/1.6 system-ui;color:#f4f4f4;background:#171819}
+h1{font-size:clamp(1.65rem,5vw,2.4rem)}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:18px}figure{margin:0}video{width:100%;display:block;border-radius:8px}figcaption{margin-bottom:5px}
+</style>
+</head>
+<body>
+<h1>转头时怎样保持同一张脸</h1>
+<p>同一虚构肖像和左右转头轨迹，生成 189 帧。左侧定时补入参考图，右侧优先等脸接近正面再补入。</p>
+<section aria-label="参考图刷新时机对照">
+<figure><figcaption>定时刷新</figcaption><video controls playsinline muted preload="metadata" src="fixed.mp4"></video></figure>
+<figure><figcaption>按头部姿态刷新</figcaption><video controls playsinline muted preload="metadata" src="pose-aware.mp4"></video></figure>
+</section>
+<p>在这组样片中，最后四分之一的转头轨迹相关性从 0.85 到 0.99，平均脸部相似度都约为 0.89。按姿态刷新时，个别帧仍有明显漂移。</p>
+<p><a href="../causal-speech/">看语音与口型</a> · <a href="../causal-speed/">看画质与速度</a></p>
+</body>
+</html>
